@@ -1,0 +1,76 @@
+{
+    "long_form": {
+        "controls": [
+            {
+                "long_form@common_dialogs.main_panel_no_buttons": {
+                    "$title_panel": "common_dialogs.standard_title_label",
+                    "$title_size": [
+                        "100% - 14px",
+                        10
+                    ],
+                    "anims": [
+                        "@common.container_screen_exit_animation_push",
+                        "@common.container_screen_exit_animation_pop",
+                        "@common.container_screen_entrance_animation_push",
+                        "@common.container_screen_entrance_animation_pop",
+                        "@common.screen_exit_animation_push_fade",
+                        "@common.screen_exit_animation_pop_fade",
+                        "@common.screen_entrance_animation_push_fade",
+                        "@common.screen_entrance_animation_pop_fade"
+                    ],
+                    "size": [
+                        225,
+                        200
+                    ],
+                    "$text_name": "#title_text",
+                    "$title_text_binding_type": "none",
+                    "$child_control": "server_form.long_form_panel",
+                    "layer": 2,
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#title_text - 'mineville@') = #title_text)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "sample_form@common-mineville.form_template": {
+                    "$title_bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(#title_text - 'mineville@sample:')",
+                            "target_property_name": "#text"
+                        }
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '@sample') = #title_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "$content_controls": [
+                        {
+                            "sample@common-mineville.field_template": {
+                                "$text": "adasds",
+                                "$background_texture": "light",
+                                "size": [
+                                    100,
+                                    40
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
