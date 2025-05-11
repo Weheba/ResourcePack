@@ -7,6 +7,7 @@
         "pressed_control": "pressed",
         "sound_name": "random.click",
         "$button_contents": [],
+        "$hover_text_bindings": [],
         "size": [
             "20px",
             "20px"
@@ -23,7 +24,23 @@
                 "hover": {
                     "type": "image",
                     "texture": "textures/ui/common/button/hover",
-                    "controls": "$button_contents"
+                    "controls": [
+                        {
+                            "contents": {
+                                "type": "panel",
+                                "controls": "$button_contents"
+                            }
+                        },
+                        {
+                            "hover_text": {
+                                "type": "custom",
+                                "renderer": "hover_text_renderer",
+                                "bindings": "$hover_text_bindings",
+                                "allow_clipping": false,
+                                "layer": 8
+                            }
+                        }
+                    ]
                 }
             },
             {
@@ -91,6 +108,7 @@
         "type": "panel",
         "$text": "",
         "$texture": "",
+        "$localize_label": true,
         "$background_texture": "dark",
         "$label_scale_factor": 1.0,
         "size": [
@@ -131,7 +149,9 @@
                                 "type": "label",
                                 "text": "$text",
                                 "shadow": true,
+                                "localize": "$localize_label",
                                 "font_scale_factor": "$label_scale_factor",
+                                "font_size": "small",
                                 "max_size": [
                                     "100%",
                                     "100%"
@@ -156,10 +176,6 @@
             "100%cm",
             "100%cm"
         ],
-        "offset": [
-            "50%",
-            "0px"
-        ],
         "$title_bindings": [
             {
                 "binding_type": "view",
@@ -172,7 +188,7 @@
                 "stack_panel": {
                     "type": "stack_panel",
                     "size": [
-                        "100%c",
+                        "100%cm",
                         "100%c"
                     ],
                     "controls": [
@@ -227,6 +243,7 @@
                                                                     "anchor_to": "left_middle",
                                                                     "font_type": "MinecraftTen",
                                                                     "font_scale_factor": 1.2,
+                                                                    "localize": true,
                                                                     "bindings": "$title_bindings",
                                                                     "max_size": [
                                                                         "100% - 75px",
@@ -277,11 +294,11 @@
                                 ],
                                 "min_size": [
                                     "225px",
-                                    "200px"
+                                    "210px"
                                 ],
                                 "max_size": [
-                                    "300px",
-                                    "200px"
+                                    "400px",
+                                    "210px"
                                 ],
                                 "controls": [
                                     {
@@ -307,12 +324,12 @@
                                                 "100%c"
                                             ],
                                             "max_size": [
-                                                "290px",
-                                                "190px"
+                                                "390px",
+                                                "200px"
                                             ],
                                             "min_size": [
                                                 "215px",
-                                                "190px"
+                                                "200px"
                                             ]
                                         }
                                     }

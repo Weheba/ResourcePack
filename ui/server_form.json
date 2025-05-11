@@ -19,8 +19,8 @@
                         "@common.screen_entrance_animation_pop_fade"
                     ],
                     "size": [
-                        225,
-                        200
+                        "225px",
+                        "200px"
                     ],
                     "$text_name": "#title_text",
                     "$title_text_binding_type": "none",
@@ -39,34 +39,15 @@
                 }
             },
             {
-                "sample_form@common-mineville.form_template": {
-                    "$title_bindings": [
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "(#title_text - 'mineville@sample:')",
-                            "target_property_name": "#text"
-                        }
-                    ],
+                "gamemodes-menu@gamemodes-menu.main": {
                     "bindings": [
                         {
                             "binding_name": "#title_text"
                         },
                         {
                             "binding_type": "view",
-                            "source_property_name": "(not ((#title_text - '@sample') = #title_text))",
+                            "source_property_name": "(not ((#title_text - '@gamemodes_menu') = #title_text))",
                             "target_property_name": "#visible"
-                        }
-                    ],
-                    "$content_controls": [
-                        {
-                            "sample@common-mineville.field_template": {
-                                "$text": "adasds",
-                                "$background_texture": "light",
-                                "size": [
-                                    100,
-                                    40
-                                ]
-                            }
                         }
                     ]
                 }
