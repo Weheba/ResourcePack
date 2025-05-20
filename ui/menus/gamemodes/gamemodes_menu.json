@@ -4,7 +4,7 @@
         "$title_bindings": [
             {
                 "binding_type": "view",
-                "source_property_name": "(#title_text - 'mineville@gamemodes_menu:')",
+                "source_property_name": "(#title_text - '@mineville/gamemodes_menu:')",
                 "target_property_name": "#text"
             }
         ],
@@ -66,7 +66,7 @@
         ],
         "controls": [
             {
-                "button@common-mineville.button": {
+                "button@common-mineville.form_button": {
                     "size": [
                         "100% - 5px",
                         "68px"
@@ -82,41 +82,6 @@
                     "$button_contents": [
                         {
                             "contents@gamemodes-menu.button_contents": {}
-                        }
-                    ],
-                    "button_mappings": [
-                        {
-                            "from_button_id": "button.menu_select",
-                            "to_button_id": "button.form_button_click",
-                            "mapping_type": "pressed"
-                        },
-                        {
-                            "from_button_id": "button.menu_ok",
-                            "to_button_id": "button.form_button_click",
-                            "mapping_type": "focused"
-                        }
-                    ],
-                    "bindings": [
-                        {
-                            "binding_name": "#null",
-                            "binding_type": "collection",
-                            "binding_condition": "none",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#null",
-                            "binding_type": "collection_details",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#form_button_text",
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#form_button_texture",
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons"
                         }
                     ]
                 }

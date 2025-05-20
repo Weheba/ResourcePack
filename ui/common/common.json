@@ -1,11 +1,9 @@
 {
     "namespace": "common-mineville",
     "button": {
-        "type": "button",
-        "default_control": "default",
-        "hover_control": "hover",
-        "pressed_control": "pressed",
-        "sound_name": "random.click",
+        "type": "panel",
+        "$button_id_name": "button.menu_ok",
+        "$button_bindings": [],
         "$button_contents": [],
         "$hover_text_bindings": [],
         "size": [
@@ -14,55 +12,107 @@
         ],
         "controls": [
             {
-                "default": {
-                    "type": "image",
-                    "texture": "textures/ui/common/button/default",
-                    "controls": "$button_contents"
-                }
-            },
-            {
-                "hover": {
-                    "type": "image",
-                    "texture": "textures/ui/common/button/hover",
+                "button_control": {
+                    "type": "button",
+                    "default_control": "default",
+                    "hover_control": "hover",
+                    "pressed_control": "pressed",
+                    "locked_control": "locked",
+                    "sound_name": "random.click",
+                    "bindings": "$button_bindings",
+                    "button_mappings": [
+                        {
+                            "from_button_id": "button.menu_select",
+                            "to_button_id": "$button_id_name",
+                            "mapping_type": "pressed"
+                        },
+                        {
+                            "from_button_id": "button.menu_ok",
+                            "to_button_id": "$button_id_name",
+                            "mapping_type": "focused"
+                        }
+                    ],
                     "controls": [
                         {
-                            "contents": {
-                                "type": "panel",
+                            "default": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/common/default",
                                 "controls": "$button_contents"
                             }
                         },
                         {
-                            "hover_text": {
-                                "type": "custom",
-                                "renderer": "hover_text_renderer",
-                                "bindings": "$hover_text_bindings",
-                                "allow_clipping": false,
-                                "layer": 8
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "pressed": {
-                    "type": "image",
-                    "texture": "textures/ui/common/button/pressed",
-                    "controls": [
-                        {
-                            "contents": {
-                                "type": "panel",
-                                "controls": "$button_contents",
-                                "offset": [
-                                    "0px",
-                                    "1px"
+                            "hover": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/common/hover",
+                                "controls": [
+                                    {
+                                        "contents": {
+                                            "type": "panel",
+                                            "controls": "$button_contents"
+                                        }
+                                    },
+                                    {
+                                        "hover_text": {
+                                            "type": "custom",
+                                            "renderer": "hover_text_renderer",
+                                            "bindings": "$hover_text_bindings",
+                                            "allow_clipping": false,
+                                            "layer": 8
+                                        }
+                                    }
                                 ]
                             }
                         },
                         {
-                            "overlay": {
+                            "pressed": {
                                 "type": "image",
-                                "texture": "textures/ui/Black",
-                                "alpha": 0.3
+                                "texture": "textures/ui/common/buttons/common/pressed",
+                                "controls": [
+                                    {
+                                        "contents": {
+                                            "type": "panel",
+                                            "controls": "$button_contents",
+                                            "offset": [
+                                                "0px",
+                                                "1px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "overlay": {
+                                            "type": "image",
+                                            "texture": "textures/ui/Black",
+                                            "alpha": 0.3,
+                                            "layer": 1
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "locked": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/common/pressed",
+                                "controls": [
+                                    {
+                                        "contents": {
+                                            "type": "panel",
+                                            "controls": "$button_contents",
+                                            "offset": [
+                                                "0px",
+                                                "1px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "overlay": {
+                                            "type": "image",
+                                            "texture": "textures/ui/Black",
+                                            "alpha": 0.3,
+                                            "layer": 1
+                                        }
+                                    }
+                                ]
                             }
                         }
                     ]
@@ -71,21 +121,10 @@
         ]
     },
     "close_button@common-mineville.button": {
+        "$button_id_name": "button.menu_exit",
         "size": [
             "19px",
             "19px"
-        ],
-        "button_mappings": [
-            {
-                "from_button_id": "button.menu_select",
-                "to_button_id": "button.menu_exit",
-                "mapping_type": "pressed"
-            },
-            {
-                "from_button_id": "button.menu_ok",
-                "to_button_id": "button.menu_exit",
-                "mapping_type": "focused"
-            }
         ],
         "$button_contents": [
             {
@@ -99,6 +138,119 @@
                     "offset": [
                         "0px",
                         "-1px"
+                    ]
+                }
+            }
+        ]
+    },
+    "empty_panel": {
+        "type": "panel",
+        "size": [
+            "0px",
+            "0px"
+        ]
+    },
+    "form_button@common-mineville.button": {
+        "$button_id_name": "button.form_button_click",
+        "$button_bindings": [
+            {
+                "binding_name": "#null",
+                "binding_type": "collection",
+                "binding_condition": "none",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#null",
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_texture",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#form_button_text - '#locked') = #form_button_text)",
+                "target_property_name": "#enabled"
+            }
+        ]
+    },
+    "field_button_template": {
+        "type": "button",
+        "$content_control": "common-mineville.empty_panel",
+        "$visibility_keyword": "",
+        "$background_texture": "light",
+        "$label_scale_factor": 1.5,
+        "$text_label": "",
+        "size": [
+            "30px",
+            "30px"
+        ],
+        "bindings": [
+            {
+                "binding_name": "#null",
+                "binding_type": "collection",
+                "binding_condition": "none",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#null",
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_texture",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            }
+        ],
+        "controls": [
+            {
+                "contents": {
+                    "type": "panel",
+                    "clips_children": true,
+                    "max_size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "background@common-mineville.field_template": {
+                                "$text": "#form_button_text",
+                                "size": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "panel": {
+                                "type": "panel",
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not ((#form_button_text - $visibility_keyword) = #form_button_text))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "content@$content_control": {}
+                                    }
+                                ]
+                            }
+                        }
                     ]
                 }
             }
@@ -212,7 +364,7 @@
                                                 {
                                                     "image": {
                                                         "type": "image",
-                                                        "texture": "textures/ui/common/button/hover"
+                                                        "texture": "textures/ui/common/buttons/common/hover"
                                                     }
                                                 },
                                                 {
@@ -340,5 +492,17 @@
                 }
             }
         ]
+    },
+    "scroll_box_mouse_image_control": {
+        "type": "image",
+        "texture": "textures/ui/common/scroll_box",
+        "layer": 3,
+        "alpha": "@common.anim_scrollbar_box_fadeout"
+    },
+    "scroll_box_touch_image_control": {
+        "type": "image",
+        "texture": "textures/ui/common/scroll_box",
+        "layer": 3,
+        "alpha": "@common.anim_scrollbar_box_fadeout"
     }
 }

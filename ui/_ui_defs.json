@@ -1,6 +1,7 @@
 {
     "ui_defs": [
         "ui/common/common.json",
-        "ui/menus/gamemodes/gamemodes_menu.json"
+        "ui/menus/gamemodes/gamemodes_menu.json",
+        "ui/menus/main/city_menu.json"
     ]
 }
