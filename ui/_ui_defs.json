@@ -2,6 +2,7 @@
     "ui_defs": [
         "ui/common/common.json",
         "ui/menus/gamemodes/gamemodes_menu.json",
+        "ui/menus/generic/long_form.json",
         "ui/menus/main/city_menu.json"
     ]
 }
