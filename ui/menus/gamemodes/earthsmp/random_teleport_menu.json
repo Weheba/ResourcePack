@@ -1,0 +1,385 @@
+{
+    "namespace": "earth-smp-rtp",
+    "main@common-mineville.form_template": {
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/earth-smp/rtp_menu:')",
+                "target_property_name": "#text"
+            }
+        ],
+        "$content_controls": [
+            {
+                "content_panel": {
+                    "type": "panel",
+                    "size": [
+                        "330px",
+                        "165px"
+                    ],
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "texture": "textures/ui/assets/earthsmp/map/earth_map",
+                                "controls": [
+                                    {
+                                        "buttons_panel@earth-smp-rtp.button_panel": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "button_panel": {
+        "type": "collection_panel",
+        "collection_name": "form_buttons",
+        "controls": [
+            {
+                "north_america@earth-smp-rtp.map_button": {
+                    "collection_index": 0,
+                    "$focus": "north_america",
+                    "$focus_offset": [
+                        "-57px",
+                        "-36px"
+                    ],
+                    "offset": [
+                        "57px",
+                        "36px"
+                    ]
+                }
+            },
+            {
+                "south_america@earth-smp-rtp.map_button": {
+                    "collection_index": 1,
+                    "$focus": "south_america",
+                    "$focus_offset": [
+                        "-103px",
+                        "-96px"
+                    ],
+                    "offset": [
+                        "103px",
+                        "96px"
+                    ]
+                }
+            },
+            {
+                "europe@earth-smp-rtp.map_button": {
+                    "collection_index": 2,
+                    "$focus": "europe",
+                    "$focus_offset": [
+                        "-174px",
+                        "-30px"
+                    ],
+                    "offset": [
+                        "174px",
+                        "30px"
+                    ]
+                }
+            },
+            {
+                "africa@earth-smp-rtp.map_button": {
+                    "collection_index": 3,
+                    "$focus": "africa",
+                    "$focus_offset": [
+                        "-184px",
+                        "-70px"
+                    ],
+                    "offset": [
+                        "184px",
+                        "70px"
+                    ]
+                }
+            },
+            {
+                "asia@earth-smp-rtp.map_button": {
+                    "collection_index": 4,
+                    "$focus": "asia",
+                    "$focus_offset": [
+                        "-246px",
+                        "-35px"
+                    ],
+                    "offset": [
+                        "246px",
+                        "35px"
+                    ]
+                }
+            },
+            {
+                "australia@earth-smp-rtp.map_button": {
+                    "collection_index": 5,
+                    "$focus": "australia",
+                    "$focus_offset": [
+                        "-307px",
+                        "-108px"
+                    ],
+                    "offset": [
+                        "307px",
+                        "108px"
+                    ]
+                }
+            },
+            {
+                "antarctica@earth-smp-rtp.map_button": {
+                    "collection_index": 6,
+                    "$focus": "antarctica",
+                    "$focus_offset": [
+                        "-164px",
+                        "-156px"
+                    ],
+                    "offset": [
+                        "164px",
+                        "156px"
+                    ]
+                }
+            }
+        ]
+    },
+    "map_button": {
+        "type": "panel",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "$focus": "north_america",
+        "$focus_offset": [
+            "0px",
+            "0px"
+        ],
+        "size": [
+            "25px",
+            "25px"
+        ],
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "offset": [
+                        "-50%",
+                        "-50%"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "button": {
+                                "type": "button",
+                                "default_control": "default",
+                                "hover_control": "hover",
+                                "pressed_control": "pressed",
+                                "locked_control": "locked",
+                                "sound_name": "random.click",
+                                "bindings": [
+                                    {
+                                        "binding_name": "#null",
+                                        "binding_type": "collection",
+                                        "binding_condition": "none",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_name": "#null",
+                                        "binding_type": "collection_details",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ],
+                                "button_mappings": [
+                                    {
+                                        "from_button_id": "button.menu_select",
+                                        "to_button_id": "button.form_button_click",
+                                        "mapping_type": "pressed"
+                                    },
+                                    {
+                                        "from_button_id": "button.menu_ok",
+                                        "to_button_id": "button.form_button_click",
+                                        "mapping_type": "focused"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "default": {
+                                            "type": "panel",
+                                            "layer": 1,
+                                            "controls": [
+                                                {
+                                                    "shadow": {
+                                                        "type": "image",
+                                                        "texture": "textures/ui/assets/common/star_shadow",
+                                                        "offset": [
+                                                            "1px",
+                                                            "1px"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "star": {
+                                                        "type": "image",
+                                                        "texture": "textures/ui/assets/common/star"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hover": {
+                                            "type": "panel",
+                                            "controls": [
+                                                {
+                                                    "continent_focus": {
+                                                        "type": "panel",
+                                                        "offset": "$focus_offset",
+                                                        "size": [
+                                                            "330px",
+                                                            "165px"
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "panel": {
+                                                                    "type": "panel",
+                                                                    "offset": [
+                                                                        "50%",
+                                                                        "50%"
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "outline": {
+                                                                                "type": "image",
+                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/outline')"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "overlay": {
+                                                                                "type": "image",
+                                                                                "layer": 1,
+                                                                                "alpha": 0.75,
+                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "star_panel": {
+                                                        "type": "panel",
+                                                        "layer": 2,
+                                                        "controls": [
+                                                            {
+                                                                "shadow": {
+                                                                    "type": "image",
+                                                                    "texture": "textures/ui/assets/common/star_shadow",
+                                                                    "offset": [
+                                                                        "1px",
+                                                                        "1px"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "star": {
+                                                                    "type": "image",
+                                                                    "texture": "textures/ui/assets/common/star"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "hover_text": {
+                                                        "type": "custom",
+                                                        "renderer": "hover_text_renderer",
+                                                        "allow_clipping": false,
+                                                        "layer": 2,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "collection",
+                                                                "binding_collection_name": "form_buttons",
+                                                                "binding_name": "#form_button_text",
+                                                                "binding_name_override": "#hover_text"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "pressed": {
+                                            "type": "panel",
+                                            "controls": [
+                                                {
+                                                    "continent_focus": {
+                                                        "type": "panel",
+                                                        "offset": "$focus_offset",
+                                                        "size": [
+                                                            "330px",
+                                                            "165px"
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "panel": {
+                                                                    "type": "panel",
+                                                                    "offset": [
+                                                                        "50%",
+                                                                        "50%"
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "outline": {
+                                                                                "type": "image",
+                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/outline')"
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "overlay": {
+                                                                                "type": "image",
+                                                                                "layer": 1,
+                                                                                "alpha": 0.75,
+                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "star_panel": {
+                                                        "type": "panel",
+                                                        "controls": [
+                                                            {
+                                                                "shadow": {
+                                                                    "type": "image",
+                                                                    "texture": "textures/ui/assets/common/star_shadow",
+                                                                    "offset": [
+                                                                        "1px",
+                                                                        "1px"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "star": {
+                                                                    "type": "image",
+                                                                    "texture": "textures/ui/assets/common/star"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

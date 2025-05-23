@@ -446,10 +446,10 @@
                                 ],
                                 "min_size": [
                                     "225px",
-                                    "210px"
+                                    "175px"
                                 ],
                                 "max_size": [
-                                    "400px",
+                                    "340px",
                                     "210px"
                                 ],
                                 "controls": [
@@ -459,28 +459,32 @@
                                             "texture": "textures/ui/common/background",
                                             "size": [
                                                 "100%sm + 10px",
-                                                "100%sm + 10px"
+                                                "100%sm + 11px"
                                             ]
                                         }
                                     },
                                     {
                                         "contents": {
                                             "type": "panel",
-                                            "anchor_from": "center",
-                                            "anchor_to": "center",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
                                             "layer": 1,
                                             "clips_children": true,
                                             "controls": "$content_controls",
+                                            "offset": [
+                                                "0px",
+                                                "5px"
+                                            ],
                                             "size": [
                                                 "100%c",
                                                 "100%c"
                                             ],
-                                            "max_size": [
-                                                "390px",
-                                                "200px"
-                                            ],
                                             "min_size": [
                                                 "215px",
+                                                "165px"
+                                            ],
+                                            "max_size": [
+                                                "330px",
                                                 "200px"
                                             ]
                                         }

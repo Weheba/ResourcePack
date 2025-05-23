@@ -42,6 +42,20 @@
                         }
                     ]
                 }
+            },
+            {
+                "random_teleport_menu@earth-smp-rtp.main": {
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '@mineville/earth-smp/rtp_menu') = #title_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
             }
         ]
     }

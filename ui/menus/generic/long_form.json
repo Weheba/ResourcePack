@@ -342,8 +342,13 @@
                             "binding_name": "#form_button_texture"
                         },
                         {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_texture_file_system"
+                        },
+                        {
                             "binding_type": "view",
-                            "source_property_name": "(not (#form_button_texture = ''))",
+                            "source_property_name": "((not (#form_button_texture = '')) and (not (#form_button_texture_file_system = ''))",
                             "target_property_name": "#visible"
                         }
                     ],
@@ -373,6 +378,12 @@
                                         "binding_collection_name": "form_buttons",
                                         "binding_name": "#form_button_texture",
                                         "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture_file_system",
+                                        "binding_name_override": "#texture_file_system"
                                     }
                                 ]
                             }
