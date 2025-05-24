@@ -2,7 +2,7 @@
     "long_form": {
         "controls": [
             {
-                "long_form@common_dialogs.main_panel_no_buttons": {
+                "vanilla_long_form@common_dialogs.main_panel_no_buttons": {
                     "$title_panel": "common_dialogs.standard_title_label",
                     "$title_size": [
                         "100% - 15px",
@@ -33,7 +33,7 @@
                 }
             },
             {
-                "long_form@long-form.main": {
+                "custom_long_form@long-form.main": {
                     "bindings": [
                         {
                             "binding_name": "#title_text"
