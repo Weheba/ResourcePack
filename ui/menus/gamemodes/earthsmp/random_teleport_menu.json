@@ -12,15 +12,23 @@
             {
                 "content_panel": {
                     "type": "panel",
+                    "offset": [
+                        "0px",
+                        "0.5px"
+                    ],
                     "size": [
                         "330px",
-                        "165px"
+                        "163px"
                     ],
                     "controls": [
                         {
                             "image": {
                                 "type": "image",
                                 "texture": "textures/ui/assets/earthsmp/map/earth_map",
+                                "size": [
+                                    "330px",
+                                    "165px"
+                                ],
                                 "controls": [
                                     {
                                         "buttons_panel@earth-smp-rtp.button_panel": {}

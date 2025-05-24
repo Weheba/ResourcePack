@@ -32,8 +32,8 @@
                         "100% - 12px"
                     ],
                     "$scrolling_pane_size": [
-                        "100% - 0px",
-                        "100% - 6px"
+                        "100%",
+                        "100% - 5px"
                     ],
                     "$scrolling_pane_offset": [
                         "0px",
@@ -348,7 +348,7 @@
                         },
                         {
                             "binding_type": "view",
-                            "source_property_name": "((not (#form_button_texture = '')) and (not (#form_button_texture_file_system = ''))",
+                            "source_property_name": "(not (#form_button_texture = ''))",
                             "target_property_name": "#visible"
                         }
                     ],
@@ -357,6 +357,7 @@
                             "background": {
                                 "type": "image",
                                 "texture": "textures/ui/Black",
+                                "layer": 1,
                                 "size": [
                                     "100%sm + 2px",
                                     "100%sm + 2px"
@@ -366,7 +367,6 @@
                         {
                             "image": {
                                 "type": "image",
-                                "texture": "#texture",
                                 "layer": 1,
                                 "size": [
                                     "100% - 8px",

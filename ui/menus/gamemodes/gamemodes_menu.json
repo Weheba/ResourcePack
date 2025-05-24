@@ -27,10 +27,19 @@
                                 ],
                                 "controls": [
                                     {
+                                        "first_padding": {
+                                            "type": "panel",
+                                            "size": [
+                                                "0px",
+                                                "1.5px"
+                                            ]
+                                        }
+                                    },
+                                    {
                                         "description@gamemodes-menu.description": {}
                                     },
                                     {
-                                        "padding_one": {
+                                        "second_padding": {
                                             "type": "panel",
                                             "size": [
                                                 "0px",
