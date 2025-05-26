@@ -8,7 +8,7 @@
     "header": {
         "name": "Mineville [RP]",
         "description": "» Resource Pack for Mineville.",
-        "uuid": "dca7bb3d-38cf-4569-ae3b-e7d41165361d",
+        "uuid": "bd5a1f42-3b04-47a2-80d2-2e87b6f04990",
         "min_engine_version": [
             1,
             21,
@@ -23,7 +23,7 @@
     "modules": [
         {
             "type": "resources",
-            "uuid": "c3768815-6148-4974-9a5b-9dffaa85b62f",
+            "uuid": "476348da-f050-4d65-b753-4726d400edbb",
             "version": [
                 1,
                 0,
