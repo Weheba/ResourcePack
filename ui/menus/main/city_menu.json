@@ -496,6 +496,11 @@
                                                     "binding_type": "view",
                                                     "source_property_name": "(#form_button_texture + 'pressed')",
                                                     "target_property_name": "#texture"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not (#form_button_texture = 'loading'))",
+                                                    "target_property_name": "#visible"
                                                 }
                                             ],
                                             "controls": [
