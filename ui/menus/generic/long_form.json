@@ -350,20 +350,14 @@
                             "binding_type": "view",
                             "source_property_name": "(not (#form_button_texture = ''))",
                             "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = 'loading'))",
+                            "target_property_name": "#visible"
                         }
                     ],
                     "controls": [
-                        {
-                            "background": {
-                                "type": "image",
-                                "texture": "textures/ui/Black",
-                                "layer": 1,
-                                "size": [
-                                    "100%sm + 2px",
-                                    "100%sm + 2px"
-                                ]
-                            }
-                        },
                         {
                             "image": {
                                 "type": "image",
