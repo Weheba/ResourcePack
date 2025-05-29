@@ -1,0 +1,512 @@
+{
+    "namespace": "modal-form",
+    "main@common-mineville.form_template": {
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/modal_form:')",
+                "target_property_name": "#text"
+            }
+        ],
+        "$content_controls": [
+            {
+                "panel@modal-form.form_content_panel": {}
+            }
+        ]
+    },
+    "form_content_panel": {
+        "type": "panel",
+        "size": [
+            "330px",
+            "205px"
+        ],
+        "controls": [
+            {
+                "scroll_panel@common.scrolling_panel": {
+                    "$show_background": false,
+                    "$scrolling_content": "modal-form.scroll_content",
+                    "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                    "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                    "$scroll_size": [
+                        "5px",
+                        "100% - 12px"
+                    ],
+                    "$scrolling_pane_size": [
+                        "100%",
+                        "100% - 5px"
+                    ],
+                    "$scrolling_pane_offset": [
+                        "0px",
+                        "2.5px"
+                    ],
+                    "$scroll_bar_left_padding_size": [
+                        "0px",
+                        "0px"
+                    ],
+                    "$scroll_bar_right_padding_size": [
+                        "4px",
+                        "0px"
+                    ]
+                }
+            }
+        ]
+    },
+    "scroll_content": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%c + 10px"
+        ],
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/common/dark_field",
+                    "size": [
+                        "100% - 10px",
+                        "100%c + 20px"
+                    ],
+                    "controls": [
+                        {
+                            "content": {
+                                "type": "stack_panel",
+                                "orientation": "vertical",
+                                "size": [
+                                    "100% - 20px",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "generated_form@modal-form.generated_contents": {}
+                                    },
+                                    {
+                                        "submit_button@modal-form.submit_button": {
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#submit_button_visible",
+                                                    "binding_name_override": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "submit_button": {
+        "type": "button",
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "sound_name": "random.click",
+        "size": [
+            "100%",
+            "35px"
+        ],
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.submit_custom_form",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.submit_custom_form",
+                "mapping_type": "focused"
+            }
+        ],
+        "controls": [
+            {
+                "default": {
+                    "type": "image",
+                    "texture": "textures/ui/common/buttons/white/default",
+                    "controls": [
+                        {
+                            "content@modal-form.submit_button_content": {
+                                "offset": [
+                                    "0px",
+                                    "-1px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "hover": {
+                    "type": "image",
+                    "texture": "textures/ui/common/buttons/white/hover",
+                    "controls": [
+                        {
+                            "content@modal-form.submit_button_content": {
+                                "offset": [
+                                    "0px",
+                                    "-1px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "pressed": {
+                    "type": "image",
+                    "texture": "textures/ui/common/buttons/white/pressed",
+                    "controls": [
+                        {
+                            "content@modal-form.submit_button_content": {}
+                        },
+                        {
+                            "overlay": {
+                                "type": "image",
+                                "texture": "textures/ui/Black",
+                                "alpha": 0.3,
+                                "layer": 1
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "submit_button_content": {
+        "type": "label",
+        "text": "#text",
+        "layer": 1,
+        "color": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "max_size": [
+            "100%",
+            "100%"
+        ],
+        "bindings": [
+            {
+                "binding_name": "#submit_text",
+                "binding_name_override": "#text"
+            }
+        ]
+    },
+    "generated_contents": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "collection_name": "custom_form",
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "factory": {
+            "name": "buttons",
+            "control_ids": {
+                "label": "@modal-form.custom_label",
+                "toggle": "@modal-form.custom_toggle",
+                "slider": "@modal-form.custom_slider",
+                "step_slider": "@modal-form.custom_step_slider",
+                "dropdown": "@modal-form.custom_dropdown",
+                "input": "@modal-form.custom_input",
+                "header": "@modal-form.custom_header",
+                "divider": "@settings_common.option_group_section_divider"
+            }
+        },
+        "bindings": [
+            {
+                "binding_name": "#custom_form_length",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "custom_label@settings_common.option_group_label": {
+        "$text": "#custom_text",
+        "$text_bindings": [
+            {
+                "binding_name": "#custom_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "custom_header@settings_common.option_group_header": {
+        "$text": "#custom_text",
+        "$text_bindings": [
+            {
+                "binding_name": "#custom_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "custom_toggle@modal-form.option_toggle": {
+        "$option_label": "#custom_text",
+        "$toggle_name": "custom_toggle",
+        "$toggle_state_binding_name": "#custom_toggle_state",
+        "$option_binding_name": "#custom_toggle_state",
+        "$toggle_binding_type": "collection",
+        "$toggle_enabled_binding_name": "#custom_toggle_enabled",
+        "$toggle_enabled_binding_type": "collection",
+        "$toggle_grid_collection_name": "custom_form",
+        "$option_tooltip_binding_type": "collection",
+        "$option_tooltip_collection_name": "custom_form",
+        "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+        "$option_tooltip_area": "inside_header_panel",
+        "$option_tooltip_visible": true,
+        "$label_bindings": [
+            {
+                "binding_name": "#custom_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "option_toggle@settings_common.option_generic": {
+        "$control_name": "modal-form.option_toggle_control",
+        "$option_label|default": "",
+        "$toggle_tts_header": "$option_label",
+        "variables": [
+            {
+                "requires": "$desktop_screen",
+                "$one_line_layout": true
+            }
+        ]
+    },
+    "option_toggle_control@common.toggle": {
+        "layer": 2,
+        "$toggle_state_binding_name|default": "$option_binding_name",
+        "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+        "$toggle_enabled_binding_type|default": "global",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "$binding_type": "global",
+        "$binding_condition": "once",
+        "$unchecked_control": "modal-form.option_toggle_off",
+        "$checked_control": "modal-form.option_toggle_on",
+        "$unchecked_hover_control": "modal-form.option_toggle_off_hover",
+        "$checked_hover_control": "modal-form.option_toggle_on_hover",
+        "$unchecked_locked_control": "settings_common.option_toggle_off_locked",
+        "$unchecked_locked_hover_control": "settings_common.option_toggle_off_locked",
+        "$checked_locked_control": "settings_common.option_toggle_on_locked",
+        "$checked_locked_hover_control": "settings_common.option_toggle_on_locked",
+        "$enable_directional_toggling": false,
+        "enabled": "$enabled",
+        "variables": [
+            {
+                "requires": "(not $option_enabled_binding_name or not $enabled)",
+                "$toggle_enabled_binding_name": "#not_data_bound",
+                "$toggle_enabled_binding_type": "none"
+            }
+        ]
+    },
+    "option_toggle_on@settings_common.option_toggle_state_template": {
+        "texture": "textures/ui/common/toggle/default/on"
+    },
+    "option_toggle_off@settings_common.option_toggle_state_template": {
+        "texture": "textures/ui/common/toggle/default/off"
+    },
+    "option_toggle_on_hover@settings_common.option_toggle_state_template": {
+        "texture": "textures/ui/common/toggle/hover/on"
+    },
+    "option_toggle_off_hover@settings_common.option_toggle_state_template": {
+        "texture": "textures/ui/common/toggle/hover/off"
+    },
+    "custom_slider@modal-form.option_slider": {
+        "$option_label": "#custom_slider_text",
+        "$slider_name": "custom_slider",
+        "$slider_value_binding_name": "#custom_slider_value",
+        "$slider_tts_text_value": "#custom_slider_text_value",
+        "$slider_binding_type": "collection",
+        "$slider_collection_name": "custom_form",
+        "$slider_enabled_binding_name": "#custom_slider_enabled",
+        "$slider_enabled_binding_type": "collection",
+        "$option_tooltip_binding_type": "collection",
+        "$option_tooltip_collection_name": "custom_form",
+        "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+        "$option_tooltip_area": "inside_header_panel",
+        "$option_tooltip_visible": true,
+        "$label_bindings": [
+            {
+                "binding_name": "#custom_slider_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "option_slider@settings_common.option_generic": {
+        "$control_name": "modal-form.option_slider_control"
+    },
+    "option_slider_control": {
+        "type": "panel",
+        "size": [
+            "100% - 2px",
+            "16px"
+        ],
+        "controls": [
+            {
+                "slider@common.slider": {
+                    "size": [
+                        "100%-8px",
+                        "10px"
+                    ],
+                    "offset": [
+                        "1px",
+                        "0px"
+                    ],
+                    "$slider_box_size": [
+                        "10px",
+                        "16px"
+                    ],
+                    "$option_label|default": "",
+                    "$slider_tts_header": "$option_label",
+                    "$slider_tts_header_binding_type": "global",
+                    "$slider_enabled_binding_name": "$option_enabled_binding_name",
+                    "$slider_enabled_binding_type": "global",
+                    "$slider_box_layout": "modal-form.slider_button_layout",
+                    "$slider_box_hover_layout": "modal-form.slider_button_hover_layout",
+                    "enabled": "$enabled",
+                    "variables": [
+                        {
+                            "requires": "(not $option_enabled_binding_name or not $enabled)",
+                            "$slider_enabled_binding_name": "#not_data_bound",
+                            "$slider_enabled_binding_type": "none"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "slider_button_layout@common.slider_button_state": {
+        "texture": "textures/ui/common/buttons/common/default"
+    },
+    "slider_button_hover_layout@common.slider_button_state": {
+        "texture": "textures/ui/common/buttons/common/hover"
+    },
+    "custom_step_slider@modal-form.custom_slider": {
+        "$option_label": "#custom_slider_step_text",
+        "$slider_name": "custom_slider_step",
+        "$slider_value_binding_name": "#custom_slider_step_value",
+        "$slider_tts_text_value": "#custom_slider_step_text_value",
+        "$slider_steps_binding_type": "collection",
+        "$slider_steps_binding_name": "#custom_slider_steps",
+        "$option_tooltip_binding_type": "collection",
+        "$option_tooltip_collection_name": "custom_form",
+        "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+        "$option_tooltip_area": "inside_header_panel",
+        "$option_tooltip_visible": true,
+        "$label_bindings": [
+            {
+                "binding_name": "#custom_slider_step_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "custom_dropdown": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "layer": 2,
+        "controls": [
+            {
+                "dropdown@settings_common.option_dropdown": {
+                    "$option_label": "#custom_text",
+                    "$dropdown_content": "modal-form.custom_dropdown_content",
+                    "$dropdown_area": "inside_header_panel",
+                    "$dropdown_name": "custom_dropdown",
+                    "$toggle_binding_type": "collection",
+                    "$toggle_grid_collection_name": "custom_form",
+                    "$options_dropdown_toggle_label_binding": "#dropdown_option_text",
+                    "$options_dropdown_toggle_label_binding_type": "collection",
+                    "$options_dropdown_toggle_label_binding_collection_name": "custom_form",
+                    "$option_tooltip_binding_type": "collection",
+                    "$option_tooltip_collection_name": "custom_form",
+                    "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+                    "$option_tooltip_area": "inside_header_panel",
+                    "$option_tooltip_visible": true,
+                    "$dropdown_scroll_content_size": [
+                        "100%",
+                        "200%"
+                    ],
+                    "$label_bindings": [
+                        {
+                            "binding_name": "#custom_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "custom_form"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "custom_dropdown_content@settings_common.option_radio_dropdown_group": {
+        "$radio_buttons": [],
+        "$toggle_focus_id_binding_type": "collection",
+        "$toggle_focus_id_collection_name": "custom_form",
+        "$toggle_focus_id_binding_name": "#custom_toggle_focus_id",
+        "$radio_factory": {
+            "name": "buttons",
+            "control_name": "modal-form.custom_dropdown_radio"
+        },
+        "$radio_collection_name": "custom_dropdown",
+        "$radio_bindings": [
+            {
+                "binding_name": "#custom_dropdown_length",
+                "binding_type": "collection",
+                "binding_name_override": "#collection_length",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    },
+    "custom_dropdown_radio@settings_common.radio_with_label": {
+        "$toggle_name": "custom_dropdown_radio_toggle",
+        "$toggle_state_binding_name": "#custom_radio_toggled",
+        "$toggle_binding_type": "collection",
+        "$toggle_grid_collection_name": "custom_dropdown",
+        "$toggle_collection_details_type": "collection_details",
+        "$radio_label_text": "#custom_radio_text",
+        "$radio_label_bindings": [
+            {
+                "binding_name": "#custom_radio_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_dropdown"
+            },
+            {
+                "binding_type": "collection_details"
+            }
+        ]
+    },
+    "custom_input@settings_common.option_text_edit": {
+        "$option_label": "#custom_text",
+        "$option_place_holder_text": "#custom_placeholder_text",
+        "$text_edit_box_placeholder_content_binding_name": "$option_place_holder_text",
+        "$text_edit_box_placeholder_content_binding_type": "collection",
+        "$text_edit_box_grid_collection_name": "custom_form",
+        "$max_text_edit_length": 100,
+        "$text_edit_box_content_binding_type": "collection",
+        "$text_edit_box_content_binding_name": "#custom_input_text",
+        "$option_binding_name": "#custom_input_text",
+        "$text_box_enabled_binding_name": "#custom_input_enabled",
+        "$text_box_name": "custom_input",
+        "$option_tooltip_binding_type": "collection",
+        "$option_tooltip_collection_name": "custom_form",
+        "$option_tooltip_text_binding_name": "#custom_tooltip_text",
+        "$option_tooltip_area": "inside_header_panel",
+        "$option_tooltip_visible": true,
+        "$label_bindings": [
+            {
+                "binding_name": "#custom_text",
+                "binding_type": "collection",
+                "binding_collection_name": "custom_form"
+            }
+        ]
+    }
+}

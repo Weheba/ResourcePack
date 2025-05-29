@@ -5,6 +5,7 @@
         "ui/menus/gamemodes/earthsmp/random_teleport_menu.json",
         "ui/menus/gamemodes/gamemodes_menu.json",
         "ui/menus/generic/long_form.json",
+        "ui/menus/generic/modal_form.json",
         "ui/menus/main/city_menu.json"
     ]
 }
