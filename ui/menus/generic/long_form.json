@@ -137,7 +137,7 @@
                                                         "shadow": "true",
                                                         "layer": 1,
                                                         "max_size": [
-                                                            "100% - 2px",
+                                                            "100% - 4px",
                                                             "default"
                                                         ]
                                                     }
