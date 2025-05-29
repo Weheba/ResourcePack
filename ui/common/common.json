@@ -438,8 +438,9 @@
                             }
                         },
                         {
-                            "form_content": {
+                            "pc_form_content": {
                                 "type": "panel",
+                                "ignored": "$touch",
                                 "size": [
                                     "100%cm",
                                     "100%cm"
@@ -486,6 +487,62 @@
                                             "max_size": [
                                                 "330px",
                                                 "200px"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "mobile_form_content": {
+                                "type": "panel",
+                                "ignored": "(not $touch)",
+                                "size": [
+                                    "100%cm",
+                                    "100%cm"
+                                ],
+                                "min_size": [
+                                    "225px",
+                                    "155px"
+                                ],
+                                "max_size": [
+                                    "340px",
+                                    "170px"
+                                ],
+                                "controls": [
+                                    {
+                                        "background": {
+                                            "type": "image",
+                                            "texture": "textures/ui/common/background",
+                                            "size": [
+                                                "100%sm + 10px",
+                                                "100%sm + 11px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "contents": {
+                                            "type": "panel",
+                                            "anchor_from": "top_middle",
+                                            "anchor_to": "top_middle",
+                                            "layer": 1,
+                                            "clips_children": true,
+                                            "controls": "$content_controls",
+                                            "offset": [
+                                                "0px",
+                                                "4.5px"
+                                            ],
+                                            "size": [
+                                                "100%c",
+                                                "100%c"
+                                            ],
+                                            "min_size": [
+                                                "215px",
+                                                "145px"
+                                            ],
+                                            "max_size": [
+                                                "330px",
+                                                "160px"
                                             ]
                                         }
                                     }
