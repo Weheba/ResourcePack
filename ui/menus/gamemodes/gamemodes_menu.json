@@ -18,40 +18,77 @@
                     ],
                     "controls": [
                         {
-                            "stack_panel": {
-                                "type": "stack_panel",
-                                "orientation": "vertical",
-                                "size": [
-                                    "100% - 30px",
+                            "scroll_panel@common.scrolling_panel": {
+                                "$show_background": false,
+                                "$scrolling_content": "gamemodes-menu.scroll_content",
+                                "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                                "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                                "$scroll_size": [
+                                    "5px",
+                                    "100% - 12px"
+                                ],
+                                "$scrolling_pane_size": [
+                                    "100%",
                                     "100% - 5px"
                                 ],
-                                "controls": [
-                                    {
-                                        "first_padding": {
-                                            "type": "panel",
-                                            "size": [
-                                                "0px",
-                                                "1.5px"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "description@gamemodes-menu.description": {}
-                                    },
-                                    {
-                                        "second_padding": {
-                                            "type": "panel",
-                                            "size": [
-                                                "0px",
-                                                "5px"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "button_grid@gamemodes-menu.button_panel": {}
-                                    }
+                                "$scrolling_pane_offset": [
+                                    "0px",
+                                    "2.5px"
+                                ],
+                                "$scroll_bar_left_padding_size": [
+                                    "0px",
+                                    "0px"
+                                ],
+                                "$scroll_bar_right_padding_size": [
+                                    "8px",
+                                    "0px"
                                 ]
                             }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "scroll_content": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%cm + 10px"
+        ],
+        "controls": [
+            {
+                "scroll_panel": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [
+                        "100% - 20px",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "first_padding": {
+                                "type": "panel",
+                                "size": [
+                                    "0px",
+                                    "1.5px"
+                                ]
+                            }
+                        },
+                        {
+                            "description@gamemodes-menu.description": {}
+                        },
+                        {
+                            "second_padding": {
+                                "type": "panel",
+                                "size": [
+                                    "0px",
+                                    "5px"
+                                ]
+                            }
+                        },
+                        {
+                            "button_grid@gamemodes-menu.button_panel": {}
                         }
                     ]
                 }
@@ -207,6 +244,7 @@
                     ],
                     "bindings": [
                         {
+                            "binding_condition": "once",
                             "binding_name": "#form_button_length",
                             "binding_name_override": "#maximum_grid_items"
                         }
