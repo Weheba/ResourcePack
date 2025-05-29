@@ -134,6 +134,7 @@
                                                         "anchor_from": "left_middle",
                                                         "anchor_to": "left_middle",
                                                         "text": "#form_text",
+                                                        "shadow": "true",
                                                         "layer": 1,
                                                         "max_size": [
                                                             "100% - 2px",
