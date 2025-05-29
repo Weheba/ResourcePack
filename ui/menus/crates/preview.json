@@ -321,6 +321,23 @@
     },
     "form_button_content": {
         "type": "panel",
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_texture"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_texture = ''))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_texture = 'loading'))",
+                "target_property_name": "#visible"
+            }
+        ],
         "controls": [
             {
                 "image": {
