@@ -1,6 +1,10 @@
 {
     "namespace": "earth-smp-rtp",
     "main@common-mineville.form_template": {
+        "$pc_size": [
+            "100%",
+            "163px"
+        ],
         "$title_bindings": [
             {
                 "binding_type": "view",
@@ -15,10 +19,6 @@
                     "offset": [
                         "0px",
                         "0.5px"
-                    ],
-                    "size": [
-                        "330px",
-                        "163px"
                     ],
                     "controls": [
                         {

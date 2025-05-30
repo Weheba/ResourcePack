@@ -16,10 +16,6 @@
     },
     "form_content_panel": {
         "type": "panel",
-        "size": [
-            "330px",
-            "205px"
-        ],
         "controls": [
             {
                 "scroll_panel@common.scrolling_panel": {

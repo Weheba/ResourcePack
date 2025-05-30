@@ -325,6 +325,14 @@
     "form_template": {
         "type": "panel",
         "$content_controls": [],
+        "$pc_size": [
+            "330px",
+            "200px"
+        ],
+        "$phone_size": [
+            "330px",
+            "160px"
+        ],
         "size": [
             "100%cm",
             "100%cm"
@@ -442,13 +450,14 @@
                             "pc_form_content": {
                                 "type": "panel",
                                 "visible": "(not $touch)",
+                                // "visible": "$touch",
                                 "size": [
                                     "100%cm",
                                     "100%cm"
                                 ],
                                 "min_size": [
                                     "225px",
-                                    "175px"
+                                    "170px"
                                 ],
                                 "max_size": [
                                     "340px",
@@ -475,15 +484,12 @@
                                             "controls": "$content_controls",
                                             "offset": [
                                                 "0px",
-                                                "4.5px"
+                                                "5px"
                                             ],
-                                            "size": [
-                                                "100%c",
-                                                "100%c"
-                                            ],
+                                            "size": "$pc_size",
                                             "min_size": [
                                                 "215px",
-                                                "165px"
+                                                "160px"
                                             ],
                                             "max_size": [
                                                 "330px",
@@ -498,13 +504,14 @@
                             "mobile_form_content": {
                                 "type": "panel",
                                 "visible": "$touch",
+                                // "visible": "(not $touch)",
                                 "size": [
                                     "100%cm",
-                                    "100%cm"
+                                    "170px"
                                 ],
                                 "min_size": [
                                     "225px",
-                                    "155px"
+                                    "150px"
                                 ],
                                 "max_size": [
                                     "340px",
@@ -533,13 +540,10 @@
                                                 "0px",
                                                 "4.5px"
                                             ],
-                                            "size": [
-                                                "100%c",
-                                                "100%c"
-                                            ],
+                                            "size": "$phone_size",
                                             "min_size": [
                                                 "215px",
-                                                "145px"
+                                                "140px"
                                             ],
                                             "max_size": [
                                                 "330px",
