@@ -181,6 +181,7 @@
                                 "pressed_control": "pressed",
                                 "locked_control": "locked",
                                 "sound_name": "random.click",
+                                "focus_enabled": true,
                                 "bindings": [
                                     {
                                         "binding_name": "#null",

@@ -14,6 +14,7 @@
             {
                 "button_control": {
                     "type": "button",
+                    "focus_enabled": true,
                     "default_control": "default",
                     "hover_control": "hover",
                     "pressed_control": "pressed",

@@ -103,6 +103,7 @@
         "hover_control": "hover",
         "pressed_control": "pressed",
         "sound_name": "random.click",
+        "focus_enabled": true,
         "size": [
             "100%",
             "35px"

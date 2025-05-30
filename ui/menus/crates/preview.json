@@ -405,6 +405,7 @@
                     "type": "button",
                     "default_control": "default",
                     "hover_control": "hover",
+                    "focus_enabled": true,
                     "size": [
                         "100% - 3px",
                         "100% - 3px"

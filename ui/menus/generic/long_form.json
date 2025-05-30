@@ -206,6 +206,7 @@
                     "pressed_control": "pressed",
                     "locked_control": "locked",
                     "sound_name": "random.click",
+                    "focus_enabled": true,
                     "size": [
                         "100% - 5px",
                         "35px"
