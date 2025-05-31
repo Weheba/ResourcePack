@@ -27,13 +27,9 @@
                         "5px",
                         "100% - 12px"
                     ],
-                    "$scrolling_pane_size": [
-                        "100%",
-                        "100% - 5px"
-                    ],
                     "$scrolling_pane_offset": [
                         "0px",
-                        "2.5px"
+                        "0px"
                     ],
                     "$scroll_bar_left_padding_size": [
                         "0px",
@@ -59,6 +55,7 @@
                     "type": "stack_panel",
                     "anchor_from": "center",
                     "anchor_to": "center",
+                    "collection_name": "form_buttons",
                     "size": [
                         "100% - 10px",
                         "100%c"
@@ -76,75 +73,102 @@
                         {
                             "body_panel": {
                                 "type": "panel",
+                                "collection_index": 47,
                                 "size": [
-                                    "100% - 5px",
-                                    "100%cm"
-                                ],
-                                "bindings": [
-                                    {
-                                        "binding_type": "view",
-                                        "source_property_name": "(not (#form_text = ''))",
-                                        "target_property_name": "#visible"
-                                    }
+                                    "100%",
+                                    "100%cm + 10px"
                                 ],
                                 "controls": [
                                     {
-                                        "background": {
-                                            "type": "image",
-                                            "texture": "textures/ui/common/light_field",
-                                            "offset": [
-                                                "2.5px",
-                                                "0px"
-                                            ],
+                                        "panel": {
+                                            "type": "panel",
                                             "size": [
                                                 "100%",
-                                                "100%sm + 10px"
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "label_panel": {
-                                            "type": "panel",
-                                            "offset": [
-                                                "4.5px",
-                                                "0px"
-                                            ],
-                                            "size": [
-                                                "100% - 10px",
                                                 "100%cm"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection_details",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not (#form_button_text = ''))",
+                                                    "target_property_name": "#visible"
+                                                }
                                             ],
                                             "controls": [
                                                 {
-                                                    "label": {
-                                                        "type": "label",
-                                                        "anchor_from": "left_middle",
-                                                        "anchor_to": "left_middle",
-                                                        "text": "#form_text",
-                                                        "layer": 1,
-                                                        "max_size": [
-                                                            "100% - 2px",
-                                                            "default"
+                                                    "label_panel": {
+                                                        "type": "stack_panel",
+                                                        "orientation": "vertical",
+                                                        "offset": [
+                                                            "4.5px",
+                                                            "0px"
+                                                        ],
+                                                        "size": [
+                                                            "100% - 10px",
+                                                            "100%c"
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "label": {
+                                                                    "type": "label",
+                                                                    "anchor_from": "left_middle",
+                                                                    "anchor_to": "left_middle",
+                                                                    "text": "#text",
+                                                                    "max_size": [
+                                                                        "100% - 2px",
+                                                                        "default"
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons",
+                                                                            "binding_name": "#form_button_text",
+                                                                            "binding_name_override": "#text"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "background": {
+                                                                                "type": "image",
+                                                                                "texture": "textures/ui/common/light_field",
+                                                                                "anchor_from": "left_middle",
+                                                                                "anchor_to": "left_middle",
+                                                                                "layer": -1,
+                                                                                "offset": [
+                                                                                    "-7px",
+                                                                                    "0px"
+                                                                                ],
+                                                                                "size": [
+                                                                                    "315px",
+                                                                                    "100% + 10px"
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "padding": {
+                                                                    "type": "panel",
+                                                                    "size": [
+                                                                        "0px",
+                                                                        "5px"
+                                                                    ]
+                                                                }
+                                                            }
                                                         ]
                                                     }
                                                 }
                                             ]
                                         }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "padding": {
-                                "type": "panel",
-                                "size": [
-                                    "0px",
-                                    "2px"
-                                ],
-                                "bindings": [
-                                    {
-                                        "binding_type": "view",
-                                        "source_property_name": "(not (#form_text = ''))",
-                                        "target_property_name": "#visible"
                                     }
                                 ]
                             }
@@ -161,12 +185,12 @@
                                 "controls": [
                                     {
                                         "left_button@crate-preview.form_button": {
-                                            "collection_index": 0
+                                            "collection_index": 48
                                         }
                                     },
                                     {
                                         "right_button@crate-preview.form_button": {
-                                            "collection_index": 1
+                                            "collection_index": 49
                                         }
                                     }
                                 ]
@@ -187,9 +211,10 @@
                                 ],
                                 "bindings": [
                                     {
+                                        "binding_type": "view",
                                         "binding_condition": "once",
-                                        "binding_name": "#form_button_length",
-                                        "binding_name_override": "#maximum_grid_items"
+                                        "source_property_name": "(#form_text * 1)",
+                                        "target_property_name": "#maximum_grid_items"
                                     }
                                 ]
                             }
@@ -355,11 +380,6 @@
                             "binding_collection_name": "form_buttons",
                             "binding_name": "#form_button_texture_file_system",
                             "binding_name_override": "#texture_file_system"
-                        },
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "(not (#form_button_texture = 'loading'))",
-                            "target_property_name": "#visible"
                         }
                     ]
                 }
@@ -372,29 +392,6 @@
             "16.6%",
             "52px"
         ],
-        "bindings": [
-            {
-                "binding_name": "#null",
-                "binding_type": "collection",
-                "binding_condition": "none",
-                "binding_collection_name": "form_buttons"
-            },
-            {
-                "binding_name": "#null",
-                "binding_type": "collection_details",
-                "binding_collection_name": "form_buttons"
-            },
-            {
-                "binding_type": "collection",
-                "binding_collection_name": "form_buttons",
-                "binding_name": "#form_button_text"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "((#form_button_text - '#button') = #form_button_text)",
-                "target_property_name": "#visible"
-            }
-        ],
         "controls": [
             {
                 "button": {
@@ -405,6 +402,29 @@
                     "size": [
                         "100% - 3px",
                         "100% - 3px"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#null",
+                            "binding_type": "collection",
+                            "binding_condition": "none",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_name": "#null",
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_text = ''))",
+                            "target_property_name": "#visible"
+                        }
                     ],
                     "controls": [
                         {
@@ -469,13 +489,13 @@
                 "binding_name": "#form_button_texture"
             },
             {
-                "binding_type": "collection",
-                "binding_collection_name": "form_buttons",
-                "binding_name": "#form_button_texture_file_system"
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_texture = ''))",
+                "target_property_name": "#visible"
             },
             {
                 "binding_type": "view",
-                "source_property_name": "(not (#form_button_texture = ''))",
+                "source_property_name": "(not (#form_button_texture = 'loading'))",
                 "target_property_name": "#visible"
             }
         ],
