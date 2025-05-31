@@ -414,7 +414,7 @@
         "layer": 2,
         "controls": [
             {
-                "dropdown@settings_common.option_dropdown": {
+                "dropdown@modal-form.option_dropdown": {
                     "$option_label": "#custom_text",
                     "$dropdown_content": "modal-form.custom_dropdown_content",
                     "$dropdown_area": "inside_header_panel",
@@ -441,6 +441,73 @@
                         }
                     ]
                 }
+            }
+        ]
+    },
+    "option_dropdown_no_scroll@settings_common.option_generic": {
+        "$control_name": "modal-form.option_dropdown_control_no_scroll"
+    },
+    "option_dropdown_control_no_scroll@modal-form.option_dropdown_control": {
+        "$option_dropdown_type": "common.dropdown_no_scrollpanel"
+    },
+    "option_dropdown@settings_common.option_generic": {
+        "$control_name": "modal-form.option_dropdown_control"
+    },
+    "option_dropdown_control": {
+        "type": "panel",
+        "$option_dropdown_size|default": [
+            "100%",
+            30
+        ],
+        "size": "$option_dropdown_size",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "$dropdown_background_control|default": "common.dropdown_background",
+        "$option_dropdown_type|default": "common.dropdown",
+        "$option_label|default": "",
+        "layer": 2,
+        "controls": [
+            {
+                "dropdown@$option_dropdown_type": {
+                    "$dropdown_toggle": "modal-form.options_dropdown_toggle_control",
+                    "$dropdown_background": "$dropdown_background_control",
+                    // you need to specify the content with "$dropdown_content"
+                    "$dropdown_content|default": "unset_dropdown_content",
+                    // you need to specify a unique name with "$dropdown_name"
+                    "$dropdown_name|default": "unset $dropdown_name",
+                    // you need to specify a the label with "$options_dropdown_toggle_label_binding"
+                    "$options_dropdown_toggle_label_binding|default": "unset $options_dropdown_toggle_label_text",
+                    "$locked_alpha": 0.5,
+                    "$toggle_tts_header": "$option_label"
+                }
+            }
+        ]
+    },
+    "options_dropdown_toggle_control@common_toggles.light_template_toggle": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$button_type_panel|default": "settings_common.default_options_dropdown_toggle_button_state_content",
+        "$unchecked_hover_control": "common_toggles.toggle_unchecked_hover_with_chevron",
+        "$checked_hover_control": "common_toggles.toggle_checked_hover_with_chevron",
+        "$default_texture": "textures/ui/common/buttons/common/default",
+        "$hover_texture": "textures/ui/common/buttons/common/hover",
+        "$pressed_texture": "textures/ui/common/buttons/common/hover",
+        "$pressed_no_hover_texture": "textures/ui/common/buttons/common/pressed",
+        "$default_text_color|default": "white",
+        "$hover_text_color|default": "white",
+        "$default_border_visible": false,
+        "$hover_border_visible": false,
+        "enabled": "$enabled",
+        "$toggle_enabled_binding_name|default": "$option_enabled_binding_name",
+        "$toggle_enabled_binding_type|default": "global",
+        "$toggle_binding_type|default": "global",
+        "variables": [
+            {
+                "requires": "(not $option_enabled_binding_name or not $enabled)",
+                "$toggle_enabled_binding_name": "#not_data_bound",
+                "$toggle_enabled_binding_type": "none"
             }
         ]
     },
@@ -478,6 +545,90 @@
             },
             {
                 "binding_type": "collection_details"
+            }
+        ]
+    },
+    "radio_visuals": {
+        "type": "panel",
+        "size": [
+            "100%",
+            16
+        ],
+        "$alpha|default": 1.0,
+        "$radio_label_bindings|default": [],
+        "$radio_label_color|default": "$main_header_text_color",
+        "$radio_label_font_type|default": "default",
+        "$no_label|default": false,
+        "$selected|default": false,
+        "$hovered|default": false,
+        "variables": [
+            {
+                "requires": "$selected",
+                "$highlight_image": "textures/ui/dropDownSelectBG"
+            },
+            {
+                "requires": "$hovered",
+                "$highlight_image": "textures/ui/dropDownHoverBG"
+            }
+        ],
+        "controls": [
+            {
+                "radio_image": {
+                    "type": "image",
+                    "texture": "$radio_texture",
+                    "alpha": "$alpha",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": [
+                        10,
+                        10
+                    ],
+                    "layer": 2
+                }
+            },
+            {
+                "radio_label": {
+                    "ignored": "($no_label)",
+                    "type": "label",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "text": "$radio_label_text",
+                    "font_type": "$radio_label_font_type",
+                    "color": "$radio_label_color",
+                    "offset": [
+                        16,
+                        0.5
+                    ],
+                    "size": [
+                        "100% - 16px",
+                        "default"
+                    ],
+                    "alpha": "$alpha",
+                    "bindings": "$radio_label_bindings",
+                    "layer": 2,
+                    "$tts_override_control_value|default": "$radio_label_text",
+                    "tts_override_control_value": "$tts_override_control_value"
+                }
+            },
+            {
+                "accessibility_selection_highlight": {
+                    "type": "image",
+                    "$selection_highlight_size|default": [
+                        "100% + 4px",
+                        "100% + 2px"
+                    ],
+                    "size": "$selection_highlight_size",
+                    "$selection_highlight_offset|default": [
+                        0,
+                        0
+                    ],
+                    "offset": "$selection_highlight_offset",
+                    "ignored": "(not $selected and not $hovered)",
+                    "$highlight_image|default": "",
+                    "texture": "$highlight_image",
+                    "tiled": true,
+                    "layer": 1
+                }
             }
         ]
     },
