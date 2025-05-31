@@ -21,111 +21,16 @@
         "controls": [
             {
                 "description@city-menu-common.description_field": {
-                    "collection_index": 5
+                    "collection_index": 44
                 }
             },
             {
                 "field@city-menu-common.text_image_field": {
-                    "collection_index": 6
+                    "collection_index": 43
                 }
             },
             {
-                "buttons@other-main-menu.button_stack_panel": {}
-            }
-        ]
-    },
-    "button_stack_panel": {
-        "type": "stack_panel",
-        "size": [
-            "100%",
-            "100%c"
-        ],
-        "controls": [
-            {
-                "first_row": {
-                    "type": "stack_panel",
-                    "orientation": "horizontal",
-                    "collection_name": "form_buttons",
-                    "size": [
-                        "100%",
-                        "30px"
-                    ],
-                    "controls": [
-                        {
-                            "first_button@city-menu-common.field_button": {
-                                "collection_index": 7,
-                                "$button_color": "white",
-                                "$text_color": [
-                                    0.3,
-                                    0.3,
-                                    0.3
-                                ],
-                                "size": [
-                                    "50%",
-                                    "100%"
-                                ]
-                            }
-                        },
-                        {
-                            "second_button@city-menu-common.field_button": {
-                                "collection_index": 8,
-                                "$button_color": "white",
-                                "$text_color": [
-                                    0.3,
-                                    0.3,
-                                    0.3
-                                ],
-                                "size": [
-                                    "50%",
-                                    "100%"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "second_row": {
-                    "type": "stack_panel",
-                    "orientation": "horizontal",
-                    "collection_name": "form_buttons",
-                    "size": [
-                        "100%",
-                        "30px"
-                    ],
-                    "controls": [
-                        {
-                            "first_button@city-menu-common.field_button": {
-                                "collection_index": 9,
-                                "$button_color": "white",
-                                "$text_color": [
-                                    0.3,
-                                    0.3,
-                                    0.3
-                                ],
-                                "size": [
-                                    "50%",
-                                    "100%"
-                                ]
-                            }
-                        },
-                        {
-                            "second_button@city-menu-common.field_button": {
-                                "collection_index": 10,
-                                "$button_color": "white",
-                                "$text_color": [
-                                    0.3,
-                                    0.3,
-                                    0.3
-                                ],
-                                "size": [
-                                    "50%",
-                                    "100%"
-                                ]
-                            }
-                        }
-                    ]
-                }
+                "buttons@city-menu-common.button_grid": {}
             }
         ]
     }

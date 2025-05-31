@@ -21,17 +21,17 @@
         "controls": [
             {
                 "chunk_description@city-menu-common.description_field": {
-                    "collection_index": 5
+                    "collection_index": 44
                 }
             },
             {
                 "chunk_field@city-menu-common.text_image_field": {
-                    "collection_index": 6
+                    "collection_index": 43
                 }
             },
             {
                 "create_city_button@city-menu-common.field_button": {
-                    "collection_index": 7,
+                    "collection_index": 42,
                     "$button_color": "green",
                     "size": [
                         "100%",
@@ -41,16 +41,16 @@
             },
             {
                 "city_description@city-menu-common.description_field": {
-                    "collection_index": 9
+                    "collection_index": 41
                 }
             },
             {
                 "city_field@city-menu-common.text_image_field": {
-                    "collection_index": 10
+                    "collection_index": 40
                 }
             },
             {
-                "city_buttons@city-menu-create-city.city_button_stack_panel": {}
+                "city_buttons@city-menu-common.button_grid": {}
             }
         ]
     },

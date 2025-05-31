@@ -62,27 +62,27 @@
         "controls": [
             {
                 "city_tab@city-menu-common.navigation_button": {
-                    "collection_index": 0
+                    "collection_index": 49
                 }
             },
             {
                 "teleport_tab@city-menu-common.navigation_button": {
-                    "collection_index": 1
+                    "collection_index": 48
                 }
             },
             {
                 "economy_tab@city-menu-common.navigation_button": {
-                    "collection_index": 2
+                    "collection_index": 47
                 }
             },
             {
                 "cosmetics_tab@city-menu-common.navigation_button": {
-                    "collection_index": 3
+                    "collection_index": 46
                 }
             },
             {
                 "quick_actions_tab@city-menu-common.navigation_button": {
-                    "collection_index": 4
+                    "collection_index": 45
                 }
             }
         ]
@@ -575,6 +575,39 @@
                     ]
                 }
             }
+        ]
+    },
+    "button_grid": {
+        "type": "grid",
+        "grid_item_template": "city-menu-common.grid_button",
+        "collection_name": "form_buttons",
+        "grid_fill_direction": "vertical",
+        "grid_rescaling_type": "horizontal",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "binding_condition": "once",
+                "source_property_name": "(#form_text * 1)",
+                "target_property_name": "#maximum_grid_items"
+            }
+        ]
+    },
+    "grid_button@city-menu-common.field_button": {
+        "$button_color": "white",
+        "$text_color": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "size": [
+            "50%",
+            "30px"
         ]
     }
 }
