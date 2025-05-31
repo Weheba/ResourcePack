@@ -1,0 +1,132 @@
+{
+    "namespace": "other-main-menu",
+    "main@city-menu-common.menu_template": {
+        "$content_control": "other-main-menu.content",
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/other_main_menu:')",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "collection_name": "form_buttons",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "description@city-menu-common.description_field": {
+                    "collection_index": 5
+                }
+            },
+            {
+                "field@city-menu-common.text_image_field": {
+                    "collection_index": 6
+                }
+            },
+            {
+                "buttons@other-main-menu.button_stack_panel": {}
+            }
+        ]
+    },
+    "button_stack_panel": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "first_row": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ],
+                    "controls": [
+                        {
+                            "first_button@city-menu-common.field_button": {
+                                "collection_index": 7,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "second_button@city-menu-common.field_button": {
+                                "collection_index": 8,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "second_row": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ],
+                    "controls": [
+                        {
+                            "first_button@city-menu-common.field_button": {
+                                "collection_index": 9,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "second_button@city-menu-common.field_button": {
+                                "collection_index": 10,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

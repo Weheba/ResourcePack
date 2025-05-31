@@ -1,0 +1,195 @@
+{
+    "namespace": "city-menu-create-city",
+    "main@city-menu-common.menu_template": {
+        "$content_control": "city-menu-create-city.content",
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/city/create_city_menu:')",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "content": {
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "collection_name": "form_buttons",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "chunk_description@city-menu-common.description_field": {
+                    "collection_index": 5
+                }
+            },
+            {
+                "chunk_field@city-menu-common.text_image_field": {
+                    "collection_index": 6
+                }
+            },
+            {
+                "create_city_button@city-menu-common.field_button": {
+                    "collection_index": 7,
+                    "$button_color": "green",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ]
+                }
+            },
+            {
+                "city_description@city-menu-common.description_field": {
+                    "collection_index": 9
+                }
+            },
+            {
+                "city_field@city-menu-common.text_image_field": {
+                    "collection_index": 10
+                }
+            },
+            {
+                "city_buttons@city-menu-create-city.city_button_stack_panel": {}
+            }
+        ]
+    },
+    "city_button_stack_panel": {
+        "type": "stack_panel",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "controls": [
+            {
+                "first_row": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ],
+                    "controls": [
+                        {
+                            "first_button@city-menu-common.field_button": {
+                                "collection_index": 11,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "second_button@city-menu-common.field_button": {
+                                "collection_index": 12,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "second_row": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ],
+                    "controls": [
+                        {
+                            "first_button@city-menu-common.field_button": {
+                                "collection_index": 13,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "second_button@city-menu-common.field_button": {
+                                "collection_index": 14,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "third_row": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "30px"
+                    ],
+                    "controls": [
+                        {
+                            "first_button@city-menu-common.field_button": {
+                                "collection_index": 15,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "second_button@city-menu-common.field_button": {
+                                "collection_index": 16,
+                                "$button_color": "white",
+                                "$text_color": [
+                                    0.3,
+                                    0.3,
+                                    0.3
+                                ],
+                                "size": [
+                                    "50%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
