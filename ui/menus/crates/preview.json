@@ -122,6 +122,7 @@
                                                                     "anchor_from": "left_middle",
                                                                     "anchor_to": "left_middle",
                                                                     "text": "#text",
+                                                                    "shadow": true,
                                                                     "max_size": [
                                                                         "100% - 2px",
                                                                         "default"
