@@ -217,11 +217,6 @@
                                                 {
                                                     "image": {
                                                         "type": "image",
-                                                        "texture": "#texture",
-                                                        "size": [
-                                                            "100% - 6px",
-                                                            "100% - 6px"
-                                                        ],
                                                         "bindings": [
                                                             {
                                                                 "binding_type": "collection",
