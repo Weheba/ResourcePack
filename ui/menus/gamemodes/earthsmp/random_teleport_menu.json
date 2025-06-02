@@ -2,7 +2,7 @@
     "namespace": "earth-smp-rtp",
     "main@common-mineville.form_template": {
         "$pc_size": [
-            "330",
+            "330px",
             "163px"
         ],
         "$title_bindings": [
