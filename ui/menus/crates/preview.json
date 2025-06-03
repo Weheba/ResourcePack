@@ -105,15 +105,14 @@
                                             "controls": [
                                                 {
                                                     "label_panel": {
-                                                        "type": "stack_panel",
-                                                        "orientation": "vertical",
+                                                        "type": "panel",
                                                         "offset": [
                                                             "4.5px",
                                                             "0px"
                                                         ],
                                                         "size": [
                                                             "100% - 10px",
-                                                            "100%c"
+                                                            "100%cm"
                                                         ],
                                                         "controls": [
                                                             {
@@ -135,24 +134,23 @@
                                                                             "binding_name_override": "#text"
                                                                         }
                                                                     ],
-                                                                    "controls": [
-                                                                        {
-                                                                            "background": {
-                                                                                "type": "image",
-                                                                                "texture": "textures/ui/common/light_field",
-                                                                                "anchor_from": "left_middle",
-                                                                                "anchor_to": "left_middle",
-                                                                                "layer": -1,
-                                                                                "offset": [
-                                                                                    "-7px",
-                                                                                    "0px"
-                                                                                ],
-                                                                                "size": [
-                                                                                    "315px",
-                                                                                    "100% + 10px"
-                                                                                ]
-                                                                            }
-                                                                        }
+                                                                    "controls": []
+                                                                }
+                                                            },
+                                                            {
+                                                                "background": {
+                                                                    "type": "image",
+                                                                    "texture": "textures/ui/common/light_field",
+                                                                    "anchor_from": "left_middle",
+                                                                    "anchor_to": "left_middle",
+                                                                    "layer": -1,
+                                                                    "offset": [
+                                                                        "-7px",
+                                                                        "0px"
+                                                                    ],
+                                                                    "size": [
+                                                                        "100% + 5px",
+                                                                        "100%sm + 10px"
                                                                     ]
                                                                 }
                                                             },
@@ -229,7 +227,7 @@
         "type": "panel",
         "size": [
             "50%",
-            "52px"
+            "100%cm"
         ],
         "controls": [
             {
@@ -241,7 +239,7 @@
                     "sound_name": "random.click",
                     "size": [
                         "100% - 5px",
-                        "100% - 5px"
+                        "100%cm"
                     ],
                     "bindings": [
                         {
@@ -273,6 +271,10 @@
                             "default": {
                                 "type": "image",
                                 "texture": "textures/ui/common/buttons/common/default",
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
                                 "controls": [
                                     {
                                         "content@crate-preview.form_button_content": {
@@ -289,6 +291,10 @@
                             "hover": {
                                 "type": "image",
                                 "texture": "textures/ui/common/buttons/common/hover",
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
                                 "controls": [
                                     {
                                         "content@crate-preview.form_button_content": {
@@ -299,17 +305,28 @@
                                         }
                                     },
                                     {
-                                        "hover_text": {
-                                            "type": "custom",
-                                            "renderer": "hover_text_renderer",
-                                            "allow_clipping": false,
-                                            "layer": 7,
-                                            "bindings": [
+                                        "hover_text_panel": {
+                                            "type": "panel",
+                                            "size": [
+                                                "0px",
+                                                "0px"
+                                            ],
+                                            "controls": [
                                                 {
-                                                    "binding_type": "collection",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_name": "#form_button_text",
-                                                    "binding_name_override": "#hover_text"
+                                                    "hover_text": {
+                                                        "type": "custom",
+                                                        "renderer": "hover_text_renderer",
+                                                        "allow_clipping": false,
+                                                        "layer": 7,
+                                                        "bindings": [
+                                                            {
+                                                                "binding_type": "collection",
+                                                                "binding_collection_name": "form_buttons",
+                                                                "binding_name": "#form_button_text",
+                                                                "binding_name_override": "#hover_text"
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -321,6 +338,10 @@
                             "pressed": {
                                 "type": "image",
                                 "texture": "textures/ui/common/buttons/common/pressed",
+                                "size": [
+                                    "100%",
+                                    "100%cm"
+                                ],
                                 "controls": [
                                     {
                                         "content@crate-preview.form_button_content": {}
@@ -343,6 +364,11 @@
     },
     "form_button_content": {
         "type": "panel",
+        "layer": 2,
+        "size": [
+            "100%",
+            "100%cm + 6px"
+        ],
         "bindings": [
             {
                 "binding_type": "collection",
@@ -366,8 +392,8 @@
                     "type": "image",
                     "layer": 1,
                     "size": [
-                        "100%y",
-                        "100% - 6.5px"
+                        "100% - 4px",
+                        "27.83%x"
                     ],
                     "bindings": [
                         {
