@@ -3,7 +3,11 @@
     "main@common-mineville.form_template": {
         "$pc_size": [
             "330px",
-            "163px"
+            "160px"
+        ],
+        "$content_offset": [
+            "0px",
+            "5px"
         ],
         "$title_bindings": [
             {
@@ -16,10 +20,6 @@
             {
                 "content_panel": {
                     "type": "panel",
-                    "offset": [
-                        "0px",
-                        "0.5px"
-                    ],
                     "controls": [
                         {
                             "image": {

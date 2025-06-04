@@ -325,6 +325,10 @@
     "form_template": {
         "type": "panel",
         "$content_controls": [],
+        "$content_offset": [
+            "0px",
+            "4.5px"
+        ],
         "$pc_size": [
             "330px",
             "200px"
@@ -482,10 +486,7 @@
                                             "layer": 1,
                                             "clips_children": true,
                                             "controls": "$content_controls",
-                                            "offset": [
-                                                "0px",
-                                                "4.5px"
-                                            ],
+                                            "offset": "$content_offset",
                                             "size": "$pc_size",
                                             "min_size": [
                                                 "215px",
