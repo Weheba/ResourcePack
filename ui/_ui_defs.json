@@ -1,6 +1,7 @@
 {
     "ui_defs": [
         "ui/common/common.json",
+        "ui/menus/crates/menu.json",
         "ui/menus/crates/preview.json",
         "ui/menus/gamemodes/earthsmp/random_teleport_menu.json",
         "ui/menus/gamemodes/gamemodes_menu.json",

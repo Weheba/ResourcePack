@@ -72,6 +72,20 @@
                 }
             },
             {
+                "crate_menu@crate-menu.main": {
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '@mineville/crate_menu') = #title_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
                 "crate_preview@crate-preview.main": {
                     "bindings": [
                         {
