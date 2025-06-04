@@ -326,6 +326,16 @@
                                         "binding_name": "#null",
                                         "binding_type": "collection_details",
                                         "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "((#form_button_text - '#locked') = #form_button_text)",
+                                        "target_property_name": "#enabled"
                                     }
                                 ],
                                 "button_mappings": [
@@ -344,33 +354,13 @@
                                     {
                                         "default": {
                                             "type": "image",
-                                            "texture": "#texture",
-                                            "bindings": [
-                                                {
-                                                    "binding_type": "collection",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_name": "#form_button_texture"
-                                                },
-                                                {
-                                                    "binding_type": "view",
-                                                    "source_property_name": "('textures/ui/common/buttons/' + $button_color + '/default' - #form_button_texture)",
-                                                    "target_property_name": "#texture"
-                                                }
-                                            ],
+                                            "texture": "('textures/ui/common/buttons/' + $button_color + '/default')",
                                             "controls": [
                                                 {
-                                                    "label": {
-                                                        "type": "label",
-                                                        "text": "#text",
-                                                        "color": "$text_color",
-                                                        "layer": 1,
-                                                        "bindings": [
-                                                            {
-                                                                "binding_type": "collection",
-                                                                "binding_collection_name": "form_buttons",
-                                                                "binding_name": "#form_button_text",
-                                                                "binding_name_override": "#text"
-                                                            }
+                                                    "contents@city-menu-common.field_button_content": {
+                                                        "offset": [
+                                                            "0px",
+                                                            "-1px"
                                                         ]
                                                     }
                                                 }
@@ -380,33 +370,13 @@
                                     {
                                         "hover": {
                                             "type": "image",
-                                            "texture": "#texture",
-                                            "bindings": [
-                                                {
-                                                    "binding_type": "collection",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_name": "#form_button_texture"
-                                                },
-                                                {
-                                                    "binding_type": "view",
-                                                    "source_property_name": "('textures/ui/common/buttons/' + $button_color + '/hover' - #form_button_texture)",
-                                                    "target_property_name": "#texture"
-                                                }
-                                            ],
+                                            "texture": "('textures/ui/common/buttons/' + $button_color + '/hover')",
                                             "controls": [
                                                 {
-                                                    "label": {
-                                                        "type": "label",
-                                                        "text": "#text",
-                                                        "color": "$text_color",
-                                                        "layer": 1,
-                                                        "bindings": [
-                                                            {
-                                                                "binding_type": "collection",
-                                                                "binding_collection_name": "form_buttons",
-                                                                "binding_name": "#form_button_text",
-                                                                "binding_name_override": "#text"
-                                                            }
+                                                    "contents@city-menu-common.field_button_content": {
+                                                        "offset": [
+                                                            "0px",
+                                                            "-1px"
                                                         ]
                                                     }
                                                 }
@@ -416,39 +386,10 @@
                                     {
                                         "pressed": {
                                             "type": "image",
-                                            "texture": "#texture",
-                                            "bindings": [
-                                                {
-                                                    "binding_type": "collection",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_name": "#form_button_texture"
-                                                },
-                                                {
-                                                    "binding_type": "view",
-                                                    "source_property_name": "('textures/ui/common/buttons/' + $button_color + '/pressed' - #form_button_texture)",
-                                                    "target_property_name": "#texture"
-                                                }
-                                            ],
+                                            "texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')",
                                             "controls": [
                                                 {
-                                                    "label": {
-                                                        "type": "label",
-                                                        "text": "#text",
-                                                        "color": "$text_color",
-                                                        "layer": 1,
-                                                        "offset": [
-                                                            "0px",
-                                                            "1px"
-                                                        ],
-                                                        "bindings": [
-                                                            {
-                                                                "binding_type": "collection",
-                                                                "binding_collection_name": "form_buttons",
-                                                                "binding_name": "#form_button_text",
-                                                                "binding_name_override": "#text"
-                                                            }
-                                                        ]
-                                                    }
+                                                    "contents@city-menu-common.field_button_content": {}
                                                 },
                                                 {
                                                     "overlay": {
@@ -464,39 +405,10 @@
                                     {
                                         "locked": {
                                             "type": "image",
-                                            "texture": "#texture",
-                                            "bindings": [
-                                                {
-                                                    "binding_type": "collection",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_name": "#form_button_texture"
-                                                },
-                                                {
-                                                    "binding_type": "view",
-                                                    "source_property_name": "('textures/ui/common/buttons/' + $button_color + '/pressed' - #form_button_texture)",
-                                                    "target_property_name": "#texture"
-                                                }
-                                            ],
+                                            "texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')",
                                             "controls": [
                                                 {
-                                                    "label": {
-                                                        "type": "label",
-                                                        "text": "#text",
-                                                        "color": "$text_color",
-                                                        "layer": 1,
-                                                        "offset": [
-                                                            "0px",
-                                                            "1px"
-                                                        ],
-                                                        "bindings": [
-                                                            {
-                                                                "binding_type": "collection",
-                                                                "binding_collection_name": "form_buttons",
-                                                                "binding_name": "#form_button_text",
-                                                                "binding_name_override": "#text"
-                                                            }
-                                                        ]
-                                                    }
+                                                    "contents@city-menu-common.field_button_content": {}
                                                 },
                                                 {
                                                     "overlay": {
@@ -508,6 +420,105 @@
                                                 }
                                             ]
                                         }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "field_button_content": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "image_panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_texture"
+                        },
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_texture_file_system"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = ''))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = 'loading'))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "layer": 1,
+                                "size": [
+                                    "100% - 8px",
+                                    "100% - 8px"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture",
+                                        "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture_file_system",
+                                        "binding_name_override": "#texture_file_system"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "label_panel": {
+                    "type": "panel",
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "#text",
+                                "color": "$text_color",
+                                "text_alignment": "center",
+                                "layer": 1,
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(#form_button_text - '#locked')",
+                                        "target_property_name": "#text"
                                     }
                                 ]
                             }
