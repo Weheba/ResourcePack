@@ -262,7 +262,7 @@
                                                                         {
                                                                             "overlay": {
                                                                                 "type": "image",
-                                                                                "layer": 1,
+                                                                                "layer": 2,
                                                                                 "alpha": 0.75,
                                                                                 "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
                                                                             }
@@ -302,7 +302,7 @@
                                                         "type": "custom",
                                                         "renderer": "hover_text_renderer",
                                                         "allow_clipping": false,
-                                                        "layer": 2,
+                                                        "layer": 3,
                                                         "bindings": [
                                                             {
                                                                 "binding_type": "collection",
@@ -346,7 +346,7 @@
                                                                         {
                                                                             "overlay": {
                                                                                 "type": "image",
-                                                                                "layer": 1,
+                                                                                "layer": 2,
                                                                                 "alpha": 0.75,
                                                                                 "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
                                                                             }

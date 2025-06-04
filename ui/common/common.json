@@ -58,7 +58,7 @@
                                             "renderer": "hover_text_renderer",
                                             "bindings": "$hover_text_bindings",
                                             "allow_clipping": false,
-                                            "layer": 8
+                                            "layer": 20
                                         }
                                     }
                                 ]
