@@ -6,6 +6,7 @@
         "$button_bindings": [],
         "$button_contents": [],
         "$hover_text_bindings": [],
+        "$button_color": "common",
         "size": [
             "20px",
             "20px"
@@ -37,14 +38,14 @@
                         {
                             "default": {
                                 "type": "image",
-                                "texture": "textures/ui/common/buttons/common/default",
+                                "texture": "('textures/ui/common/buttons/' + $button_color + '/default')",
                                 "controls": "$button_contents"
                             }
                         },
                         {
                             "hover": {
                                 "type": "image",
-                                "texture": "textures/ui/common/buttons/common/hover",
+                                "texture": "('textures/ui/common/buttons/' + $button_color + '/hover')",
                                 "controls": [
                                     {
                                         "contents": {
@@ -67,7 +68,7 @@
                         {
                             "pressed": {
                                 "type": "image",
-                                "texture": "textures/ui/common/buttons/common/pressed",
+                                "texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')",
                                 "controls": [
                                     {
                                         "contents": {
@@ -93,7 +94,7 @@
                         {
                             "locked": {
                                 "type": "image",
-                                "texture": "textures/ui/common/buttons/common/pressed",
+                                "texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')",
                                 "controls": [
                                     {
                                         "contents": {
@@ -139,6 +140,106 @@
                     "offset": [
                         "0px",
                         "-1px"
+                    ]
+                }
+            }
+        ]
+    },
+    "back_button_panel": {
+        "type": "stack_panel",
+        "orientation": "none",
+        "collection_name": "form_buttons",
+        "factory": {
+            "name": "buttons",
+            "control_name": "common-mineville.back_button"
+        },
+        "size": [
+            "100%cm",
+            "100%cm"
+        ],
+        "bindings": [
+            {
+                "binding_condition": "once",
+                "binding_name": "#form_button_length",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "back_button": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "size": [
+            "100%c",
+            "100%cm"
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_condition": "none",
+                "binding_name": "#null"
+            },
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#null"
+            },
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not ((#form_button_text - '#back_button') = #form_button_text))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "padding": {
+                    "type": "panel",
+                    "size": [
+                        "2px",
+                        "0px"
+                    ]
+                }
+            },
+            {
+                "button@common-mineville.form_button": {
+                    "$button_color": "green",
+                    "size": [
+                        "19px",
+                        "19px"
+                    ],
+                    "$button_contents": [
+                        {
+                            "cross": {
+                                "type": "image",
+                                "size": [
+                                    "100% - 12px",
+                                    "100% - 12px"
+                                ],
+                                "offset": [
+                                    "0px",
+                                    "-1px"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture",
+                                        "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture_file_system",
+                                        "binding_name_override": "#texture_file_system"
+                                    }
+                                ]
+                            }
+                        }
                     ]
                 }
             }
@@ -370,7 +471,7 @@
                                         "bar": {
                                             "type": "panel",
                                             "size": [
-                                                "100% - 21px",
+                                                "fill",
                                                 "default"
                                             ],
                                             "controls": [
@@ -427,6 +528,9 @@
                                         }
                                     },
                                     {
+                                        "back_button_panel@common-mineville.back_button_panel": {}
+                                    },
+                                    {
                                         "padding": {
                                             "type": "panel",
                                             "size": [
@@ -454,7 +558,6 @@
                             "pc_form_content": {
                                 "type": "panel",
                                 "visible": "(not $touch)",
-                                // "visible": "$touch",
                                 "size": [
                                     "100%cm",
                                     "100%cm"
@@ -505,7 +608,6 @@
                             "mobile_form_content": {
                                 "type": "panel",
                                 "visible": "$touch",
-                                // "visible": "(not $touch)",
                                 "size": [
                                     "100%cm",
                                     "170px"
