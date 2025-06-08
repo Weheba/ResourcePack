@@ -62,15 +62,6 @@
                     ],
                     "controls": [
                         {
-                            "padding": {
-                                "type": "panel",
-                                "size": [
-                                    "0px",
-                                    "2.5px"
-                                ]
-                            }
-                        },
-                        {
                             "body_panel": {
                                 "type": "panel",
                                 "collection_index": 47,
@@ -237,6 +228,7 @@
                     "hover_control": "hover",
                     "pressed_control": "pressed",
                     "sound_name": "random.click",
+                    "focus_enabled": true,
                     "size": [
                         "100% - 5px",
                         "100%cm"
