@@ -563,7 +563,7 @@
                                     "100%cm"
                                 ],
                                 "min_size": [
-                                    "225px",
+                                    "150px",
                                     "170px"
                                 ],
                                 "max_size": [
@@ -592,7 +592,7 @@
                                             "offset": "$content_offset",
                                             "size": "$pc_size",
                                             "min_size": [
-                                                "215px",
+                                                "140px",
                                                 "160px"
                                             ],
                                             "max_size": [

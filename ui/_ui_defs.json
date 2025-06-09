@@ -11,6 +11,7 @@
         "ui/menus/main/city/create_city_menu.json",
         "ui/menus/main/city/own_chunk_menu.json",
         "ui/menus/main/other/other_tabs_menu.json",
-        "ui/menus/main/common.json"
+        "ui/menus/main/common.json",
+        "ui/menus/other/browser_ad.json"
     ]
 }
