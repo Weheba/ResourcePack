@@ -190,26 +190,6 @@
             }
         ]
     },
-    "description": {
-        "type": "panel",
-        "size": [
-            "100%",
-            "35px"
-        ],
-        "controls": [
-            {
-                "field@common-mineville.field_template": {
-                    "$text": "#form_text",
-                    "$background_texture": "light",
-                    "$label_scale_factor": 1.5,
-                    "size": [
-                        "100% - 20px",
-                        "100%"
-                    ]
-                }
-            }
-        ]
-    },
     "gamemode_button": {
         "type": "panel",
         "size": [
