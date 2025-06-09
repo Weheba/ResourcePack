@@ -191,6 +191,20 @@
                 }
             },
             {
+                "wardrobe_menu@wardrobe.main": {
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '@mineville/wardrobe') = #title_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
                 "vanilla_modal_form@common_dialogs.main_panel_no_buttons": {
                     "$title_panel": "common_dialogs.standard_title_label",
                     "$title_size": [
