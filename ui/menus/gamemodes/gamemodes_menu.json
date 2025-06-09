@@ -53,6 +53,7 @@
                 "scroll_panel": {
                     "type": "stack_panel",
                     "orientation": "vertical",
+                    "collection_name": "form_buttons",
                     "size": [
                         "100% - 20px",
                         "100%c"
@@ -87,13 +88,104 @@
             }
         ]
     },
-    "description@common-mineville.field_template": {
-        "$text": "#form_text",
-        "$background_texture": "light",
-        "$label_scale_factor": 1.5,
+    "description": {
+        "type": "panel",
+        "collection_index": 50,
         "size": [
             "100%",
-            "35px"
+            "100%cm"
+        ],
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [
+                        "100% + 5px",
+                        "100%cm"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_name": "#form_button_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_text = ''))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "label_panel": {
+                                "type": "panel",
+                                "offset": [
+                                    "4.5px",
+                                    "0px"
+                                ],
+                                "size": [
+                                    "100% - 10px",
+                                    "100%cm"
+                                ],
+                                "controls": [
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "text": "#text",
+                                            "layer": 1,
+                                            "shadow": true,
+                                            "max_size": [
+                                                "100% - 2px",
+                                                "default"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#text"
+                                                }
+                                            ],
+                                            "controls": []
+                                        }
+                                    },
+                                    {
+                                        "background": {
+                                            "type": "image",
+                                            "texture": "textures/ui/common/light_field",
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "offset": [
+                                                "-7px",
+                                                "0px"
+                                            ],
+                                            "size": [
+                                                "100% + 5px",
+                                                "100%sm + 10px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "padding": {
+                                            "type": "panel",
+                                            "size": [
+                                                "0px",
+                                                "2px"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
         ]
     },
     "gamemode_button": {
@@ -240,17 +332,16 @@
                     "collection_name": "form_buttons",
                     "grid_fill_direction": "horizontal",
                     "grid_rescaling_type": "horizontal",
-                    "anchor_from": "top_middle",
-                    "anchor_to": "top_middle",
                     "size": [
                         "100% + 5px",
                         "100%c"
                     ],
                     "bindings": [
                         {
+                            "binding_type": "view",
                             "binding_condition": "once",
-                            "binding_name": "#form_button_length",
-                            "binding_name_override": "#maximum_grid_items"
+                            "source_property_name": "(#form_text * 1)",
+                            "target_property_name": "#maximum_grid_items"
                         }
                     ]
                 }
