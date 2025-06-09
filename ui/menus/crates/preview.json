@@ -64,7 +64,7 @@
                         {
                             "body_panel": {
                                 "type": "panel",
-                                "collection_index": 47,
+                                "collection_index": 50,
                                 "size": [
                                     "100%",
                                     "100%cm + 10px"
@@ -175,12 +175,12 @@
                                 "controls": [
                                     {
                                         "left_button@crate-preview.form_button": {
-                                            "collection_index": 48
+                                            "collection_index": 51
                                         }
                                     },
                                     {
                                         "right_button@crate-preview.form_button": {
-                                            "collection_index": 49
+                                            "collection_index": 52
                                         }
                                     }
                                 ]
