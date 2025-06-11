@@ -120,16 +120,12 @@
         "texture": "textures/ui/Black",
         "size": [
             "100%",
-            "100%cm + 2px"
+            "56.25%x + 2px"
         ],
         "controls": [
             {
                 "panel": {
                     "type": "panel",
-                    "size": [
-                        "100%cm",
-                        "100%cm"
-                    ],
                     "bindings": [
                         {
                             "binding_type": "collection",
