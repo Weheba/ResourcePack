@@ -124,24 +124,17 @@
         ],
         "controls": [
             {
-                "image": {
-                    "type": "image",
+                "panel": {
+                    "type": "panel",
                     "size": [
-                        "100% - 2.5px",
-                        "56.25%x"
+                        "100%cm",
+                        "100%cm"
                     ],
                     "bindings": [
                         {
                             "binding_type": "collection",
                             "binding_collection_name": "form_buttons",
-                            "binding_name": "#form_button_texture",
-                            "binding_name_override": "#texture"
-                        },
-                        {
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons",
-                            "binding_name": "#form_button_texture_file_system",
-                            "binding_name_override": "#texture_file_system"
+                            "binding_name": "#form_button_texture"
                         },
                         {
                             "binding_type": "view",
@@ -152,6 +145,31 @@
                             "binding_type": "view",
                             "source_property_name": "(not (#form_button_texture = 'loading'))",
                             "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "size": [
+                                    "100% - 2.5px",
+                                    "56.25%x"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture",
+                                        "binding_name_override": "#texture"
+                                    },
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture_file_system",
+                                        "binding_name_override": "#texture_file_system"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
@@ -248,18 +266,45 @@
         ],
         "$button_contents": [
             {
-                "label": {
+                "label@browser-ad.button_label": {}
+            }
+        ]
+    },
+    "button_label": {
+        "type": "label",
+        "text": "#text",
+        "font_type": "MinecraftTen",
+        "alpha": 0.8,
+        "color": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "max_size": [
+            "100% - 5px",
+            "100% - 5px"
+        ],
+        "offset": [
+            "0px",
+            "-2px"
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text",
+                "binding_name_override": "#text"
+            }
+        ],
+        "controls": [
+            {
+                "shadow": {
                     "type": "label",
                     "text": "#text",
                     "font_type": "MinecraftTen",
-                    "shadow": true,
-                    "max_size": [
-                        "100% - 5px",
-                        "100% - 5px"
-                    ],
                     "offset": [
-                        "0px",
-                        "-2px"
+                        "-1.2px",
+                        "-1.2px"
                     ],
                     "bindings": [
                         {
