@@ -538,7 +538,7 @@
             {
                 "background": {
                     "type": "image",
-                    "texture": "textures/ui/common/buttons/white/pressed",
+                    "texture": "textures/ui/common/white_field",
                     "alpha": 0.65
                 }
             },
