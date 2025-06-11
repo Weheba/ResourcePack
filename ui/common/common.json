@@ -207,15 +207,15 @@
             },
             {
                 "button@common-mineville.form_button": {
-                    "$button_color": "green",
                     "size": [
                         "19px",
                         "19px"
                     ],
                     "$button_contents": [
                         {
-                            "cross": {
+                            "back_arrow": {
                                 "type": "image",
+                                "texture": "textures/ui/common/back_symbol",
                                 "size": [
                                     "100% - 12px",
                                     "100% - 12px"
@@ -223,20 +223,6 @@
                                 "offset": [
                                     "0px",
                                     "-1px"
-                                ],
-                                "bindings": [
-                                    {
-                                        "binding_type": "collection",
-                                        "binding_collection_name": "form_buttons",
-                                        "binding_name": "#form_button_texture",
-                                        "binding_name_override": "#texture"
-                                    },
-                                    {
-                                        "binding_type": "collection",
-                                        "binding_collection_name": "form_buttons",
-                                        "binding_name": "#form_button_texture_file_system",
-                                        "binding_name_override": "#texture_file_system"
-                                    }
                                 ]
                             }
                         }

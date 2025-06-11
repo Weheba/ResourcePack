@@ -104,7 +104,7 @@
                                     },
                                     {
                                         "button@browser-ad.button": {
-                                            "collection_index": 1
+                                            "collection_index": 0
                                         }
                                     }
                                 ]
@@ -142,6 +142,16 @@
                             "binding_collection_name": "form_buttons",
                             "binding_name": "#form_button_texture_file_system",
                             "binding_name_override": "#texture_file_system"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = ''))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not (#form_button_texture = 'loading'))",
+                            "target_property_name": "#visible"
                         }
                     ]
                 }
@@ -241,9 +251,15 @@
                 "label": {
                     "type": "label",
                     "text": "#text",
+                    "font_type": "MinecraftTen",
+                    "shadow": true,
                     "max_size": [
                         "100% - 5px",
                         "100% - 5px"
+                    ],
+                    "offset": [
+                        "0px",
+                        "-2px"
                     ],
                     "bindings": [
                         {
