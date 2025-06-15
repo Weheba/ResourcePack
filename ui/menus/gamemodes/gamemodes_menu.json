@@ -76,7 +76,7 @@
                                 "type": "panel",
                                 "size": [
                                     "0px",
-                                    "5px"
+                                    "2px"
                                 ]
                             }
                         },
@@ -170,15 +170,6 @@
                                                 "100%sm + 10px"
                                             ]
                                         }
-                                    },
-                                    {
-                                        "padding": {
-                                            "type": "panel",
-                                            "size": [
-                                                "0px",
-                                                "2px"
-                                            ]
-                                        }
                                     }
                                 ]
                             }
@@ -192,7 +183,7 @@
         "type": "panel",
         "size": [
             "33.3%",
-            "73px"
+            "100%cm + 5px"
         ],
         "controls": [
             {
@@ -219,12 +210,27 @@
         ]
     },
     "button_contents": {
-        "type": "panel",
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
         "layer": 1,
+        "size": [
+            "100% - 4px",
+            "100% - 5px"
+        ],
+        "offset": [
+            "0px",
+            "2px"
+        ],
         "controls": [
             {
                 "icon_panel": {
                     "type": "panel",
+                    "size": [
+                        "100%",
+                        "100%cm"
+                    ],
                     "bindings": [
                         {
                             "binding_type": "collection",
@@ -247,30 +253,18 @@
                             "border": {
                                 "type": "image",
                                 "texture": "textures/ui/Black",
-                                "anchor_from": "top_middle",
-                                "anchor_to": "top_middle",
-                                "offset": [
-                                    "0px",
-                                    "2px"
-                                ],
                                 "size": [
-                                    "100%sm + 2px",
-                                    "50px"
+                                    "100%",
+                                    "100%sm + 2px"
                                 ]
                             }
                         },
                         {
                             "image": {
                                 "type": "image",
-                                "anchor_from": "top_middle",
-                                "anchor_to": "top_middle",
-                                "offset": [
-                                    0,
-                                    "-4px"
-                                ],
                                 "size": [
-                                    "100% - 6px",
-                                    "100% - 6px"
+                                    "100% - 2px",
+                                    "52.22%x"
                                 ],
                                 "bindings": [
                                     {
@@ -292,26 +286,33 @@
                 }
             },
             {
-                "label": {
-                    "type": "label",
-                    "text": "#text",
-                    "font_size": "small",
-                    "text_alignment": "center",
-                    "font_scale_factor": 1.5,
-                    "max_size": [
+                "label_panel": {
+                    "type": "panel",
+                    "size": [
                         "100%",
-                        20
+                        "fill"
                     ],
-                    "offset": [
-                        0,
-                        "35%"
-                    ],
-                    "bindings": [
+                    "controls": [
                         {
-                            "binding_name": "#form_button_text",
-                            "binding_name_override": "#text",
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons"
+                            "label": {
+                                "type": "label",
+                                "text": "#text",
+                                "font_size": "small",
+                                "text_alignment": "center",
+                                "font_scale_factor": 1.5,
+                                "max_size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_name": "#form_button_text",
+                                        "binding_name_override": "#text",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    }
+                                ]
+                            }
                         }
                     ]
                 }
