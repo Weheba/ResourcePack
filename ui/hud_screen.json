@@ -1,0 +1,59 @@
+{
+    "namespace": "hud",
+    "chat_grid_item/chat_background": {
+        "controls": [
+            {
+                "zelisce_chat_label@chat_label": {
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        2,
+                        0
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "chat_text_grid",
+                            "binding_name": "#chat_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "binding_condition": "once",
+                            "source_property_name": "('§bzelisce' + (#chat_text - 'zelisce'))",
+                            "target_property_name": "#text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#chat_text - 'zelisce') = #chat_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
+                "normal_chat_label@chat_label": {
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        2,
+                        0
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#chat_text",
+                            "binding_name_override": "#text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "chat_text_grid",
+                            "binding_condition": "once"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "((#chat_text - 'zelisce') = #chat_text)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
