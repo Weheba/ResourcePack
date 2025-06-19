@@ -128,6 +128,20 @@
                 }
             },
             {
+                "auction_house_menu@auction-house.main": {
+                    "bindings": [
+                        {
+                            "binding_name": "#title_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#title_text - '@mineville/auction_house') = #title_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            {
                 "browser_ad_menu@browser-ad.main": {
                     "bindings": [
                         {

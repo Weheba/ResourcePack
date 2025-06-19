@@ -1,0 +1,390 @@
+{
+    "namespace": "auction-house",
+    "main@common-mineville.form_template": {
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/auction_house:')",
+                "target_property_name": "#text"
+            }
+        ],
+        "$content_controls": [
+            {
+                "content_panel": {
+                    "type": "panel",
+                    "controls": [
+                        {
+                            "scroll_panel@common.scrolling_panel": {
+                                "$show_background": false,
+                                "$scrolling_content": "auction-house.scroll_content",
+                                "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                                "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                                "$scroll_size": [
+                                    "5px",
+                                    "100% - 12px"
+                                ],
+                                "$scrolling_pane_size": [
+                                    "100%",
+                                    "100%"
+                                ],
+                                "$scrolling_pane_offset": [
+                                    "0px",
+                                    "0px"
+                                ],
+                                "$scroll_bar_left_padding_size": [
+                                    "0px",
+                                    "0px"
+                                ],
+                                "$scroll_bar_right_padding_size": [
+                                    "4px",
+                                    "0px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "scroll_content": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "200px"
+        ],
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100% - 10px",
+                        "100% - 10px"
+                    ],
+                    "controls": [
+                        {
+                            "body_panel": {
+                                "type": "panel",
+                                "size": [
+                                    "100% - 5px",
+                                    "100%cm"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#form_text = ''))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "background": {
+                                            "type": "image",
+                                            "texture": "textures/ui/common/light_field",
+                                            "offset": [
+                                                "2.5px",
+                                                "0px"
+                                            ],
+                                            "size": [
+                                                "100%",
+                                                "100%sm + 10px"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "label_panel": {
+                                            "type": "panel",
+                                            "offset": [
+                                                "4.5px",
+                                                "0px"
+                                            ],
+                                            "size": [
+                                                "100% - 10px",
+                                                "100%cm"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "label": {
+                                                        "type": "label",
+                                                        "anchor_from": "left_middle",
+                                                        "anchor_to": "left_middle",
+                                                        "text": "#form_text",
+                                                        "shadow": true,
+                                                        "layer": 1,
+                                                        "max_size": [
+                                                            "100% - 4px",
+                                                            "10px"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "buttons": {
+                                "type": "grid",
+                                "grid_item_template": "auction-house.auction_button",
+                                "grid_rescaling_type": "horizontal",
+                                "grid_fill_direction": "horizontal",
+                                "maximum_grid_items": 27,
+                                "size": [
+                                    "100%",
+                                    "fill"
+                                ]
+                            }
+                        },
+                        {
+                            "page_buttons": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "35px"
+                                ],
+                                "controls": [
+                                    {
+                                        "previous_page@auction-house.page_button": {
+                                            "$collection_index": 1
+                                        }
+                                    },
+                                    {
+                                        "next_page@auction-house.page_button": {
+                                            "$collection_index": 2
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "auction_button": {
+        "type": "panel",
+        "size": [
+            "11.1%",
+            "33.3%"
+        ],
+        "controls": [
+            {
+                "button": {
+                    "type": "button",
+                    "default_control": "default",
+                    "hover_control": "hover",
+                    "size": [
+                        "100% - 5px",
+                        "100% - 2px"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_name": "#null",
+                            "binding_type": "collection",
+                            "binding_condition": "none",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_name": "#null",
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "default": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/common/default",
+                                "controls": [
+                                    {
+                                        "contents@auction-house.auction_button_content": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "hover": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/common/hover",
+                                "controls": [
+                                    {
+                                        "contents@auction-house.auction_button_content": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "auction_button_content": {
+        "type": "panel",
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "layer": 1,
+        "size": [
+            "100% - 4px",
+            "100% - 6px"
+        ],
+        "offset": [
+            "0px",
+            "2px"
+        ],
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "price_label": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    "10px"
+                                ],
+                                "controls": [
+                                    {
+                                        "background": {
+                                            "type": "image",
+                                            "texture": "textures/ui/common/light_field",
+                                            "layer": 1
+                                        }
+                                    },
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "#text",
+                                            "font_size": "small",
+                                            "layer": 2,
+                                            "max_size": [
+                                                "100% - 2px",
+                                                "100%"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#text"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "item_image": {
+                                "type": "panel",
+                                "size": [
+                                    "100%",
+                                    "fill"
+                                ],
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_texture"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#form_button_texture = ''))",
+                                        "target_property_name": "#visible"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#form_button_texture = 'loading'))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "image": {
+                                            "type": "image",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_texture",
+                                                    "binding_name_override": "#texture"
+                                                },
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_texture_file_system",
+                                                    "binding_name_override": "#texture_file_system"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "bid_button@common-mineville.form_button": {
+                                "$button_color": "green",
+                                "size": [
+                                    "100%",
+                                    "10px"
+                                ],
+                                "$button_contents": [
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "Bid",
+                                            "font_size": "small",
+                                            "layer": 1,
+                                            "offset": [
+                                                "0px",
+                                                "-1px"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "page_button": {
+        "type": "panel",
+        "$collection_index|default": 0,
+        "size": [
+            "50%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "button@common-mineville.form_button": {
+                    "collection_index": "$collection_index",
+                    "size": [
+                        "100% - 5px",
+                        "100% - 5px"
+                    ],
+                    "$button_contents": [
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "Bid",
+                                "font_size": "small",
+                                "layer": 1,
+                                "offset": [
+                                    "0px",
+                                    "-1px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
