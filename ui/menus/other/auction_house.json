@@ -542,7 +542,7 @@
                         },
                         {
                             "bid_button@common-mineville.form_button": {
-                                "$button_color": "green",
+                                "$button_color": "orange",
                                 "collection_index": "($collection_index + 54)",
                                 "size": [
                                     "100%",
