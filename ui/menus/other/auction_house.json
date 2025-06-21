@@ -639,6 +639,33 @@
         "$button_color|default": "common",
         "$key|default": "none",
         "collection_index": "($collection_index + 54)",
+        "$hover_text_controls": [
+            {
+                "hover_text_panel": {
+                    "type": "collection_panel",
+                    "collection_name": "form_buttons",
+                    "controls": [
+                        {
+                            "hover_text": {
+                                "type": "custom",
+                                "renderer": "hover_text_renderer",
+                                "allow_clipping": false,
+                                "collection_index": "$collection_index",
+                                "layer": 20,
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text",
+                                        "binding_name_override": "#hover_text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
         "size": [
             "100%",
             "10px"

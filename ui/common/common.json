@@ -6,6 +6,7 @@
         "$button_bindings": [],
         "$button_contents": [],
         "$hover_text_bindings": [],
+        "$hover_text_controls": [],
         "$button_color": "common",
         "size": [
             "20px",
@@ -59,7 +60,8 @@
                                             "renderer": "hover_text_renderer",
                                             "bindings": "$hover_text_bindings",
                                             "allow_clipping": false,
-                                            "layer": 20
+                                            "layer": 20,
+                                            "controls": "$hover_text_controls"
                                         }
                                     }
                                 ]
