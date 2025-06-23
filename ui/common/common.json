@@ -545,6 +545,7 @@
                         {
                             "pc_form_content": {
                                 "type": "panel",
+                                "enabled": "(not $touch)",
                                 "visible": "(not $touch)",
                                 "size": [
                                     "100%cm",
@@ -595,6 +596,7 @@
                         {
                             "mobile_form_content": {
                                 "type": "panel",
+                                "enabled": "$touch",
                                 "visible": "$touch",
                                 "size": [
                                     "100%cm",

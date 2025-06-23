@@ -27,14 +27,6 @@
                         "5px",
                         "100% - 12px"
                     ],
-                    "$scrolling_pane_size": [
-                        "100%",
-                        "100%"
-                    ],
-                    "$scrolling_pane_offset": [
-                        "0px",
-                        "0px"
-                    ],
                     "$scroll_bar_left_padding_size": [
                         "0px",
                         "0px"
@@ -671,7 +663,7 @@
             "100%",
             "30px"
         ],
-                "$text_edit_box_label_offset|default": [
+        "$text_edit_box_label_offset|default": [
             10,
             0
         ],
