@@ -151,6 +151,7 @@
                             "page_buttons": {
                                 "type": "stack_panel",
                                 "orientation": "horizontal",
+                                "collection_name": "form_buttons",
                                 "size": [
                                     "100%",
                                     "25px"
@@ -158,27 +159,27 @@
                                 "controls": [
                                     {
                                         "previous_page@auction-house.page_button": {
-                                            "$collection_index": 81
+                                            "collection_index": 27
                                         }
                                     },
                                     {
                                         "filter@auction-house.page_button": {
-                                            "$collection_index": 82
+                                            "collection_index": 28
                                         }
                                     },
                                     {
                                         "claim@auction-house.page_button": {
-                                            "$collection_index": 83
+                                            "collection_index": 29
                                         }
                                     },
                                     {
                                         "listings@auction-house.page_button": {
-                                            "$collection_index": 84
+                                            "collection_index": 30
                                         }
                                     },
                                     {
                                         "next_page@auction-house.page_button": {
-                                            "$collection_index": 85
+                                            "collection_index": 31
                                         }
                                     }
                                 ]
@@ -241,7 +242,7 @@
                                             ],
                                             "controls": [
                                                 {
-                                                    "contents@auction-house.test_content": {}
+                                                    "contents@auction-house.auction_button_content": {}
                                                 }
                                             ]
                                         }
@@ -271,7 +272,7 @@
                                             ],
                                             "controls": [
                                                 {
-                                                    "contents@auction-house.test_content": {}
+                                                    "contents@auction-house.auction_button_content": {}
                                                 },
                                                 {
                                                     "hover_text_panel": {
@@ -287,7 +288,7 @@
                                                             },
                                                             {
                                                                 "binding_type": "view",
-                                                                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim')",
+                                                                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out' - '#locked')",
                                                                 "target_property_name": "#hover_text"
                                                             }
                                                         ]
@@ -360,7 +361,7 @@
                                                 },
                                                 {
                                                     "binding_type": "view",
-                                                    "source_property_name": "(('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim')) - '&')",
+                                                    "source_property_name": "(('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out')) - '&')",
                                                     "target_property_name": "#text"
                                                 }
                                             ]
@@ -446,6 +447,12 @@
                                 "$button_color": "pink",
                                 "$key": "Claim"
                             }
+                        },
+                        {
+                            "sold_button@auction-house.action_button": {
+                                "$button_color": "common",
+                                "$key": "Sold Out"
+                            }
                         }
                     ]
                 }
@@ -465,7 +472,7 @@
             },
             {
                 "binding_type": "view",
-                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim')",
+                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out')",
                 "target_property_name": "#hover_text"
             }
         ],
@@ -506,17 +513,26 @@
         ]
     },
     "page_button": {
-        "type": "collection_panel",
-        "collection_name": "form_buttons",
-        "$collection_index|default": 0,
+        "type": "panel",
         "size": [
-            "20%",
+            "fill",
             "100%"
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons",
+                "binding_name": "#form_button_text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_text = ''))",
+                "target_property_name": "#visible"
+            }
         ],
         "controls": [
             {
                 "button@common-mineville.form_button": {
-                    "collection_index": "$collection_index",
                     "$button_color": "white",
                     "size": [
                         "100% - 5px",
@@ -531,6 +547,10 @@
                                 "offset": [
                                     "0px",
                                     "-1px"
+                                ],
+                                "max_size": [
+                                    "100% - 4px",
+                                    "100% - 4px"
                                 ],
                                 "bindings": [
                                     {
