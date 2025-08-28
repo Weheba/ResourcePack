@@ -1,0 +1,195 @@
+{
+  "gametag_wrapper": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100%c",
+      "100%"
+    ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "gamertag@pause.player_gamertag": {}
+      },
+      {
+        "gamertag_rank@pause.player_rank": {}
+      }
+    ]
+  },
+  "player_permission_button": {
+    "ignored": true
+  },
+  "player_grid_item_content/player_button_panel/player_permission_button_padding": {
+    "size": [
+      0,
+      "100%"
+    ]
+  },
+  "player_lists": {
+    "size": [
+      "100%-1px",
+      "100%c"
+    ]
+  },
+  "player_gamertag": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "text": "#ss",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "font_scale_factor": 1,
+    "size": [
+      "100%",
+      10
+    ],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+"binding_type": "view",
+        "source_property_name": "((('%.16s' * #text)) - ''-''-''-''-''-''-''-''-''-''-''-'')",
+        "target_property_name": "#ss"
+      }
+    ]
+  },
+  "platform_icon": {
+    "ignored": true
+  },
+  "social_buttons_panel/invitebutton_panel": {
+    "bindings": [
+      {
+        "binding_name": "#invite_button_visible",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#invite_button_enabled",
+        "binding_name_override": "(not #enabled)"
+      }
+    ]
+  },
+  "social_buttons_panel/friendsbutton_panel": {
+    "ignored": true
+  },
+  "social_buttons_panel/invitebutton_panel/invite_button": {
+    "$default_button_texture": "textures/ui/common/buttons/blurple/default",
+    "$hover_button_texture": "textures/ui/common/buttons/blurple/hover",
+    "$pressed_button_texture": "textures/ui/common/buttons/blurple/pressed",
+    "$button_pressed_offset": [
+      3,
+      1
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "$discord_button": true,
+    "$button_content": "pause.discord_button_content",
+    "$icon_texture": "textures/ui/discord",
+    "$button_text": "Join our Discord!\nDiscord.gg/mineville",
+    "$default_text_color": "white",
+    "$pressed_button_name": "button.null"
+  },
+  "discord_button_content@iconbutton.iconbutton_button_content": {
+    "controls": [
+      {
+        "icon_wrapper": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "icon_with_border": {
+                "type": "panel",
+                "size": [
+                  18,
+                  18
+                ],
+                "offset": [
+                  -3,
+                  -2
+                ],
+                "controls": [
+                  {
+                    "iconbutton_animated_icon@iconbutton.iconbutton_animated_icon": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "padding_middle@common.empty_panel": {
+          "size": [
+            2,
+            "100%"
+          ]
+        }
+      },
+      {
+        "vertically_centered_text": {
+          "type": "panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "profile_button_label@common_buttons.new_ui_binding_button_label": {
+                "layer": 1,
+                "$new_ui_label_offset": [
+                  0,
+                  -3
+                ],
+                "$button_text_binding_type": "$textbutton_binding_type",
+                "$button_text_size": [
+                  "default",
+                  "default"
+                ],
+                "$button_text_max_size": [
+                  "default",
+                  20
+                ],
+                "$button_binding_condition": "none",
+                "$button_text_grid_collection_name": ""
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_rank": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "text": "#s",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "font_scale_factor": 1,
+    "size": [
+      "100%",
+      10
+    ],
+    "layer": 2,
+    "bindings": [
+      {
+        "binding_name": "#gamertag",
+        "binding_name_override": "#text",
+        "binding_type": "collection",
+        "binding_collection_name": "players_collection"
+      },
+      {
+"binding_type": "view",
+        "source_property_name": "((#text - ('%.15s' * #text)))",
+        "target_property_name": "#s"
+      }
+    ]
+  }
+}

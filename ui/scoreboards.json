@@ -1,0 +1,157 @@
+{
+  "info_bar_label": {
+    "type": "label",
+    "text": "#player_name_sidebar",
+    "bindings": [
+      {
+        "binding_name": "#player_name_sidebar",
+        "binding_type": "collection",
+        "binding_collection_name": "scoreboard_players"
+      }
+    ]
+  },
+  "scoreboard_sidebar": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      {
+        "info_bars": {
+          "type": "panel",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "left_side": {
+                "type": "panel",
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [
+                  "100%cm",
+                  "50%cm"
+                ],
+                "controls": [
+                  {
+                    "background": {
+                      "type": "image",
+                      "texture": "textures/ui/mv_bordered",
+                      "alpha": 0.6,
+                      "size": [
+                        "100%sm + 4px",
+                        "100%sm + 2px"
+                      ]
+                    }
+                  },
+                  {
+                    "logo": {
+                      "type": "image",
+                      "texture": "textures/ui/logo.png",
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "size": [
+                        "191%y",
+                        "8px"
+                      ],
+                      "offset": [
+                        "2px",
+                        "2px"
+                      ]
+                    }
+                  },
+                  {
+                    "content": {
+                      "type": "stack_panel",
+                      "orientation": "vertical",
+                      "collection_name": "scoreboard_players",
+                      "clips_children": true,
+                      "layer": 1,
+                      "factory": {
+                        "name": "player_list_factory",
+                        "control_name": "scoreboard.info_bar_label"
+                      },
+                      "size": [
+                        "100%cm",
+                        "50%c - 5px"
+                      ],
+                      "bindings": [
+                        {
+                          "binding_name": "#scoreboard_sidebar_size",
+                          "binding_type": "global",
+                          "binding_name_override": "#collection_length"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "right_side": {
+                "type": "panel",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [
+                  "100%",
+                  "100%cm"
+                ],
+                "controls": [
+                  {
+                    "left_side": {
+                      "type": "image",
+                      "texture": "textures/ui/mv_bordered",
+                      "alpha": 0.6,
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "clips_children": true,
+                      "size": [
+                        "100%cm + 4px",
+                        "50%cm - 3px"
+                      ],
+                      "controls": [
+                        {
+                          "content": {
+                            "type": "stack_panel",
+                            "orientation": "vertical",
+                            "collection_name": "scoreboard_players",
+                            "layer": 1,
+                            "factory": {
+                              "name": "player_list_factory",
+                              "control_name": "scoreboard.info_bar_label"
+                            },
+                            "size": [
+                              "100%cm",
+                              "50%c"
+                            ],
+                            "offset": [
+                              "0px",
+                              "-100%y + 7.5px"
+                            ],
+                            "bindings": [
+                              {
+                                "binding_name": "#scoreboard_sidebar_size",
+                                "binding_type": "global",
+                                "binding_name_override": "#collection_length"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

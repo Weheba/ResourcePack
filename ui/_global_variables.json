@@ -1,1 +1,9 @@
-{}
+{
+    "$gifting_binds": [
+        {
+            "binding_type": "view",
+            "source_property_name": "(not ((#title_text - '@mineville/gift:') = #title_text))",
+            "target_property_name": "#visible"
+        }
+    ]
+}

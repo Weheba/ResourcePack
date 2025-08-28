@@ -3,7 +3,7 @@
     "main@common-mineville.form_template": {
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/modal_form:')",
                 "target_property_name": "#text"
             }

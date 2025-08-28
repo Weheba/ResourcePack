@@ -227,23 +227,6 @@
                         "100%",
                         "100%cm"
                     ],
-                    "bindings": [
-                        {
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons",
-                            "binding_name": "#form_button_texture"
-                        },
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "(not (#form_button_texture = ''))",
-                            "target_property_name": "#visible"
-                        },
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "(not (#form_button_texture = 'loading'))",
-                            "target_property_name": "#visible"
-                        }
-                    ],
                     "controls": [
                         {
                             "border": {
@@ -256,25 +239,10 @@
                             }
                         },
                         {
-                            "image": {
-                                "type": "image",
+                            "image@common-mineville.image_template": {
                                 "size": [
                                     "100% - 2px",
                                     "52.22%x"
-                                ],
-                                "bindings": [
-                                    {
-                                        "binding_type": "collection",
-                                        "binding_collection_name": "form_buttons",
-                                        "binding_name": "#form_button_texture",
-                                        "binding_name_override": "#texture"
-                                    },
-                                    {
-                                        "binding_type": "collection",
-                                        "binding_collection_name": "form_buttons",
-                                        "binding_name": "#form_button_texture_file_system",
-                                        "binding_name_override": "#texture_file_system"
-                                    }
                                 ]
                             }
                         }

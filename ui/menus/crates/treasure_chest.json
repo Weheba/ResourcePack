@@ -1,0 +1,820 @@
+{
+    "namespace": "treasurechest",
+    "main@common-mineville.form_template": {
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/treasurechest:')",
+                "target_property_name": "#text"
+            }
+        ],
+        "$content_controls": [
+            {
+                "panel@treasurechest.form_content_panel": {}
+            }
+        ]
+    },
+    "form_content_panel@common.empty_panel": {
+        "controls": [
+            {
+                "scroll_panel@common.scrolling_panel": {
+                    "$show_background": false,
+                    "$scrolling_content": "treasurechest.scroll_content",
+                    "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                    "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                    "$scroll_size": [
+                        "5px",
+                        "100%  - 4px"
+                    ],
+                    "$scroll_bar_left_padding_size": [
+                        "0px",
+                        "0px"
+                    ],
+                    "$scrolling_pane_offset": [
+                        0,
+                        7
+                    ],
+                    "$scrolling_pane_size": [
+                        "100%",
+                        "100% - 12px"
+                    ],
+                    "$scroll_bar_right_padding_size": [
+                        "5px",
+                        "0px"
+                    ]
+                }
+            }
+        ]
+    },
+    "scroll_content@common.empty_panel": {
+        "size": [
+            "100% - 15px",
+            "100%cm +10px"
+        ],
+        "offset": [
+            10,
+            0
+        ],
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "padding@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "horizontal_stack": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "collection_name": "form_buttons",
+                                "size": [
+                                    "100%",
+                                    167
+                                ],
+                                "controls": [
+                                    {
+                                        "image_panel_index@common.empty_image": {
+                                            "size": [
+                                                "48% +2.5px",
+                                                "100%"
+                                            ],
+                                            "texture": "textures/ui/common/light_field",
+                                            "collection_index": 57,
+                                            "controls": [
+                                                {
+                                                    "form_text_label": {
+                                                        "layer": 5,
+                                                        "offset": [
+                                                            0.5,
+                                                            -1
+                                                        ],
+                                                        "font_scale_factor": 1.5,
+                                                        "type": "label",
+                                                        "text_alignment": "center",
+                                                        "anchor_from": "top_middle",
+                                                        "anchor_to": "top_middle",
+                                                        "font_type": "MinecraftTen",
+                                                        "text": "Your Next Reward",
+                                                        "color": [
+                                                            0.918,
+                                                            0.11,
+                                                            0.184
+                                                        ],
+                                                        "shadow": false,
+                                                        "max_size": [
+                                                            "100%",
+                                                            "default"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "form_text_label_shadow": {
+                                                        "layer": 4,
+                                                        "offset": [
+                                                            2,
+                                                            0
+                                                        ],
+                                                        "alpha": 0.6,
+                                                        "font_scale_factor": 1.5,
+                                                        "type": "label",
+                                                        "text_alignment": "center",
+                                                        "anchor_from": "top_middle",
+                                                        "anchor_to": "top_middle",
+                                                        "font_type": "MinecraftTen",
+                                                        "text": "Your Next Reward",
+                                                        "color": [
+                                                            0.227,
+                                                            0.027,
+                                                            0.043
+                                                        ],
+                                                        "shadow": false,
+                                                        "max_size": [
+                                                            "100%",
+                                                            "default"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "form_text_label_receieve": {
+                                                        "layer": 5,
+                                                        "offset": [
+                                                            0,
+                                                            -47
+                                                        ],
+                                                        "font_scale_factor": 1,
+                                                        "type": "label",
+                                                        "text_alignment": "center",
+                                                        "text": "You will receive this reward when you open the bundle.",
+                                                        "shadow": true,
+                                                        "max_size": [
+                                                            "90%",
+                                                            "default"
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "image@treasurechest.preview_button": {
+                                                        "offset": [
+                                                            0,
+                                                            10
+                                                        ],
+                                                        "$default_texture": "textures/ui/common/buttons/clear/preview_square",
+                                                        "$hover_texture": "textures/ui/common/buttons/clear/preview_square",
+                                                        "$pressed_texture": "textures/ui/common/buttons/clear/preview_square",
+                                                        "size": [
+                                                            80,
+                                                            80
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "image_panel_index": {
+                                                        "type": "collection_panel",
+                                                        "size": [
+                                                            "100%",
+                                                            "100%"
+                                                        ],
+                                                        "collection_name": "form_buttons",
+                                                        "controls": [
+                                                            {
+                                                                "refresh@common-mineville.mv_form_button_text": {
+                                                                    "layer": 5,
+                                                                    "collection_index": 56,
+                                                                    "offset": [
+                                                                        0,
+                                                                        -10
+                                                                    ],
+                                                                    "font_scale_factor": 1,
+                                                                    "color": [
+                                                                        0.918,
+                                                                        0.11,
+                                                                        0.184
+                                                                    ],
+                                                                    "anchor_from": "bottom_middle",
+                                                                    "anchor_to": "bottom_middle",
+                                                                    "text_alignment": "center",
+                                                                    "shadow": true,
+                                                                    "max_size": [
+                                                                        "90%",
+                                                                        "default"
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "split_padding@common.empty_panel": {
+                                            "size": [
+                                                2,
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "image_panel_index@common.empty_image": {
+                                            "size": [
+                                                "48% +2.5px",
+                                                "100%"
+                                            ],
+                                            "texture": "textures/ui/common/light_field",
+                                            "collection_index": 16,
+                                            "controls": [
+                                                {
+                                                    "preview_grid_wrapper@common.empty_panel": {
+                                                        "size": [
+                                                            "100%",
+                                                            23
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "form_text_label_receieve": {
+                                                                    "layer": 5,
+                                                                    "offset": [
+                                                                        0,
+                                                                        -73
+                                                                    ],
+                                                                    "font_scale_factor": 0.9,
+                                                                    "type": "label",
+                                                                    "text_alignment": "center",
+                                                                    "text": "Other rewards in this Bundle:",
+                                                                    "shadow": true
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "scroll_panel@common.scrolling_panel": {
+                                                        "$show_background": false,
+                                                        "$scrolling_content": "treasurechest.preview_grid",
+                                                        "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                                                        "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                                                        "$scroll_size": [
+                                                            "4px",
+                                                            "100%  - 4px"
+                                                        ],
+                                                        "$scroll_bar_left_padding_size": [
+                                                            2,
+                                                            "0px"
+                                                        ],
+                                                        "$scrolling_pane_offset": [
+                                                            -2,
+                                                            20
+                                                        ],
+                                                        "anchor_from": "center",
+                                                        "anchor_to": "center",
+                                                        "$scrolling_pane_size": [
+                                                            "102%",
+                                                            "100% - 26px"
+                                                        ],
+                                                        "$scroll_bar_contained": true,
+                                                        "$scroll_bar_right_padding_size": [
+                                                            1,
+                                                            "0px"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "padding_hggw@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "hero_gold_green_wrapper@common.empty_panel": {
+                                "size": [
+                                    "100% - 3px",
+                                    92
+                                ],
+                                "controls": [
+                                    {
+                                        "button_stack_panel": {
+                                            "type": "stack_panel",
+                                            "orientation": "horizontal",
+                                            "collection_name": "form_buttons",
+                                            "size": [
+                                                "100%",
+                                                92
+                                            ],
+                                            "offset": [
+                                                -1,
+                                                0
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "hero_image_button@crate_preview_v2.mv_button_controller": {
+                                                        "size": [
+                                                            "50%",
+                                                            "100%"
+                                                        ],
+                                                        "enabled": false,
+                                                        "$button_color": "common",
+                                                        "$mv_click_bindings": "crate_preview_v2.hero_image_button",
+                                                        "collection_index": 52
+                                                    }
+                                                },
+                                                {
+                                                    "right_button_stack": {
+                                                        "type": "stack_panel",
+                                                        "orientation": "vertical",
+                                                        "collection_name": "form_buttons",
+                                                        "size": [
+                                                            "50%",
+                                                            46
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "gold_button@crate_preview_v2.mv_button_controller": {
+                                                                    "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons_gold",
+                                                                    "$button_color": "gold",
+                                                                    "$shadow_color": [
+                                                                        0.769,
+                                                                        0.431,
+                                                                        0.051
+                                                                    ],
+                                                                    "$color": [
+                                                                        0.478,
+                                                                        0.224,
+                                                                        0.031
+                                                                    ],
+                                                                    "$mc_texture": "textures/ui/common/buttons/gold/minecoin",
+                                                                    "collection_index": 53
+                                                                }
+                                                            },
+                                                            {
+                                                                "green_button@crate_preview_v2.mv_button_controller_green": {
+                                                                    "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons",
+                                                                    "collection_index": 54
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "split_padding@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "text_background@common.empty_image": {
+                                "size": [
+                                    "100% - 5px",
+                                    "100%c + 10px"
+                                ],
+                                "collection_index": 55,
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text",
+                                        "binding_name_override": "#text"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#text = ''))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "texture": "textures/ui/common/light_field",
+                                "layer": 4,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "controls": [
+                                    {
+                                        "form_text_label": {
+                                            "layer": 5,
+                                            "offset": [
+                                                5,
+                                                0
+                                            ],
+                                            "type": "label",
+                                            "anchor_from": "left_middle",
+                                            "anchor_to": "left_middle",
+                                            "text": "#text",
+                                            "shadow": true,
+                                            "max_size": [
+                                                "100% - 2px",
+                                                "default"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#text"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "Collection_stack_2@common.vertical_stack_panel": {
+                                "size": [
+                                    "100% -5px",
+                                    "100%c"
+                                ],
+                                "collection_name": "form_buttons",
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection_details",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_name": "#collection_index",
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#collection_index > 58))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "padding@common.empty_panel": {
+                                            "size": [
+                                                4,
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "20@treasurechest.stack_button": {
+                                            "$text_offset": [
+                                                25,
+                                                0
+                                            ],
+                                            "$text_color_placement": [
+                                                0.957,
+                                                0.824,
+                                                0.224
+                                            ],
+                                            "$text": "1st",
+                                            "$texture": "textures/ui/common/1st",
+                                            "collection_index": 58
+                                        }
+                                    },
+                                    {
+                                        "21@treasurechest.stack_button": {
+                                            "$text_offset": [
+                                                25,
+                                                0
+                                            ],
+                                            "$text_color_placement": [
+                                                0.863,
+                                                0.863,
+                                                0.863
+                                            ],
+                                            "$text": "2nd",
+                                            "$texture": "textures/ui/common/2nd",
+                                            "collection_index": 59
+                                        }
+                                    },
+                                    {
+                                        "22@treasurechest.stack_button": {
+                                            "$text_offset": [
+                                                25,
+                                                0
+                                            ],
+                                            "$text_color_placement": [
+                                                0.894,
+                                                0.596,
+                                                0.286
+                                            ],
+                                            "$text": "3rd",
+                                            "$texture": "textures/ui/common/3rd",
+                                            "collection_index": 60
+                                        }
+                                    },
+                                    {
+                                        "23@treasurechest.stack_button": {
+                                            "$text": "4th",
+                                            "collection_index": 61
+                                        }
+                                    },
+                                    {
+                                        "24@treasurechest.stack_button": {
+                                            "$text": "5th",
+                                            "collection_index": 62
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "preview_grid": {
+        "type": "grid",
+        "grid_item_template": "treasurechest.preview_button",
+        "collection_name": "form_buttons",
+        "grid_rescaling_type": "horizontal",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [
+            "100%",
+            "100%c"
+        ],
+        "offset": [
+            0,
+            0
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "binding_condition": "once",
+                "source_property_name": "(#form_text * 1)",
+                "target_property_name": "#maximum_grid_items"
+            }
+        ]
+    },
+    "stack_button@common-mineville.form_button": {
+        "size": [
+            "100%",
+            "36px"
+        ],
+        "$button_control_size": [
+            "100%",
+            "32px"
+        ],
+        "$button_clicked": "button.null",
+        "$button_color": "dark",
+        "bindings": [
+            {
+                "binding_name": "#form_button_text",
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_text = ''))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "$button_contents": [
+            {
+                "content@treasurechest.form_button_content": {
+                    "$text_color": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "offset": [
+                        "-1px",
+                        "-1px"
+                    ]
+                }
+            }
+        ]
+    },
+    "form_button_content@common.horizontal_stack_panel": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "$text_color": [
+            0.3,
+            0.3,
+            0.3
+        ],
+        "$text_color_placement|default": "",
+        "$text_offset|default": "",
+        "$text|default": "",
+        "$texture|default": "",
+        "controls": [
+            {
+                "image_panel@common.empty_panel": {
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "image@common.empty_image": {
+                                "layer": 1,
+                                "texture": "$texture",
+                                "size": [
+                                    "100% - 8px",
+                                    "100% - 8px"
+                                ]
+                            }
+                        },
+                        {
+                            "form_text_label": {
+                                "layer": 5,
+                                "text": "$text",
+                                "offset": "$text_offset",
+                                "color": "$text_color_placement",
+                                "type": "label",
+                                "text_alignment": "center",
+                                "shadow": true,
+                                "max_size": [
+                                    "100%",
+                                    "default"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "label_panel@common.empty_panel": {
+                    "size": [
+                        "fill",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "label@common-mineville.mv_form_button_text": {
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "text_alignment": "center",
+                                "layer": 1,
+                                "color": "$text_color",
+                                "max_size": [
+                                    "100%",
+                                    "100%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "image_panel@common.empty_panel": {
+                    "size": [
+                        "100%y",
+                        "100%"
+                    ],
+                    "controls": [
+                        {
+                            "image@common-mineville.mv_form_button_image": {
+                                "size": [
+                                    "100% - 8px",
+                                    "100% - 8px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "preview_button@common.empty_panel": {
+        "size": [
+            35,
+            35
+        ],
+        "$default_texture|default": "textures/ui/common/buttons/clear/preview",
+        "$hover_texture|default": "textures/ui/common/buttons/clear/preview",
+        "$pressed_texture|default": "textures/ui/common/buttons/clear/preview",
+        "bindings": [
+            {
+                "binding_name": "#form_button_text",
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_text = ''))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "button@common.button": {
+                    "layer": 2,
+                    "sound_volume": 0,
+                    "$pressed_button_name|default": "",
+                    "$pressed_button_name": "button.null",
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "controls": [
+                        {
+                            "default": {
+                                "type": "image",
+                                "texture": "$default_texture",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "hover": {
+                                "type": "image",
+                                "texture": "$hover_texture",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "105%",
+                                                "105%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "pressed": {
+                                "type": "image",
+                                "texture": "$pressed_texture",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "105%",
+                                                "105%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

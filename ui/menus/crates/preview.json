@@ -3,7 +3,7 @@
     "main@common-mineville.form_template": {
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/crate_preview:')",
                 "target_property_name": "#text"
             }
@@ -84,7 +84,7 @@
                                                     "binding_name": "#form_button_text"
                                                 },
                                                 {
-                                                    "binding_type": "view",
+                                            "binding_type": "view",
                                                     "source_property_name": "(not (#form_button_text = ''))",
                                                     "target_property_name": "#visible"
                                                 }
@@ -197,7 +197,7 @@
                                 ],
                                 "bindings": [
                                     {
-                                        "binding_type": "view",
+                                "binding_type": "view",
                                         "binding_condition": "once",
                                         "source_property_name": "(#form_text * 1)",
                                         "target_property_name": "#maximum_grid_items"
@@ -231,13 +231,6 @@
                     ],
                     "bindings": [
                         {
-                            "binding_name": "#null",
-                            "binding_type": "collection",
-                            "binding_condition": "none",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#null",
                             "binding_type": "collection_details",
                             "binding_collection_name": "form_buttons"
                         }
@@ -301,10 +294,7 @@
                                             ],
                                             "controls": [
                                                 {
-                                                    "hover_text": {
-                                                        "type": "custom",
-                                                        "renderer": "hover_text_renderer",
-                                                        "allow_clipping": false,
+                                                    "hover_text@common.hover_text": {
                                                         "layer": 20,
                                                         "bindings": [
                                                             {
@@ -364,12 +354,12 @@
                 "binding_name": "#form_button_texture"
             },
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(not (#form_button_texture = ''))",
                 "target_property_name": "#visible"
             },
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(not (#form_button_texture = 'loading'))",
                 "target_property_name": "#visible"
             }
@@ -420,13 +410,6 @@
                     ],
                     "bindings": [
                         {
-                            "binding_name": "#null",
-                            "binding_type": "collection",
-                            "binding_condition": "none",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#null",
                             "binding_type": "collection_details",
                             "binding_collection_name": "form_buttons"
                         },
@@ -436,7 +419,7 @@
                             "binding_name": "#form_button_text"
                         },
                         {
-                            "binding_type": "view",
+                    "binding_type": "view",
                             "source_property_name": "(not (#form_button_text = ''))",
                             "target_property_name": "#visible"
                         }
@@ -472,10 +455,7 @@
                                         }
                                     },
                                     {
-                                        "hover_text": {
-                                            "type": "custom",
-                                            "renderer": "hover_text_renderer",
-                                            "allow_clipping": false,
+                                        "hover_text@common.hover_text": {
                                             "layer": 20,
                                             "bindings": [
                                                 {
@@ -504,12 +484,12 @@
                 "binding_name": "#form_button_texture"
             },
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(not (#form_button_texture = ''))",
                 "target_property_name": "#visible"
             },
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(not (#form_button_texture = 'loading'))",
                 "target_property_name": "#visible"
             }

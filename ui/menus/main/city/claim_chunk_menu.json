@@ -4,15 +4,13 @@
         "$content_control": "city-menu-claim-chunk.content",
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/city/claim_chunk_menu:')",
                 "target_property_name": "#text"
             }
         ]
     },
-    "content": {
-        "type": "stack_panel",
-        "orientation": "vertical",
+    "content@common.vertical_stack_panel": {
         "collection_name": "form_buttons",
         "size": [
             "100%",
@@ -47,9 +45,7 @@
             }
         ]
     },
-    "chunk_button_stack_panel": {
-        "type": "stack_panel",
-        "orientation": "horizontal",
+    "chunk_button_stack_panel@common.horizontal_stack_panel": {
         "collection_name": "form_buttons",
         "size": [
             "100%",

@@ -1,0 +1,1922 @@
+{
+    "namespace": "progression",
+    "main@common-mineville.form_template": {
+        "$title_bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(#title_text - '@mineville/progression:')",
+                "target_property_name": "#text"
+            }
+        ],
+        "$content_controls": [
+            {
+                "panel@progression.form_content_panel": {}
+            }
+        ]
+    },
+    "form_content_panel": {
+        "type": "panel",
+        "controls": [
+            {
+                "scroll_panel@common.scrolling_panel": {
+                    "$show_background": false,
+                    "$scrolling_content": "progression.scroll_content",
+                    "$scroll_box_touch_image_control": "common-mineville.scroll_box_touch_image_control",
+                    "$scroll_box_mouse_image_control": "common-mineville.scroll_box_mouse_image_control",
+                    "$scroll_size": [
+                        "5px",
+                        "100%  - 4px"
+                    ],
+                    "$scroll_bar_left_padding_size": [
+                        "0px",
+                        "0px"
+                    ],
+                    "$scrolling_pane_offset": [
+                        0,
+                        7
+                    ],
+                    "$scrolling_pane_size": [
+                        "100%",
+                        "100% - 12px"
+                    ],
+                    "$scroll_bar_right_padding_size": [
+                        "5px",
+                        "0px"
+                    ]
+                }
+            }
+        ]
+    },
+    "scroll_content": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%cm"
+        ],
+        "controls": [
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "collection_name": "form_buttons",
+                    "size": [
+                        "100% - 10px",
+                        "100%c"
+                    ],
+                    "controls": [
+                        {
+                            "timer_panel_wrapper@common.empty_panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "collection_index": 54,
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text",
+                                        "binding_name_override": "#text"
+                                    },
+                                    {
+                                        "binding_type": "view",
+                                        "source_property_name": "(not (#text = ''))",
+                                        "target_property_name": "#visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "timer_panel@common.empty_image": {
+                                            "size": [
+                                                "100% - 5px",
+                                                "100%c - 5px"
+                                            ],
+                                            "alpha": 0.6,
+                                            "texture": "textures/ui/common/buttons/clear/preview",
+                                            "layer": 4,
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "controls": [
+                                                {
+                                                    "stack_panel": {
+                                                        "type": "stack_panel",
+                                                        "orientation": "horizontal",
+                                                        "anchor_from": "right_middle",
+                                                        "anchor_to": "right_middle",
+                                                        "size": [
+                                                            "100%",
+                                                            10
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "empty_panel_padding@common.empty_panel": {
+                                                                    "size": [
+                                                                        4,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "timer_spin_wrapper@common.empty_panel": {
+                                                                    "size": [
+                                                                        16,
+                                                                        16
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "timer_spin_image@common.empty_image": {
+                                                                                "layer": 5,
+                                                                                "texture": "textures/ui/timer_spin",
+                                                                                "uv_size": [
+                                                                                    16,
+                                                                                    16
+                                                                                ],
+                                                                                "offset": [
+                                                                                    0,
+                                                                                    -2.5
+                                                                                ],
+                                                                                "size": [
+                                                                                    16,
+                                                                                    16
+                                                                                ],
+                                                                                "keep_ratio": true,
+                                                                                "uv": "@crate_preview_v2.timer_animation"
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "empty_panel_padding_2@common.empty_panel": {
+                                                                    "size": [
+                                                                        2,
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "empty_panel@common.empty_panel": {
+                                                                    "controls": [
+                                                                        {
+                                                                            "form_text_label": {
+                                                                                "layer": 5,
+                                                                                "type": "label",
+                                                                                "offset": [
+                                                                                    0,
+                                                                                    1
+                                                                                ],
+                                                                                "anchor_from": "left_middle",
+                                                                                "anchor_to": "left_middle",
+                                                                                "text_alignment": "center",
+                                                                                "text": "#text",
+                                                                                "shadow": true,
+                                                                                "bindings": [
+                                                                                    {
+                                                                                        "binding_type": "collection",
+                                                                                        "binding_collection_name": "form_buttons",
+                                                                                        "binding_name": "#form_button_text",
+                                                                                        "binding_name_override": "#text"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "form_text_label": {
+                                                        "layer": 5,
+                                                        "offset": [
+                                                            -4,
+                                                            1
+                                                        ],
+                                                        "type": "label",
+                                                        "anchor_from": "top_right",
+                                                        "anchor_to": "top_right",
+                                                        "font_type": "MinecraftTen",
+                                                        "text": "Limited Time Offer!",
+                                                        "color": [
+                                                            0.918,
+                                                            0.11,
+                                                            0.184
+                                                        ],
+                                                        "font_scale_factor": 1.2,
+                                                        "shadow": false,
+                                                        "max_size": [
+                                                            "100% - 2px",
+                                                            "default"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "padding@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "button_stack_panel": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "collection_name": "form_buttons",
+                                "size": [
+                                    "100% - 3px",
+                                    92
+                                ],
+                                "controls": [
+                                    {
+                                        "padding@common.empty_panel": {
+                                            "size": [
+                                                1.5,
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hero_image_button@crate_preview_v2.mv_button_controller": {
+                                            "size": [
+                                                "50%",
+                                                "100%"
+                                            ],
+                                            "enabled": false,
+                                            "$button_color": "common",
+                                            "$mv_click_bindings": "crate_preview_v2.hero_image_button",
+                                            "collection_index": 53
+                                        }
+                                    },
+                                    {
+                                        "right_button_stack": {
+                                            "type": "stack_panel",
+                                            "orientation": "vertical",
+                                            "collection_name": "form_buttons",
+                                            "size": [
+                                                "50%",
+                                                46
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "gold_button@crate_preview_v2.mv_button_controller": {
+                                                        "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons_gold",
+                                                        "$button_color": "gold",
+                                                        "$shadow_color": [
+                                                            0.769,
+                                                            0.431,
+                                                            0.051
+                                                        ],
+                                                        "$color": [
+                                                            0.478,
+                                                            0.224,
+                                                            0.031
+                                                        ],
+                                                        "$mc_texture": "textures/ui/common/buttons/gold/minecoin",
+                                                        "collection_index": 51
+                                                    }
+                                                },
+                                                {
+                                                    "green_button@crate_preview_v2.mv_button_controller_green": {
+                                                        "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons",
+                                                        "collection_index": 52
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "padding2pixels@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "main_wrapper@common.empty_panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "empty_panel@common.empty_image": {
+                                            "alpha": 0.6,
+                                            "texture": "textures/ui/common/buttons/clear/preview",
+                                            "size": [
+                                                "100%-5px",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "stack@common.vertical_stack_panel": {
+                                                        "offset": [
+                                                            -0.5,
+                                                            0
+                                                        ],
+                                                        "size": [
+                                                            "100%",
+                                                            "100%c"
+                                                        ],
+                                                        "collection_name": "form_buttons",
+                                                        "controls": [
+                                                            {
+                                                                "padding_top_grid@common.empty_panel": {
+                                                                    "size": [
+                                                                        0,
+                                                                        5
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "preview_grid_wrapper": {
+                                                                    "type": "stack_panel",
+                                                                    "orientation": "horizontal",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 5))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "0@progression.preview_button": {
+                                                                                "collection_index": 0
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_1@progression.arrows": {}
+                                                                        },
+                                                                        {
+                                                                            "1@progression.preview_button": {
+                                                                                "collection_index": 1
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_2@progression.arrows": {
+                                                                                "collection_index": 2
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "2@progression.preview_button": {
+                                                                                "collection_index": 2
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_3@progression.arrows": {
+                                                                                "collection_index": 3
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "3@progression.preview_button": {
+                                                                                "collection_index": 3
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_4@progression.arrows": {
+                                                                                "collection_index": 4
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "4@progression.preview_button": {
+                                                                                "collection_index": 4
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_5@progression.arrows": {
+                                                                                "collection_index": 5
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "5@progression.preview_button": {
+                                                                                "collection_index": 5
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow@progression.vertical_arrow": {
+                                                                    "collection_index": 6,
+                                                                    "$arrow_offset": [
+                                                                        275,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_1": {
+                                                                    "type": "collection_panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "controls": [
+                                                                        {
+                                                                            "6@progression.preview_button": {
+                                                                                "collection_index": 6,
+                                                                                "offset": [
+                                                                                    131,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_7@progression.arrows_flipped": {
+                                                                                "collection_index": 7,
+                                                                                "offset": [
+                                                                                    104.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "7@progression.preview_button": {
+                                                                                "collection_index": 7,
+                                                                                "offset": [
+                                                                                    79,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_8@progression.arrows_flipped": {
+                                                                                "collection_index": 8,
+                                                                                "offset": [
+                                                                                    52.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "8@progression.preview_button": {
+                                                                                "collection_index": 8,
+                                                                                "offset": [
+                                                                                    27,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_9@progression.arrows_flipped": {
+                                                                                "collection_index": 9,
+                                                                                "offset": [
+                                                                                    0.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "9@progression.preview_button": {
+                                                                                "collection_index": 9,
+                                                                                "offset": [
+                                                                                    -25.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_10@progression.arrows_flipped": {
+                                                                                "collection_index": 10,
+                                                                                "offset": [
+                                                                                    -51.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "10@progression.preview_button": {
+                                                                                "collection_index": 10,
+                                                                                "offset": [
+                                                                                    -77.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_11@progression.arrows_flipped": {
+                                                                                "collection_index": 11,
+                                                                                "offset": [
+                                                                                    -103.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "11@progression.preview_button": {
+                                                                                "offset": [
+                                                                                    -129.7,
+                                                                                    0
+                                                                                ],
+                                                                                "collection_index": 11
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_2@progression.vertical_arrow": {
+                                                                    "collection_index": 12,
+                                                                    "$arrow_offset": [
+                                                                        15,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_2": {
+                                                                    "type": "stack_panel",
+                                                                    "orientation": "horizontal",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 17))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "12@progression.preview_button": {
+                                                                                "collection_index": 12
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_13@progression.arrows": {
+                                                                                "collection_index": 13
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "13@progression.preview_button": {
+                                                                                "collection_index": 13
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_14@progression.arrows": {
+                                                                                "collection_index": 14
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "14@progression.preview_button": {
+                                                                                "collection_index": 14
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_15@progression.arrows": {
+                                                                                "collection_index": 15
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "15@progression.preview_button": {
+                                                                                "collection_index": 15
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_16@progression.arrows": {
+                                                                                "collection_index": 16
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "16@progression.preview_button": {
+                                                                                "collection_index": 16
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_17@progression.arrows": {
+                                                                                "collection_index": 17
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "17@progression.preview_button": {
+                                                                                "collection_index": 17
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_3@progression.vertical_arrow": {
+                                                                    "collection_index": 18,
+                                                                    "$arrow_offset": [
+                                                                        275,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_3": {
+                                                                    "type": "collection_panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 23))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "18@progression.preview_button": {
+                                                                                "collection_index": 18,
+                                                                                "offset": [
+                                                                                    131,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_19@progression.arrows_flipped": {
+                                                                                "collection_index": 19,
+                                                                                "offset": [
+                                                                                    104.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "19@progression.preview_button": {
+                                                                                "collection_index": 19,
+                                                                                "offset": [
+                                                                                    79,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_20@progression.arrows_flipped": {
+                                                                                "collection_index": 20,
+                                                                                "offset": [
+                                                                                    52.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "20@progression.preview_button": {
+                                                                                "collection_index": 20,
+                                                                                "offset": [
+                                                                                    27,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_21@progression.arrows_flipped": {
+                                                                                "collection_index": 21,
+                                                                                "offset": [
+                                                                                    0.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "21@progression.preview_button": {
+                                                                                "collection_index": 21,
+                                                                                "offset": [
+                                                                                    -25.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_22@progression.arrows_flipped": {
+                                                                                "collection_index": 22,
+                                                                                "offset": [
+                                                                                    -51.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "22@progression.preview_button": {
+                                                                                "collection_index": 22,
+                                                                                "offset": [
+                                                                                    -77.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_23@progression.arrows_flipped": {
+                                                                                "collection_index": 23,
+                                                                                "offset": [
+                                                                                    -103.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "23@progression.preview_button": {
+                                                                                "collection_index": 23,
+                                                                                "offset": [
+                                                                                    -129.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_4@progression.vertical_arrow": {
+                                                                    "collection_index": 24,
+                                                                    "$arrow_offset": [
+                                                                        15,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_4": {
+                                                                    "type": "stack_panel",
+                                                                    "orientation": "horizontal",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 29))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "24@progression.preview_button": {
+                                                                                "collection_index": 24
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_25@progression.arrows": {
+                                                                                "collection_index": 25
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "25@progression.preview_button": {
+                                                                                "collection_index": 25
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_26@progression.arrows": {
+                                                                                "collection_index": 26
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "26@progression.preview_button": {
+                                                                                "collection_index": 26
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_27@progression.arrows": {
+                                                                                "collection_index": 27
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "27@progression.preview_button": {
+                                                                                "collection_index": 27
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_28@progression.arrows": {
+                                                                                "collection_index": 28
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "28@progression.preview_button": {
+                                                                                "collection_index": 28
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_29@progression.arrows": {
+                                                                                "collection_index": 29
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "29@progression.preview_button": {
+                                                                                "collection_index": 29
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_5@progression.vertical_arrow": {
+                                                                    "collection_index": 30,
+                                                                    "$arrow_offset": [
+                                                                        275,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_5": {
+                                                                    "type": "collection_panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 35))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "30@progression.preview_button": {
+                                                                                "collection_index": 30,
+                                                                                "offset": [
+                                                                                    131,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_31@progression.arrows_flipped": {
+                                                                                "collection_index": 31,
+                                                                                "offset": [
+                                                                                    104.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "31@progression.preview_button": {
+                                                                                "collection_index": 31,
+                                                                                "offset": [
+                                                                                    79,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_32@progression.arrows_flipped": {
+                                                                                "collection_index": 32,
+                                                                                "offset": [
+                                                                                    52.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "32@progression.preview_button": {
+                                                                                "collection_index": 32,
+                                                                                "offset": [
+                                                                                    27,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_33@progression.arrows_flipped": {
+                                                                                "collection_index": 33,
+                                                                                "offset": [
+                                                                                    0.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "33@progression.preview_button": {
+                                                                                "collection_index": 33,
+                                                                                "offset": [
+                                                                                    -25.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_34@progression.arrows_flipped": {
+                                                                                "collection_index": 34,
+                                                                                "offset": [
+                                                                                    -51.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "34@progression.preview_button": {
+                                                                                "collection_index": 34,
+                                                                                "offset": [
+                                                                                    -77.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_35@progression.arrows_flipped": {
+                                                                                "collection_index": 35,
+                                                                                "offset": [
+                                                                                    -103.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "35@progression.preview_button": {
+                                                                                "collection_index": 35,
+                                                                                "offset": [
+                                                                                    -129.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_6@progression.vertical_arrow": {
+                                                                    "collection_index": 36,
+                                                                    "$arrow_offset": [
+                                                                        15,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_6": {
+                                                                    "type": "stack_panel",
+                                                                    "orientation": "horizontal",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 41))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "36@progression.preview_button": {
+                                                                                "collection_index": 36
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_37@progression.arrows": {
+                                                                                "collection_index": 37
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "37@progression.preview_button": {
+                                                                                "collection_index": 37
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_38@progression.arrows": {
+                                                                                "collection_index": 38
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "38@progression.preview_button": {
+                                                                                "collection_index": 38
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_39@progression.arrows": {
+                                                                                "collection_index": 39
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "39@progression.preview_button": {
+                                                                                "collection_index": 39
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_40@progression.arrows": {
+                                                                                "collection_index": 40
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "40@progression.preview_button": {
+                                                                                "collection_index": 40
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_41@progression.arrows": {
+                                                                                "collection_index": 41
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "41@progression.preview_button": {
+                                                                                "collection_index": 41
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_7@progression.vertical_arrow": {
+                                                                    "collection_index": 42,
+                                                                    "$arrow_offset": [
+                                                                        275,
+                                                                        6
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "Collection_stack_7": {
+                                                                    "type": "collection_panel",
+                                                                    "size": [
+                                                                        "100%",
+                                                                        "100%cm"
+                                                                    ],
+                                                                    "collection_name": "form_buttons",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_type": "collection_details",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_name": "#collection_index",
+                                                                            "binding_type": "collection",
+                                                                            "binding_collection_name": "form_buttons"
+                                                                        },
+                                                                        {
+                                                                            "binding_type": "view",
+                                                                            "source_property_name": "(not (#collection_index > 47))",
+                                                                            "target_property_name": "#visible"
+                                                                        }
+                                                                    ],
+                                                                    "controls": [
+                                                                        {
+                                                                            "padding@common.empty_panel": {
+                                                                                "size": [
+                                                                                    4,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "42@progression.preview_button": {
+                                                                                "collection_index": 42,
+                                                                                "offset": [
+                                                                                    131,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_43@progression.arrows_flipped": {
+                                                                                "collection_index": 43,
+                                                                                "offset": [
+                                                                                    104.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "43@progression.preview_button": {
+                                                                                "collection_index": 43,
+                                                                                "offset": [
+                                                                                    79,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_44@progression.arrows_flipped": {
+                                                                                "collection_index": 44,
+                                                                                "offset": [
+                                                                                    52.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "44@progression.preview_button": {
+                                                                                "collection_index": 44,
+                                                                                "offset": [
+                                                                                    27,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_45@progression.arrows_flipped": {
+                                                                                "collection_index": 45,
+                                                                                "offset": [
+                                                                                    0.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "45@progression.preview_button": {
+                                                                                "collection_index": 45,
+                                                                                "offset": [
+                                                                                    -25.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_46@progression.arrows_flipped": {
+                                                                                "collection_index": 46,
+                                                                                "offset": [
+                                                                                    -51.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "46@progression.preview_button": {
+                                                                                "collection_index": 46,
+                                                                                "offset": [
+                                                                                    -77.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "arrow_47@progression.arrows_flipped": {
+                                                                                "collection_index": 47,
+                                                                                "offset": [
+                                                                                    -103.5,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "47@progression.preview_button": {
+                                                                                "collection_index": 47,
+                                                                                "offset": [
+                                                                                    -129.7,
+                                                                                    0
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "vertical_arrow_padding@progression.vertical_arrow": {
+                                                                    "collection_index": 0,
+                                                                    "alpha": 0,
+                                                                    "size": [
+                                                                        15,
+                                                                        20
+                                                                    ],
+                                                                    "propagate_alpha": true
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "padding_2px@common.empty_panel": {
+                                "size": [
+                                    0,
+                                    2
+                                ]
+                            }
+                        },
+                        {
+                            "empty_panel@common.empty_panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c +2px"
+                                ],
+                                "controls": [
+                                    {
+                                        "text_background@common.empty_image": {
+                                            "size": [
+                                                "100% - 5px",
+                                                "100%c + 10px"
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not (#form_text = ''))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ],
+                                            "texture": "textures/ui/common/light_field",
+                                            "layer": 4,
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "controls": [
+                                                {
+                                                    "form_text_label": {
+                                                        "layer": 5,
+                                                        "offset": [
+                                                            5,
+                                                            0
+                                                        ],
+                                                        "type": "label",
+                                                        "anchor_from": "left_middle",
+                                                        "anchor_to": "left_middle",
+                                                        "text": "#form_text",
+                                                        "shadow": true,
+                                                        "max_size": [
+                                                            "100% - 2px",
+                                                            "default"
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "preview_button": {
+        "type": "panel",
+        "size": [
+            "12.2%",
+            38
+        ],
+        "bindings": [
+            {
+                "binding_name": "#form_button_text",
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_text = ''))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "button@common.button": {
+                    "layer": 2,
+                    "sound_volume": 0,
+                    "$pressed_button_name": "button.null",
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_condition": "none",
+                            "binding_name": "#form_button_text",
+                            "binding_name_override": "#form_button_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(((#form_button_text - '§g§o§r') = #form_button_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "default": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/clear/preview_square",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {}
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "hover": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/clear/preview_square",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {}
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "110%",
+                                                "110%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "pressed": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/clear/preview_square",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {}
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "110%",
+                                                "110%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "button_gold@common.button": {
+                    "layer": 2,
+                    "$pressed_button_name": "button.null",
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "collection_details",
+                            "binding_collection_name": "form_buttons"
+                        },
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "form_buttons",
+                            "binding_condition": "none",
+                            "binding_name": "#form_button_text",
+                            "binding_name_override": "#form_button_text"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not ((#form_button_text - '§g§o§r') = #form_button_text))",
+                            "target_property_name": "#visible"
+                        }
+                    ],
+                    "controls": [
+                        {
+                            "default": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/gold/gold_preview",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {
+                                            "$binds": [
+                                                {
+                                                    "binding_type": "collection_details",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_name": "#collection_index",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "target_property_name": "#text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "hover": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/gold/gold_preview",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {
+                                            "$binds": [
+                                                {
+                                                    "binding_type": "collection_details",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_name": "#collection_index",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "target_property_name": "#text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "110%",
+                                                "110%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "pressed": {
+                                "type": "image",
+                                "texture": "textures/ui/common/buttons/gold/gold_preview",
+                                "controls": [
+                                    {
+                                        "content@crate_preview_v2.preview_button_content": {}
+                                    },
+                                    {
+                                        "open_label@progression.open_label": {
+                                            "$binds": [
+                                                {
+                                                    "binding_type": "collection_details",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_name": "#collection_index",
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "target_property_name": "#text"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "hover_text@common.hover_text": {
+                                            "layer": 150,
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#hover_text",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_type": "collection"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "finished@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "90%",
+                                                "90%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/check",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection",
+                                                    "binding_collection_name": "form_buttons",
+                                                    "binding_condition": "none",
+                                                    "binding_name": "#form_button_text",
+                                                    "binding_name_override": "#form_button_text"
+                                                },
+                                                {
+                                                    "binding_type": "view",
+                                                    "source_property_name": "(not ((#form_button_text - '§c§a§r') = #form_button_text))",
+                                                    "target_property_name": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "green_outline@common.empty_image": {
+                                            "type": "image",
+                                            "size": [
+                                                "110%",
+                                                "110%"
+                                            ],
+                                            "layer": 100,
+                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "open_label": {
+        "type": "label",
+        "size": [
+            37,
+            30
+        ],
+        "font_type": "MinecraftTen",
+        "text": "#text",
+        "text_alignment": "center",
+        "font_scale_factor": 0.7,
+        "anchor_from": "bottom_middle",
+        "anchor_to": "top_middle",
+        "layer": 5,
+        "shadow": false,
+        "bindings": "$binds",
+        "$binds|default": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#collection_index",
+                "binding_type": "collection",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('Open ' + (#collection_index + 1))",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "vertical_arrow@progression.arrows": {
+        "size": [
+            15,
+            38
+        ],
+        "$texture": "textures/ui/common/arrow_vertical"
+    },
+    "arrows_flipped@progression.arrows": {
+        "$texture": "textures/ui/common/arrow_reverse"
+    },
+    "arrows@common.button": {
+        "$pressed_button_name": "button.null",
+        "size": [
+            15,
+            38
+        ],
+        "$texture|default": "textures/ui/common/arrow",
+        "sound_volume": 0,
+        "focus_enabled": false,
+        "locked_control": "pressed",
+        "collection_index": 1,
+        "$arrow_offset|default": [],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "form_buttons"
+            },
+            {
+                "binding_name": "#form_button_text",
+                "binding_collection_name": "form_buttons",
+                "binding_type": "collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#form_button_text = ''))",
+                "target_property_name": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "default@common.empty_image": {
+                    "texture": "$texture",
+                    "offset": "$arrow_offset"
+                }
+            },
+            {
+                "hover@common.empty_image": {
+                    "texture": "$texture",
+                    "offset": "$arrow_offset"
+                }
+            },
+            {
+                "pressed@common.empty_image": {
+                    "texture": "$texture",
+                    "offset": "$arrow_offset"
+                }
+            },
+            {
+                "locked@common.empty_image": {
+                    "texture": "$texture",
+                    "offset": "$arrow_offset"
+                }
+            }
+        ]
+    }
+}

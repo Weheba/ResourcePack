@@ -2,9 +2,12 @@
     "ui_defs": [
         "ui/common/common.json",
         "ui/menus/crates/menu.json",
+        "ui/menus/crates/preview_v2.json",
         "ui/menus/crates/preview.json",
         "ui/menus/gamemodes/earthsmp/random_teleport_menu.json",
         "ui/menus/gamemodes/gamemodes_menu.json",
+		"ui/menus/gamemodes/gaf/shop_menu.json",
+        "ui/menus/gamemodes/gaf/shop_menu_v2.json",
         "ui/menus/generic/long_form.json",
         "ui/menus/generic/modal_form.json",
         "ui/menus/main/city/claim_chunk_menu.json",
@@ -14,6 +17,9 @@
         "ui/menus/main/common.json",
         "ui/menus/other/auction_house.json",
         "ui/menus/other/browser_ad.json",
-        "ui/menus/other/wardrobe.json"
+        "ui/menus/other/wardrobe.json",
+        "ui/menus/other/dollwardrobe.json",
+        "ui/menus/crates/progression.json",
+        "ui/menus/crates/treasure_chest.json"
     ]
 }

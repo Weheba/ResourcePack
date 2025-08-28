@@ -11,7 +11,7 @@
         ],
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/earth-smp/rtp_menu:')",
                 "target_property_name": "#text"
             }
@@ -24,7 +24,7 @@
                         {
                             "image": {
                                 "type": "image",
-                                "texture": "textures/ui/assets/earthsmp/map/earth_map",
+                                "texture": "textures/ui/common/earthsmp/map/earth_map",
                                 "size": [
                                     "330px",
                                     "165px"
@@ -184,13 +184,6 @@
                                 "focus_enabled": true,
                                 "bindings": [
                                     {
-                                        "binding_name": "#null",
-                                        "binding_type": "collection",
-                                        "binding_condition": "none",
-                                        "binding_collection_name": "form_buttons"
-                                    },
-                                    {
-                                        "binding_name": "#null",
                                         "binding_type": "collection_details",
                                         "binding_collection_name": "form_buttons"
                                     }
@@ -216,7 +209,7 @@
                                                 {
                                                     "shadow": {
                                                         "type": "image",
-                                                        "texture": "textures/ui/assets/common/star_shadow",
+                                                        "texture": "textures/ui/common/earthsmp/star_shadow",
                                                         "offset": [
                                                             "1px",
                                                             "1px"
@@ -226,7 +219,7 @@
                                                 {
                                                     "star": {
                                                         "type": "image",
-                                                        "texture": "textures/ui/assets/common/star"
+                                                        "texture": "textures/ui/common/earthsmp/star"
                                                     }
                                                 }
                                             ]
@@ -256,7 +249,7 @@
                                                                         {
                                                                             "outline": {
                                                                                 "type": "image",
-                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/outline')"
+                                                                                "texture": "('textures/ui/common/earthsmp/map/' + $focus + '/outline')"
                                                                             }
                                                                         },
                                                                         {
@@ -264,7 +257,7 @@
                                                                                 "type": "image",
                                                                                 "layer": 2,
                                                                                 "alpha": 0.75,
-                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
+                                                                                "texture": "('textures/ui/common/earthsmp/map/' + $focus + '/overlay')"
                                                                             }
                                                                         }
                                                                     ]
@@ -281,7 +274,7 @@
                                                             {
                                                                 "shadow": {
                                                                     "type": "image",
-                                                                    "texture": "textures/ui/assets/common/star_shadow",
+                                                                    "texture": "textures/ui/common/earthsmp/star_shadow",
                                                                     "offset": [
                                                                         "1px",
                                                                         "1px"
@@ -291,18 +284,14 @@
                                                             {
                                                                 "star": {
                                                                     "type": "image",
-                                                                    "texture": "textures/ui/assets/common/star"
+                                                                    "texture": "textures/ui/common/earthsmp/star"
                                                                 }
                                                             }
                                                         ]
                                                     }
                                                 },
                                                 {
-                                                    "hover_text": {
-                                                        "type": "custom",
-                                                        "renderer": "hover_text_renderer",
-                                                        "allow_clipping": false,
-                                                        "layer": 3,
+                                                    "hover_text@common.hover_text": {
                                                         "bindings": [
                                                             {
                                                                 "binding_type": "collection",
@@ -340,7 +329,7 @@
                                                                         {
                                                                             "outline": {
                                                                                 "type": "image",
-                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/outline')"
+                                                                                "texture": "('textures/ui/common/earthsmp/map/' + $focus + '/outline')"
                                                                             }
                                                                         },
                                                                         {
@@ -348,7 +337,7 @@
                                                                                 "type": "image",
                                                                                 "layer": 2,
                                                                                 "alpha": 0.75,
-                                                                                "texture": "('textures/ui/assets/earthsmp/map/' + $focus + '/overlay')"
+                                                                                "texture": "('textures/ui/common/earthsmp/map/' + $focus + '/overlay')"
                                                                             }
                                                                         }
                                                                     ]
@@ -364,7 +353,7 @@
                                                             {
                                                                 "shadow": {
                                                                     "type": "image",
-                                                                    "texture": "textures/ui/assets/common/star_shadow",
+                                                                    "texture": "textures/ui/common/earthsmp/star_shadow",
                                                                     "offset": [
                                                                         "1px",
                                                                         "1px"
@@ -374,7 +363,7 @@
                                                             {
                                                                 "star": {
                                                                     "type": "image",
-                                                                    "texture": "textures/ui/assets/common/star"
+                                                                    "texture": "textures/ui/common/earthsmp/star"
                                                                 }
                                                             }
                                                         ]

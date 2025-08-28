@@ -2,13 +2,14 @@
     "format_version": 2,
     "metadata": {
         "authors": [
-            "zelisce"
+            "zelisce",
+            "Citicx"
         ]
     },
     "header": {
-        "name": "Mineville [RP]",
-        "description": "» Resource Pack for Mineville.",
-        "uuid": "bd5a1f42-3b04-47a2-80d2-2e87b6f04990",
+        "name": "Mineville [UI]",
+        "description": "» UI Pack for Mineville.",
+        "uuid": "2e113c3a-4995-4f94-bfd1-c00c416ce716",
         "min_engine_version": [
             1,
             21,
@@ -16,18 +17,18 @@
         ],
         "version": [
             1,
-            2,
-            1
+            6,
+            3
         ]
     },
     "modules": [
         {
             "type": "resources",
-            "uuid": "476348da-f050-4d65-b753-4726d400edbb",
+            "uuid": "9f6988e0-373a-428b-89b3-93437c9daeed",
             "version": [
                 1,
-                0,
-                0
+                6,
+                3
             ]
         }
     ]

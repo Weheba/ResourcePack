@@ -4,15 +4,13 @@
         "$content_control": "other-main-menu.content",
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/other_main_menu:')",
                 "target_property_name": "#text"
             }
         ]
     },
-    "content": {
-        "type": "stack_panel",
-        "orientation": "vertical",
+    "content@common.vertical_stack_panel": {
         "collection_name": "form_buttons",
         "size": [
             "100%",

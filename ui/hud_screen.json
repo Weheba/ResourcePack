@@ -1,59 +1,96 @@
 {
-    "namespace": "hud",
-    "chat_grid_item/chat_background": {
-        "controls": [
+  "root_panel/sidebar": {
+    "ignored": true
+  },
+  "root_panel/chat_stack": {
+    "size": ["100%", "100%"],
+    "controls": [
+      {
+        "pocket_screen_padding": {
+          "type": "panel",
+          "ignored": "$desktop_screen",
+          "size": [0, 24]
+        }
+      },
+      {
+        "scoreboard_padding@scoreboard.scoreboard_sidebar": {}
+      },
+      {
+        "player_position_padding": {
+          "type": "panel",
+          "size": [0, 2]
+        }
+      },
+      {
+        "player_position@hud.player_position": {}
+      },
+      {
+        "vr_riding_chat_padding": {
+          "type": "panel",
+          "size": ["100%", 132],
+          "visible": "#vr_riding",
+          "bindings": [
             {
-                "zelisce_chat_label@chat_label": {
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "offset": [
-                        2,
-                        0
-                    ],
-                    "bindings": [
-                        {
-                            "binding_type": "collection",
-                            "binding_collection_name": "chat_text_grid",
-                            "binding_name": "#chat_text"
-                        },
-                        {
-                            "binding_type": "view",
-                            "binding_condition": "once",
-                            "source_property_name": "('§bzelisce' + (#chat_text - 'zelisce'))",
-                            "target_property_name": "#text"
-                        },
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "(not ((#chat_text - 'zelisce') = #chat_text))",
-                            "target_property_name": "#visible"
-                        }
-                    ]
-                }
-            },
-            {
-                "normal_chat_label@chat_label": {
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "offset": [
-                        2,
-                        0
-                    ],
-                    "bindings": [
-                        {
-                            "binding_name": "#chat_text",
-                            "binding_name_override": "#text",
-                            "binding_type": "collection",
-                            "binding_collection_name": "chat_text_grid",
-                            "binding_condition": "once"
-                        },
-                        {
-                            "binding_type": "view",
-                            "source_property_name": "((#chat_text - 'zelisce') = #chat_text)",
-                            "target_property_name": "#visible"
-                        }
-                    ]
-                }
+              "binding_name": "#vr_riding",
+              "binding_name_override": "#visible"
             }
-        ]
-    }
+          ]
+        }
+      },
+      {
+        "vr_chat_padding": {
+          "type": "panel",
+          "size": ["100%", 30],
+          "visible": "#vr_non_riding",
+          "bindings": [
+            {
+              "binding_name": "#vr_non_riding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "non_centered_gui_padding": {
+          "type": "panel",
+          "size": ["100%", 24],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible_not_centered",
+              "binding_name_override": "#visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      },
+      {
+        "number_of_days_played@hud.number_of_days_played": {}
+      },
+      {
+        "game_tip@game_tip.game_tip_chat_stack_factory": {
+          "size": ["100%", "100%c"]
+        }
+      },
+      {
+        "chat_panel@hud.chat_panel": {
+          "size": ["40%", "100%c"]
+        }
+      }
+    ]
+  },
+  "player_position": {
+    "texture": "textures/ui/mv_bordered"
+  },
+  "player_position/player_position_text": {
+    "offset": ["0px", "-1px"]
+  },
+  "hud_player_renderer": {
+    "ignored": true
+  },
+  "boss_health_panel/progress_bar_for_collections": {
+    "size": [150, 5]
+  },
+  "boss_name_panel/boss_name": {
+    "font_scale_factor": 0.7
+  }
 }

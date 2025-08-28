@@ -4,15 +4,13 @@
         "$content_control": "city-menu-create-city.content",
         "$title_bindings": [
             {
-                "binding_type": "view",
+        "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/city/create_city_menu:')",
                 "target_property_name": "#text"
             }
         ]
     },
-    "content": {
-        "type": "stack_panel",
-        "orientation": "vertical",
+    "content@common.vertical_stack_panel": {
         "collection_name": "form_buttons",
         "size": [
             "100%",
@@ -54,17 +52,14 @@
             }
         ]
     },
-    "city_button_stack_panel": {
-        "type": "stack_panel",
+    "city_button_stack_panel@common.vertical_stack_panel": {
         "size": [
             "100%",
             "100%c"
         ],
         "controls": [
             {
-                "first_row": {
-                    "type": "stack_panel",
-                    "orientation": "horizontal",
+                "first_row@common.horizontal_stack_panel": {
                     "collection_name": "form_buttons",
                     "size": [
                         "100%",
@@ -105,9 +100,7 @@
                 }
             },
             {
-                "second_row": {
-                    "type": "stack_panel",
-                    "orientation": "horizontal",
+                "second_row@common.horizontal_stack_panel": {
                     "collection_name": "form_buttons",
                     "size": [
                         "100%",
@@ -148,9 +141,7 @@
                 }
             },
             {
-                "third_row": {
-                    "type": "stack_panel",
-                    "orientation": "horizontal",
+                "third_row@common.horizontal_stack_panel": {
                     "collection_name": "form_buttons",
                     "size": [
                         "100%",

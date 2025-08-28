@@ -208,13 +208,6 @@
                     ],
                     "bindings": [
                         {
-                            "binding_name": "#null",
-                            "binding_type": "collection",
-                            "binding_condition": "none",
-                            "binding_collection_name": "form_buttons"
-                        },
-                        {
-                            "binding_name": "#null",
                             "binding_type": "collection_details",
                             "binding_collection_name": "form_buttons"
                         }
@@ -275,10 +268,7 @@
                                                     "contents@auction-house.auction_button_content": {}
                                                 },
                                                 {
-                                                    "hover_text_panel": {
-                                                        "type": "custom",
-                                                        "renderer": "hover_text_renderer",
-                                                        "allow_clipping": false,
+                                                    "hover_text_panel@common.hover_text": {
                                                         "layer": 20,
                                                         "bindings": [
                                                             {
@@ -288,7 +278,7 @@
                                                             },
                                                             {
                                                                 "binding_type": "view",
-                                                                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out' - '#locked')",
+                                                                "source_property_name": "((#form_button_text - ('%.10s' * (#form_button_text  - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out'))) - 'Bid' - 'Buy' - 'Cancel' - 'Claim' - 'Sold Out' - '')",
                                                                 "target_property_name": "#hover_text"
                                                             }
                                                         ]

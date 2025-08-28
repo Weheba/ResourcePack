@@ -199,14 +199,6 @@
                         "100% - 5px",
                         "68px"
                     ],
-                    "$hover_text_bindings": [
-                        {
-                            "binding_type": "collection",
-                            "binding_collection_name": "form_buttons",
-                            "binding_name": "#form_button_text",
-                            "binding_name_override": "#hover_text"
-                        }
-                    ],
                     "$button_contents": [
                         {
                             "contents@crate-menu.button_contents": {}
