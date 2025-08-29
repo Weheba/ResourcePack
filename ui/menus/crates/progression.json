@@ -1361,6 +1361,7 @@
     },
     "preview_button": {
         "type": "panel",
+        "$open_text_ignored|default": false,
         "size": [
             "12.2%",
             38
@@ -1836,6 +1837,7 @@
         "anchor_to": "top_middle",
         "layer": 5,
         "shadow": false,
+        "ignored": "$open_text_ignored",
         "bindings": "$binds",
         "$binds|default": [
             {

@@ -234,7 +234,6 @@
                                                 "100%"
                                             ],
                                             "texture": "textures/ui/common/light_field",
-                                            "collection_index": 16,
                                             "controls": [
                                                 {
                                                     "preview_grid_wrapper@common.empty_panel": {
@@ -699,122 +698,11 @@
             }
         ]
     },
-    "preview_button@common.empty_panel": {
+    "preview_button@progression.preview_button": {
+        "$open_text_ignored": true,
         "size": [
             35,
             35
-        ],
-        "$default_texture|default": "textures/ui/common/buttons/clear/preview",
-        "$hover_texture|default": "textures/ui/common/buttons/clear/preview",
-        "$pressed_texture|default": "textures/ui/common/buttons/clear/preview",
-        "bindings": [
-            {
-                "binding_name": "#form_button_text",
-                "binding_collection_name": "form_buttons",
-                "binding_type": "collection"
-            },
-            {
-                "binding_type": "view",
-                "source_property_name": "(not (#form_button_text = ''))",
-                "target_property_name": "#visible"
-            }
-        ],
-        "controls": [
-            {
-                "button@common.button": {
-                    "layer": 2,
-                    "sound_volume": 0,
-                    "$pressed_button_name|default": "",
-                    "$pressed_button_name": "button.null",
-                    "size": [
-                        "100% - 2px",
-                        "100% - 2px"
-                    ],
-                    "controls": [
-                        {
-                            "default": {
-                                "type": "image",
-                                "texture": "$default_texture",
-                                "controls": [
-                                    {
-                                        "content@crate_preview_v2.preview_button_content": {}
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "hover": {
-                                "type": "image",
-                                "texture": "$hover_texture",
-                                "controls": [
-                                    {
-                                        "content@crate_preview_v2.preview_button_content": {}
-                                    },
-                                    {
-                                        "hover_text@common.hover_text": {
-                                            "layer": 150,
-                                            "bindings": [
-                                                {
-                                                    "binding_name": "#form_button_text",
-                                                    "binding_name_override": "#hover_text",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_type": "collection"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "green_outline@common.empty_image": {
-                                            "type": "image",
-                                            "size": [
-                                                "105%",
-                                                "105%"
-                                            ],
-                                            "layer": 100,
-                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "pressed": {
-                                "type": "image",
-                                "texture": "$pressed_texture",
-                                "controls": [
-                                    {
-                                        "content@crate_preview_v2.preview_button_content": {}
-                                    },
-                                    {
-                                        "hover_text@common.hover_text": {
-                                            "layer": 150,
-                                            "bindings": [
-                                                {
-                                                    "binding_name": "#form_button_text",
-                                                    "binding_name_override": "#hover_text",
-                                                    "binding_collection_name": "form_buttons",
-                                                    "binding_type": "collection"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "green_outline@common.empty_image": {
-                                            "type": "image",
-                                            "size": [
-                                                "105%",
-                                                "105%"
-                                            ],
-                                            "layer": 100,
-                                            "texture": "textures/ui/common/buttons/clear/preview_hover_green"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            }
         ]
     }
 }
