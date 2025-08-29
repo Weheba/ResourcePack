@@ -169,6 +169,7 @@
     },
     "mv_form_button_image@common.empty_image": {
         "layer": 1,
+        "allow_debug_missing_texture": false,
         "bindings": [
             {
                 "binding_type": "collection",
