@@ -321,24 +321,24 @@
           ]
         }
       },
-      {
-        "wardrobe_menu@doll-wardrobe.main": {
-          "enabled": false,
-          "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/dollwardrobe') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/dollwardrobe') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
+      // {
+      //   "wardrobe_menu@doll-wardrobe.main": {
+      //     "enabled": false,
+      //    "visible": false,
+      //    "bindings": [
+      //      {
+      //        "binding_type": "view",
+      //        "source_property_name": "(not ((#title_text - '@mineville/dollwardrobe') = #title_text))",
+      //        "target_property_name": "#enabled"
+      //      },
+      //      {
+      //        "binding_type": "view",
+      //        "source_property_name": "(not ((#title_text - '@mineville/dollwardrobe') = #title_text))",
+      //        "target_property_name": "#visible"
+      //      }
+      //    ]
+      // }
+      //},
       {
         "progression@progression.main": {
           "enabled": false,
