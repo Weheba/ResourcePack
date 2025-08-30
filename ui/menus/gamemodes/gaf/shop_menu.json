@@ -407,6 +407,14 @@
                                     "-1px"
                                 ]
                             }
+                        },
+                        {
+                            "hover_text@common.hover_text": {
+                                "layer": 200,
+                                "property_bag": {
+                                    "#hover_text": "Get from a Bundle now!"
+                                }
+                            }
                         }
                     ]
                 }
@@ -524,13 +532,14 @@
                         {
                             "icon": {
                                 "type": "image",
-                                "texture": "textures/ui/common/minecoin",
+                                "texture": "textures/ui/common/chest_closed",
                                 "anchor_from": "center",
                                 "anchor_to": "center",
                                 "size": [
-                                    "8px",
-                                    "8px"
+                                    "9px",
+                                    "9px"
                                 ],
+                                "keep_ratio": true,
                                 "layer": 2
                             }
                         }
