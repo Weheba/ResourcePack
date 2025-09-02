@@ -386,7 +386,10 @@
                     "controls": [
                         {
                             "label@gaf-shop.shop_button_buy_minecoin_panel": {
-                                "$chest_texture": "textures/ui/common/chest_closed"
+                                "offset": [
+                                    "-1px",
+                                    "-1px"
+                                ]
                             }
                         }
                     ]
@@ -399,15 +402,10 @@
                     "controls": [
                         {
                             "label@gaf-shop.shop_button_buy_minecoin_panel": {
-                                "$chest_texture": "textures/ui/common/chest_open"
-                            }
-                        },
-                        {
-                            "hover_text@common.hover_text": {
-                                "layer": 200,
-                                "property_bag": {
-                                    "#hover_text": "Get from a Bundle now!"
-                                }
+                                "offset": [
+                                    "-1px",
+                                    "-1px"
+                                ]
                             }
                         }
                     ]
@@ -420,7 +418,10 @@
                     "controls": [
                         {
                             "label@gaf-shop.shop_button_buy_minecoin_panel": {
-                                "$chest_texture": "textures/ui/common/chest_open"
+                                "offset": [
+                                    "-1px",
+                                    "-1px"
+                                ]
                             }
                         },
                         {
@@ -441,7 +442,10 @@
                     "controls": [
                         {
                             "label@gaf-shop.shop_button_buy_minecoin_panel": {
-                                "$chest_texture": "textures/ui/common/chest_closed"
+                                "offset": [
+                                    "-1px",
+                                    "-1px"
+                                ]
                             }
                         },
                         {
@@ -461,10 +465,6 @@
         "type": "stack_panel",
         "orientation": "vertical",
         "anchor_from": "center",
-        "offset": [
-            "-1px",
-            "-1px"
-        ],
         "anchor_to": "center",
         "size": [
             "100%",
@@ -472,24 +472,65 @@
         ],
         "controls": [
             {
-                "stack_panel": {
+                "padding": {
                     "type": "panel",
+                    "size": [
+                        "100%",
+                        "22px"
+                    ]
+                }
+            },
+            {
+                "stack_panel": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
                     "size": [
                         "100%",
                         "30px"
                     ],
                     "controls": [
                         {
+                            "padding": {
+                                "type": "panel",
+                                "size": [
+                                    "15px",
+                                    "100%"
+                                ]
+                            }
+                        },
+                        {
+                            "shop_button_buy_minecoin_label": {
+                                "type": "label",
+                                "text": "#text",
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "layer": 1,
+                                "color": [
+                                    0.9,
+                                    0.9,
+                                    0.9
+                                ],
+                                "font_scale_factor": 0.7,
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection",
+                                        "binding_collection_name": "form_buttons",
+                                        "binding_name": "#form_button_text",
+                                        "binding_name_override": "#text"
+                                    }
+                                ]
+                            }
+                        },
+                        {
                             "icon": {
                                 "type": "image",
-                                "texture": "$chest_texture",
+                                "texture": "textures/ui/common/minecoin",
                                 "anchor_from": "center",
                                 "anchor_to": "center",
                                 "size": [
-                                    20,
-                                    20
+                                    "8px",
+                                    "8px"
                                 ],
-                                "keep_ratio": true,
                                 "layer": 2
                             }
                         }
