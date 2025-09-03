@@ -47,6 +47,92 @@
             }
         ]
     },
+    "mv_button_controller_green@crate_preview_v2.mv_button_controller": {
+        "controls": [
+            {
+                "button@crate_preview_v2.mv_button": {
+                    "controls": [
+                        {
+                            "default@$mv_click_bindings": {
+                                "$mc_texture": "textures/ui/common/pickaxe",
+                                "ignored": "($hover_state or $pressed_state)",
+                                "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/default')"
+                            }
+                        },
+                        {
+                            "hover@$mv_click_bindings": {
+                                "$mc_texture": "textures/ui/common/pickaxe",
+                                "$hover_state": true,
+                                "ignored": "($default_state or $pressed_state)",
+                                "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/hover')"
+                            }
+                        },
+                        {
+                            "pressed@$mv_click_bindings": {
+                                "ignored": "($default_state or $hover_state)",
+                                "$mc_texture": "textures/ui/common/pickaxe",
+                                "$pressed_state": true,
+                                "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "pickaxe_anim": {
+        "anim_type": "flip_book",
+        "initial_uv": [
+            0,
+            0
+        ],
+        "frame_count": 2,
+        "frame_step": 3,
+        "fps": 1.5
+    },
+    "mv_dynamic_buttons@common.empty_image": {
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 2,
+        "texture": "$button_texture",
+        "controls": [
+            {
+                "texture_icon_mv@common.empty_image": {
+                    "texture": "$mc_texture",
+                    "layer": 10,
+                    "uv": "@progression.pickaxe_anim",
+                    "$mc_texture|default": "",
+                    "keep_ratio": true,
+                    "size": [
+                        32,
+                        32
+                    ],
+                    "uv_size": [
+                        22,
+                        22
+                    ],
+                    "offset": [
+                        8,
+                        -1
+                    ],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "controls": [
+                        {
+                            "description_label_mv@crate_preview_v2.text_common": {
+                                "offset": [
+                                    70,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
     "scroll_content": {
         "type": "panel",
         "size": [
@@ -90,7 +176,7 @@
                                         "timer_panel@common.empty_image": {
                                             "size": [
                                                 "100% - 5px",
-                                                "100%c - 5px"
+                                                20
                                             ],
                                             "alpha": 0.6,
                                             "texture": "textures/ui/common/buttons/clear/preview",
@@ -127,11 +213,7 @@
                                                                         {
                                                                             "timer_spin_image@common.empty_image": {
                                                                                 "layer": 5,
-                                                                                "texture": "textures/ui/timer_spin",
-                                                                                "uv_size": [
-                                                                                    16,
-                                                                                    16
-                                                                                ],
+                                                                                "texture": "textures/ui/common/emerald",
                                                                                 "offset": [
                                                                                     0,
                                                                                     -2.5
@@ -140,8 +222,7 @@
                                                                                     16,
                                                                                     16
                                                                                 ],
-                                                                                "keep_ratio": true,
-                                                                                "uv": "@crate_preview_v2.timer_animation"
+                                                                                "keep_ratio": true
                                                                             }
                                                                         }
                                                                     ]
@@ -184,31 +265,6 @@
                                                                     ]
                                                                 }
                                                             }
-                                                        ]
-                                                    }
-                                                },
-                                                {
-                                                    "form_text_label": {
-                                                        "layer": 5,
-                                                        "offset": [
-                                                            -4,
-                                                            1
-                                                        ],
-                                                        "type": "label",
-                                                        "anchor_from": "top_right",
-                                                        "anchor_to": "top_right",
-                                                        "font_type": "MinecraftTen",
-                                                        "text": "Limited Time Offer!",
-                                                        "color": [
-                                                            0.918,
-                                                            0.11,
-                                                            0.184
-                                                        ],
-                                                        "font_scale_factor": 1.2,
-                                                        "shadow": false,
-                                                        "max_size": [
-                                                            "100% - 2px",
-                                                            "default"
                                                         ]
                                                     }
                                                 }
@@ -285,8 +341,8 @@
                                                     }
                                                 },
                                                 {
-                                                    "green_button@crate_preview_v2.mv_button_controller_green": {
-                                                        "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons",
+                                                    "green_button@progression.mv_button_controller_green": {
+                                                        "$mv_click_bindings": "progression.mv_dynamic_buttons",
                                                         "collection_index": 52
                                                     }
                                                 }
@@ -1624,7 +1680,7 @@
                                                 },
                                                 {
                                                     "binding_type": "view",
-                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "source_property_name": "('UPGRADE ' + (#collection_index + 1) + ' §gGold Item')",
                                                     "target_property_name": "#text"
                                                 }
                                             ]
@@ -1680,7 +1736,7 @@
                                                 },
                                                 {
                                                     "binding_type": "view",
-                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "source_property_name": "('UPGRADE ' + (#collection_index + 1) + ' §gGold Item')",
                                                     "target_property_name": "#text"
                                                 }
                                             ]
@@ -1760,7 +1816,7 @@
                                                 },
                                                 {
                                                     "binding_type": "view",
-                                                    "source_property_name": "('Open ' + (#collection_index + 1) + ' §gGold Item')",
+                                                    "source_property_name": "('UPGRADE ' + (#collection_index + 1) + ' §gGold Item')",
                                                     "target_property_name": "#text"
                                                 }
                                             ]
@@ -1851,7 +1907,7 @@
             },
             {
                 "binding_type": "view",
-                "source_property_name": "('Open ' + (#collection_index + 1))",
+                "source_property_name": "('UPGRADE ' + (#collection_index + 1))",
                 "target_property_name": "#text"
             }
         ]
