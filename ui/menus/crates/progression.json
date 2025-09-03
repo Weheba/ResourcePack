@@ -80,16 +80,6 @@
             }
         ]
     },
-    "pickaxe_anim": {
-        "anim_type": "flip_book",
-        "initial_uv": [
-            0,
-            0
-        ],
-        "frame_count": 2,
-        "frame_step": 3,
-        "fps": 1.5
-    },
     "mv_dynamic_buttons@common.empty_image": {
         "size": [
             "100%",
@@ -102,16 +92,11 @@
                 "texture_icon_mv@common.empty_image": {
                     "texture": "$mc_texture",
                     "layer": 10,
-                    "uv": "@progression.pickaxe_anim",
                     "$mc_texture|default": "",
                     "keep_ratio": true,
                     "size": [
                         32,
                         32
-                    ],
-                    "uv_size": [
-                        22,
-                        22
                     ],
                     "offset": [
                         8,
