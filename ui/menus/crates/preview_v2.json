@@ -3,7 +3,7 @@
     "main@common-mineville.form_template": {
         "$title_bindings": [
             {
-        "binding_type": "view",
+                "binding_type": "view",
                 "source_property_name": "(#title_text - '@mineville/bundle:')",
                 "target_property_name": "#text"
             }
@@ -80,7 +80,7 @@
                                         "binding_name_override": "#text"
                                     },
                                     {
-                                "binding_type": "view",
+                                        "binding_type": "view",
                                         "source_property_name": "(not (#text = ''))",
                                         "target_property_name": "#visible"
                                     }
@@ -313,7 +313,7 @@
                                 ],
                                 "bindings": [
                                     {
-                                "binding_type": "view",
+                                        "binding_type": "view",
                                         "source_property_name": "(not (#form_text = ''))",
                                         "target_property_name": "#visible"
                                     }
@@ -333,7 +333,7 @@
                                             ],
                                             "bindings": [
                                                 {
-                                            "binding_type": "view",
+                                                    "binding_type": "view",
                                                     "binding_condition": "once",
                                                     "source_property_name": "(#form_text * 1)",
                                                     "target_property_name": "#maximum_grid_items"
@@ -359,7 +359,7 @@
                                         "binding_name_override": "#text"
                                     },
                                     {
-                                "binding_type": "view",
+                                        "binding_type": "view",
                                         "source_property_name": "(not (#text = ''))",
                                         "target_property_name": "#visible"
                                     }
@@ -581,7 +581,7 @@
     },
     "text_common": {
         "type": "label",
-        "text": "#text",
+        "text": "$text",
         "font_type": "MinecraftTen",
         "alpha": 0.8,
         "font_scale_factor": 1,
@@ -591,6 +591,7 @@
             0.3,
             0.3
         ],
+        "$text": "#text",
         "offset": [
             "0px",
             "-2px"
@@ -608,7 +609,7 @@
                 "shadow": {
                     "font_scale_factor": 1,
                     "type": "label",
-                    "text": "#text",
+                    "text": "$text",
                     "font_type": "MinecraftTen",
                     "offset": [
                         "-1.2px",
@@ -665,7 +666,6 @@
             {
                 "binding_type": "collection",
                 "binding_collection_name": "form_buttons",
-                
                 "binding_name": "#form_button_text",
                 "binding_name_override": "#form_button_text"
             }
@@ -748,7 +748,7 @@
                                         "binding_collection_name": "form_buttons"
                                     },
                                     {
-                                "binding_type": "view",
+                                        "binding_type": "view",
                                         "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
                                         "target_property_name": "#visible"
                                     }
@@ -881,7 +881,7 @@
                 "binding_collection_name": "form_buttons"
             },
             {
-        "binding_type": "view",
+                "binding_type": "view",
                 "source_property_name": "(not ((#texture = '') or (#texture = 'loading')))",
                 "target_property_name": "#visible"
             }

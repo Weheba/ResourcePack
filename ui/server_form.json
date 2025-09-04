@@ -374,6 +374,24 @@
             }
           ]
         }
+      },
+      {
+        "gifting@gifting.main": {
+          "enabled": false,
+          "visible": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#title_text - '@mineville/gifting') = #title_text))",
+              "target_property_name": "#enabled"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#title_text - '@mineville/gifting') = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
       }
     ]
   },

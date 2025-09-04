@@ -20,6 +20,7 @@
         "ui/menus/other/wardrobe.json",
         "ui/menus/other/dollwardrobe.json",
         "ui/menus/crates/progression.json",
-        "ui/menus/crates/treasure_chest.json"
+        "ui/menus/crates/treasure_chest.json",
+        "ui/menus/other/gifting.json"
     ]
 }
