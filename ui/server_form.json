@@ -1,6 +1,18 @@
 {
   "third_party_server_screen@common.base_screen": {
+    "low_frequency_rendering": true,
+    "load_screen_immediately": true,
     "$screen_content": "server_form.mineville_main_screen_content",
+    "$screen_animations|default": [
+      "@server_form.screen_exit_animation_push_offset",
+      "@server_form.screen_exit_animation_pop_offset",
+      "@server_form.screen_entrance_animation_push_offset",
+      "@server_form.screen_entrance_animation_pop_offset",
+      "@server_form.screen_exit_animation_push_fade",
+      "@server_form.screen_exit_animation_pop_fade",
+      "@server_form.screen_entrance_animation_push_fade",
+      "@server_form.screen_entrance_animation_pop_fade"
+    ],
     "button_mappings": [
       {
         "from_button_id": "button.menu_cancel",
@@ -469,5 +481,102 @@
         }
       }
     ]
+  },
+  "screen_exit_animation_push_fade": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_push",
+    "from": 0.0,
+    "to": 0.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_exit_animation_pop_fade": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_pop",
+    "from": 0.0,
+    "to": 0.0,
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_entrance_animation_push_fade": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_push",
+    "from": 1.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_entrance_animation_pop_fade": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_pop",
+    "from": 1.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
+  },
+  //Wipe Animations
+  "screen_exit_animation_push_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_push",
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+  "screen_exit_animation_pop_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_pop",
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "screen_entrance_animation_push_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_push",
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  },
+  "screen_entrance_animation_pop_offset": {
+    "anim_type": "offset",
+    "easing": "out_cubic",
+    "duration": "$mv_transition_time_pop",
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.entrance_pop",
+    "end_event": "screen.entrance_end"
   }
 }
