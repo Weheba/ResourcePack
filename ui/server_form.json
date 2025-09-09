@@ -518,7 +518,6 @@
     "play_event": "screen.entrance_pop",
     "end_event": "screen.entrance_end"
   },
-  //Wipe Animations
   "screen_exit_animation_push_offset": {
     "anim_type": "offset",
     "easing": "out_cubic",
