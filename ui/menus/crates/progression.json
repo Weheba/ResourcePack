@@ -4,7 +4,7 @@
         "$title_bindings": [
             {
                 "binding_type": "view",
-                "source_property_name": "(#title_text - '@mineville/progression:')",
+                "source_property_name": "(#title_text - '@mineville/progression:' - '@mineville/pvp_progression:')",
                 "target_property_name": "#text"
             }
         ],
@@ -54,14 +54,12 @@
                     "controls": [
                         {
                             "default@$mv_click_bindings": {
-                                "$mc_texture": "textures/ui/common/pickaxe",
                                 "ignored": "($hover_state or $pressed_state)",
                                 "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/default')"
                             }
                         },
                         {
                             "hover@$mv_click_bindings": {
-                                "$mc_texture": "textures/ui/common/pickaxe",
                                 "$hover_state": true,
                                 "ignored": "($default_state or $pressed_state)",
                                 "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/hover')"
@@ -70,7 +68,6 @@
                         {
                             "pressed@$mv_click_bindings": {
                                 "ignored": "($default_state or $hover_state)",
-                                "$mc_texture": "textures/ui/common/pickaxe",
                                 "$pressed_state": true,
                                 "$button_texture": "('textures/ui/common/buttons/' + $button_color + '/pressed')"
                             }
@@ -196,7 +193,7 @@
                                                                     ],
                                                                     "controls": [
                                                                         {
-                                                                            "timer_spin_image@common.empty_image": {
+                                                                            "emerald@common.empty_image": {
                                                                                 "layer": 5,
                                                                                 "texture": "textures/ui/common/emerald",
                                                                                 "offset": [
@@ -207,7 +204,46 @@
                                                                                     16,
                                                                                     16
                                                                                 ],
-                                                                                "keep_ratio": true
+                                                                                "keep_ratio": true,
+                                                                                "bindings": [
+                                                                                    {
+                                                                                        "source_property_name": "((#title_text - '@mineville/pvp_progression') = #title_text)",
+                                                                                        "binding_type": "view",
+                                                                                        "target_property_name": "#visible"
+                                                                                    },
+                                                                                    {
+                                                                                        "source_property_name": "((#title_text - '@mineville/pvp_progression') = #title_text)",
+                                                                                        "binding_type": "view",
+                                                                                        "target_property_name": "#enabled"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "skull@common.empty_image": {
+                                                                                "layer": 5,
+                                                                                "texture": "textures/ui/common/skull",
+                                                                                "offset": [
+                                                                                    0,
+                                                                                    -2.5
+                                                                                ],
+                                                                                "size": [
+                                                                                    16,
+                                                                                    16
+                                                                                ],
+                                                                                "keep_ratio": true,
+                                                                                "bindings": [
+                                                                                    {
+                                                                                        "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                                        "binding_type": "view",
+                                                                                        "target_property_name": "#visible"
+                                                                                    },
+                                                                                    {
+                                                                                        "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                                        "binding_type": "view",
+                                                                                        "target_property_name": "#enabled"
+                                                                                    }
+                                                                                ]
                                                                             }
                                                                         }
                                                                     ]
@@ -308,6 +344,26 @@
                                             ],
                                             "controls": [
                                                 {
+                                                    "red_button@crate_preview_v2.mv_button_controller": {
+                                                        "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons_gold",
+                                                        "$button_color": "red",
+                                                        "$mc_texture": "textures/ui/common/sword",
+                                                        "collection_index": 51,
+                                                        "bindings": [
+                                                            {
+                                                                "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#visible"
+                                                            },
+                                                            {
+                                                                "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#enabled"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
                                                     "gold_button@crate_preview_v2.mv_button_controller": {
                                                         "$mv_click_bindings": "crate_preview_v2.mv_dynamic_buttons_gold",
                                                         "$button_color": "gold",
@@ -322,13 +378,57 @@
                                                             0.031
                                                         ],
                                                         "$mc_texture": "textures/ui/common/buttons/gold/minecoin",
-                                                        "collection_index": 51
+                                                        "collection_index": 51,
+                                                        "bindings": [
+                                                            {
+                                                                "source_property_name": "(((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#visible"
+                                                            },
+                                                            {
+                                                                "source_property_name": "(((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#enabled"
+                                                            }
+                                                        ]
                                                     }
                                                 },
                                                 {
-                                                    "green_button@progression.mv_button_controller_green": {
+                                                    "green_button_pickaxe@progression.mv_button_controller_green": {
                                                         "$mv_click_bindings": "progression.mv_dynamic_buttons",
-                                                        "collection_index": 52
+                                                        "$mc_texture": "textures/ui/common/pickaxe",
+                                                        "collection_index": 52,
+                                                        "bindings": [
+                                                            {
+                                                                "source_property_name": "(((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#visible"
+                                                            },
+                                                            {
+                                                                "source_property_name": "(((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#enabled"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "green_button_skull@progression.mv_button_controller_green": {
+                                                        "$mv_click_bindings": "progression.mv_dynamic_buttons",
+                                                        "$mc_texture": "textures/ui/common/anvil",
+                                                        "collection_index": 52,
+                                                        "bindings": [
+                                                            {
+                                                                "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#visible"
+                                                            },
+                                                            {
+                                                                "source_property_name": "(not ((#title_text - '@mineville/pvp_progression') = #title_text))",
+                                                                "binding_type": "view",
+                                                                "target_property_name": "#enabled"
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]

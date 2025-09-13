@@ -358,12 +358,12 @@
           "bindings": [
             {
               "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/progression') = #title_text))",
+              "source_property_name": "(not ((#title_text - '@mineville/progression' - '@mineville/pvp_progression') = #title_text))",
               "target_property_name": "#enabled"
             },
             {
               "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/progression') = #title_text))",
+              "source_property_name": "(not ((#title_text - '@mineville/progression' - '@mineville/pvp_progression') = #title_text))",
               "target_property_name": "#visible"
             }
           ]
