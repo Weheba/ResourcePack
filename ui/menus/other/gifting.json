@@ -458,7 +458,7 @@
                                     },
                                     {
                                         "item2@gifting.form_button": {
-                                            "$shop_button_index": 21
+                                            "$shop_button_index": 22
                                         }
                                     },
                                     {
@@ -471,7 +471,7 @@
                                     },
                                     {
                                         "item3@gifting.form_button": {
-                                            "$shop_button_index": 24
+                                            "$shop_button_index": 25
                                         }
                                     }
                                 ]
