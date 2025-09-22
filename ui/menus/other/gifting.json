@@ -313,7 +313,7 @@
                                                         "type": "label",
                                                         "anchor_from": "left_middle",
                                                         "anchor_to": "left_middle",
-                                                        "text": "Temp text",
+                                                        "text": "#form_text",
                                                         "shadow": true,
                                                         "max_size": [
                                                             "100% - 2px",
