@@ -50,126 +50,56 @@
         "custom_long_form@long-form.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/long_form') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/long_form') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/long_form') = #title_text))"
         }
       },
       {
         "city_claim_chunk_menu@city-menu-claim-chunk.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/claim_chunk_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/claim_chunk_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/city/claim_chunk_menu') = #title_text))"
         }
       },
       {
         "city_create_city_menu@city-menu-create-city.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/create_city_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/create_city_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/city/create_city_menu') = #title_text))"
         }
       },
       {
         "city_own_chunk_menu@city-menu-own-chunk.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/own_chunk_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/city/own_chunk_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/city/own_chunk_menu') = #title_text))"
         }
       },
       {
         "other_main_menu@other-main-menu.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/other_main_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/other_main_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/other_main_menu') = #title_text))"
         }
       },
       {
         "crate_menu@crate-menu.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/crate_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/crate_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/crate_menu') = #title_text))"
         }
       },
       {
         "bundles@crate_preview_v2.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/bundle') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/bundle') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/bundle') = #title_text))"
         }
       },
       //{
@@ -194,72 +124,32 @@
         "gamemodes_menu@gamemodes-menu.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gamemodes_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gamemodes_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/gamemodes_menu') = #title_text))"
         }
       },
       {
         "random_teleport_menu@earth-smp-rtp.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/earth-smp/rtp_menu') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/earth-smp/rtp_menu') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/earth-smp/rtp_menu') = #title_text))"
         }
       },
       {
         "auction_house_menu@auction-house.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/auction_house') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/auction_house') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/auction_house') = #title_text))"
         }
       },
       {
         "browser_ad_menu@browser-ad.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/browser_ad' - '@mineville/gift:') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/browser_ad' - '@mineville/gift:') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/browser_ad' - '@mineville/gift:') = #title_text))"
         }
       },
       {
@@ -283,54 +173,24 @@
           "$title_text_binding_type": "none",
           "$child_control": "server_form.long_form_panel",
           "layer": 2,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "((#title_text - '@mineville') = #title_text)",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "((#title_text - '@mineville') = #title_text)",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "((#title_text - '@mineville') = #title_text)"
         }
       },
       {
         "gaf_shop_menu@gaf-shop.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gaf_shop') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gaf_shop') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/gaf_shop') = #title_text))"
         }
       },
       {
         "gaf_shop_menu_v2@gaf-shop-v2.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gaf/v2') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gaf/v2') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/gaf/v2') = #title_text))"
         }
       },
       // {
@@ -355,54 +215,24 @@
         "progression@progression.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/progression' - '@mineville/pvp_progression') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/progression' - '@mineville/pvp_progression') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/progression' - '@mineville/pvp_progression') = #title_text))"
         }
       },
       {
         "treasure_chest@treasurechest.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/treasurechest') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/treasurechest') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/treasurechest') = #title_text))"
         }
       },
       {
         "gifting@gifting.main": {
           "enabled": false,
           "visible": false,
-          "bindings": [
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gifting') = #title_text))",
-              "target_property_name": "#enabled"
-            },
-            {
-              "binding_type": "view",
-              "source_property_name": "(not ((#title_text - '@mineville/gifting') = #title_text))",
-              "target_property_name": "#visible"
-            }
-          ]
+          "bindings": "$visible_binding",
+          "$condition": "(not ((#title_text - '@mineville/gifting') = #title_text))"
         }
       }
     ]
